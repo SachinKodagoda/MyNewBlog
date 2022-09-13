@@ -3,11 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["google.com"],
+    domains: ['google.com'],
   },
   i18n: {
-    locales: ["en", "de"],
-    defaultLocale: "en",
+    locales: ['en', 'de'],
+    defaultLocale: 'en',
   },
   env: {
     APP_NAME: process.env.APP_NAME,

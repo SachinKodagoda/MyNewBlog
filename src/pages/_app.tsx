@@ -1,6 +1,3 @@
-import { CartContextProvider } from '@ctx/CartContext';
-import { UploadContextProvider } from '@ctx/UploadContext';
-import { UserContextProvider } from '@ctx/UserContext';
 import '@styles/globals.css';
 import theme from '@theme/baseTheme';
 import type { AppProps } from 'next/app';
@@ -38,19 +35,13 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
         <meta name='theme-color' content='#000' />
         <meta name='apple-mobile-web-app-status-bar-style' content='#000' />
       </Head>
-      <UserContextProvider>
-        <CartContextProvider>
-          <UploadContextProvider>
-            <ThemeProvider theme={{ ...theme }}>
-              <>
-                {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-                <Component {...pageProps} />
-                <Toaster />
-              </>
-            </ThemeProvider>
-          </UploadContextProvider>
-        </CartContextProvider>
-      </UserContextProvider>
+      <ThemeProvider theme={{ ...theme }}>
+        <>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Component {...pageProps} />
+          <Toaster />
+        </>
+      </ThemeProvider>
     </>
   );
 }
