@@ -13,6 +13,7 @@ const Server = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <rect height='8' width='20' rx='2' ry='2' x='2' y='2' />
       <rect height='8' width='20' rx='2' ry='2' x='2' y='14' />

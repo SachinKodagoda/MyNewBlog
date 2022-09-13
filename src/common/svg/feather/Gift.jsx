@@ -13,6 +13,7 @@ const Gift = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <polyline points='20 12 20 22 4 22 4 12' />
       <rect height='5' width='20' x='2' y='7' />

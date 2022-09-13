@@ -13,6 +13,7 @@ const Cpu = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <rect height='16' width='16' rx='2' ry='2' x='4' y='4' />
       <rect height='6' width='6' x='9' y='9' />

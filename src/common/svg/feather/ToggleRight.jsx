@@ -13,6 +13,7 @@ const ToggleRight = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <rect height='14' width='22' rx='7' ry='7' x='1' y='5' />
       <circle cx='16' cy='12' r='3' />

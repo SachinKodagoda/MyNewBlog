@@ -13,6 +13,7 @@ const PhoneIncoming = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <polyline points='16 2 16 8 22 8' />
       <line x1='23' x2='16' y1='1' y2='8' />

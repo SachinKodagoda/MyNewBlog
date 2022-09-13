@@ -13,6 +13,7 @@ const Loader = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <line x1='12' x2='12' y1='2' y2='6' />
       <line x1='12' x2='12' y1='18' y2='22' />

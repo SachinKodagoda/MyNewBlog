@@ -13,6 +13,7 @@ const Anchor = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <circle cx='12' cy='5' r='3' />
       <line x1='12' x2='12' y1='22' y2='8' />

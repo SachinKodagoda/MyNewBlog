@@ -13,6 +13,7 @@ const Frown = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <circle cx='12' cy='12' r='10' />
       <path d='M16 16s-1.5-2-4-2-4 2-4 2' />

@@ -13,6 +13,7 @@ const PauseCircle = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <circle cx='12' cy='12' r='10' />
       <line x1='10' x2='10' y1='15' y2='9' />

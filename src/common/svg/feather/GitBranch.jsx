@@ -13,6 +13,7 @@ const GitBranch = props => {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <line x1='6' x2='6' y1='3' y2='15' />
       <circle cx='18' cy='6' r='3' />
