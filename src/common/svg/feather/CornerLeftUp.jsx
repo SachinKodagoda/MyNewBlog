@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
-const CornerLeftUp = (props) => {
+const CornerLeftUp = props => {
   return (
     <svg
-      className="feather feather-corner-left-up"
-      height="24"
-      width="24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
+      className='feather feather-corner-left-up'
+      height='24'
+      width='24'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='2'
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
     >
-      <polyline points="14 9 9 4 4 9" />
-      <path d="M20 20h-7a4 4 0 0 1-4-4V4" />
+      <polyline points='14 9 9 4 4 9' />
+      <path d='M20 20h-7a4 4 0 0 1-4-4V4' />
     </svg>
   );
 };

@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
-const ChevronsDown = (props) => {
+const ChevronsDown = props => {
   return (
     <svg
-      className="feather feather-chevrons-down"
-      height="24"
-      width="24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
+      className='feather feather-chevrons-down'
+      height='24'
+      width='24'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='2'
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
     >
-      <polyline points="7 13 12 18 17 13" />
-      <polyline points="7 6 12 11 17 6" />
+      <polyline points='7 13 12 18 17 13' />
+      <polyline points='7 6 12 11 17 6' />
     </svg>
   );
 };

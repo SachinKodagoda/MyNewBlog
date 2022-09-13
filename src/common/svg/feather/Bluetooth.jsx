@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
-const Bluetooth = (props) => {
+const Bluetooth = props => {
   return (
     <svg
-      className="feather feather-bluetooth"
-      height="24"
-      width="24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
+      className='feather feather-bluetooth'
+      height='24'
+      width='24'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='2'
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
     >
-      <polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5" />
+      <polyline points='6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5' />
     </svg>
   );
 };
