@@ -34,6 +34,7 @@
     "@types/styled-components": "^5.1.26",
     "depcheck": "^1.4.3",
     "eslint": "8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
