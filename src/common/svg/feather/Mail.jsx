@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Mail = props => {
+function Mail(props) {
   return (
     <svg
       className='feather feather-mail'
@@ -19,6 +19,6 @@ const Mail = props => {
       <polyline points='22,6 12,13 2,6' />
     </svg>
   );
-};
+}
 
 export default Mail;

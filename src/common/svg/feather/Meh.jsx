@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Meh = props => {
+function Meh(props) {
   return (
     <svg
       className='feather feather-meh'
@@ -21,6 +21,6 @@ const Meh = props => {
       <line x1='15' x2='15.01' y1='9' y2='9' />
     </svg>
   );
-};
+}
 
 export default Meh;

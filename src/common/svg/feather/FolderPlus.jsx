@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FolderPlus = props => {
+function FolderPlus(props) {
   return (
     <svg
       className='feather feather-folder-plus'
@@ -20,6 +20,6 @@ const FolderPlus = props => {
       <line x1='9' x2='15' y1='14' y2='14' />
     </svg>
   );
-};
+}
 
 export default FolderPlus;

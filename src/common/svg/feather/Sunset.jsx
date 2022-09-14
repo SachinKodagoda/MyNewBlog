@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sunset = props => {
+function Sunset(props) {
   return (
     <svg
       className='feather feather-sunset'
@@ -25,6 +25,6 @@ const Sunset = props => {
       <polyline points='16 5 12 9 8 5' />
     </svg>
   );
-};
+}
 
 export default Sunset;

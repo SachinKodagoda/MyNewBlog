@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToggleRight = props => {
+function ToggleRight(props) {
   return (
     <svg
       className='feather feather-toggle-right'
@@ -19,6 +19,6 @@ const ToggleRight = props => {
       <circle cx='16' cy='12' r='3' />
     </svg>
   );
-};
+}
 
 export default ToggleRight;

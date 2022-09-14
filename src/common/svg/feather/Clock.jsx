@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Clock = props => {
+function Clock(props) {
   return (
     <svg
       className='feather feather-clock'
@@ -19,6 +19,6 @@ const Clock = props => {
       <polyline points='12 6 12 12 16 14' />
     </svg>
   );
-};
+}
 
 export default Clock;

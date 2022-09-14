@@ -1,4 +1,4 @@
-const ChevronRight = props => {
+function ChevronRight(props) {
   return (
     <svg
       className='feather feather-chevron-right'
@@ -16,6 +16,6 @@ const ChevronRight = props => {
       <polyline points='9 18 15 12 9 6' />
     </svg>
   );
-};
+}
 
 export default ChevronRight;

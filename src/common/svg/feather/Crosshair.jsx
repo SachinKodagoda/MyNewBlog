@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Crosshair = props => {
+function Crosshair(props) {
   return (
     <svg
       className='feather feather-crosshair'
@@ -22,6 +22,6 @@ const Crosshair = props => {
       <line x1='12' x2='12' y1='22' y2='18' />
     </svg>
   );
-};
+}
 
 export default Crosshair;

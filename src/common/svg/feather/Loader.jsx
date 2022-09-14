@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Loader = props => {
+function Loader(props) {
   return (
     <svg
       className='feather feather-loader'
@@ -25,6 +25,6 @@ const Loader = props => {
       <line x1='16.24' x2='19.07' y1='7.76' y2='4.93' />
     </svg>
   );
-};
+}
 
 export default Loader;

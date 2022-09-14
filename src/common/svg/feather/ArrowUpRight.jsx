@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArrowUpRight = props => {
+function ArrowUpRight(props) {
   return (
     <svg
       className='feather feather-arrow-up-right'
@@ -19,6 +19,6 @@ const ArrowUpRight = props => {
       <polyline points='7 7 17 7 17 17' />
     </svg>
   );
-};
+}
 
 export default ArrowUpRight;

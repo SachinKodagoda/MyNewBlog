@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Layers = props => {
+function Layers(props) {
   return (
     <svg
       className='feather feather-layers'
@@ -20,6 +20,6 @@ const Layers = props => {
       <polyline points='2 12 12 17 22 12' />
     </svg>
   );
-};
+}
 
 export default Layers;

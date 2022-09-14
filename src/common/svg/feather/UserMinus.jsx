@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserMinus = props => {
+function UserMinus(props) {
   return (
     <svg
       className='feather feather-user-minus'
@@ -20,6 +20,6 @@ const UserMinus = props => {
       <line x1='23' x2='17' y1='11' y2='11' />
     </svg>
   );
-};
+}
 
 export default UserMinus;

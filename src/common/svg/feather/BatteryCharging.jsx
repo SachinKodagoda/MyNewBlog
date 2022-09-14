@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BatteryCharging = props => {
+function BatteryCharging(props) {
   return (
     <svg
       className='feather feather-battery-charging'
@@ -20,6 +20,6 @@ const BatteryCharging = props => {
       <polyline points='11 6 7 12 13 12 9 18' />
     </svg>
   );
-};
+}
 
 export default BatteryCharging;

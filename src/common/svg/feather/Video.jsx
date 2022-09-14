@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Video = props => {
+function Video(props) {
   return (
     <svg
       className='feather feather-video'
@@ -19,6 +19,6 @@ const Video = props => {
       <rect height='14' width='15' rx='2' ry='2' x='1' y='5' />
     </svg>
   );
-};
+}
 
 export default Video;

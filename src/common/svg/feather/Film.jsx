@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Film = props => {
+function Film(props) {
   return (
     <svg
       className='feather feather-film'
@@ -25,6 +25,6 @@ const Film = props => {
       <line x1='17' x2='22' y1='7' y2='7' />
     </svg>
   );
-};
+}
 
 export default Film;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Box = props => {
+function Box(props) {
   return (
     <svg
       className='feather feather-box'
@@ -20,6 +20,6 @@ const Box = props => {
       <line x1='12' x2='12' y1='22.08' y2='12' />
     </svg>
   );
-};
+}
 
 export default Box;

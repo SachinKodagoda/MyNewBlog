@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Bold = props => {
+function Bold(props) {
   return (
     <svg
       className='feather feather-bold'
@@ -19,6 +19,6 @@ const Bold = props => {
       <path d='M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z' />
     </svg>
   );
-};
+}
 
 export default Bold;

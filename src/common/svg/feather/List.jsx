@@ -1,6 +1,6 @@
 import React from 'react';
 
-const List = props => {
+function List(props) {
   return (
     <svg
       className='feather feather-list'
@@ -23,6 +23,6 @@ const List = props => {
       <line x1='3' x2='3.01' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default List;

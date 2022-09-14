@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Square = props => {
+function Square(props) {
   return (
     <svg
       className='feather feather-square'
@@ -18,6 +18,6 @@ const Square = props => {
       <rect height='18' width='18' rx='2' ry='2' x='3' y='3' />
     </svg>
   );
-};
+}
 
 export default Square;

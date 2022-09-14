@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GitBranch = props => {
+function GitBranch(props) {
   return (
     <svg
       className='feather feather-git-branch'
@@ -21,6 +21,6 @@ const GitBranch = props => {
       <path d='M18 9a9 9 0 0 1-9 9' />
     </svg>
   );
-};
+}
 
 export default GitBranch;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MoreVertical = props => {
+function MoreVertical(props) {
   return (
     <svg
       className='feather feather-more-vertical'
@@ -20,6 +20,6 @@ const MoreVertical = props => {
       <circle cx='12' cy='19' r='1' />
     </svg>
   );
-};
+}
 
 export default MoreVertical;

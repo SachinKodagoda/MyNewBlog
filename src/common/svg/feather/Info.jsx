@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Info = props => {
+function Info(props) {
   return (
     <svg
       className='feather feather-info'
@@ -20,6 +20,6 @@ const Info = props => {
       <line x1='12' x2='12.01' y1='8' y2='8' />
     </svg>
   );
-};
+}
 
 export default Info;

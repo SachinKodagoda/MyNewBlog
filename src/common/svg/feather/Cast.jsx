@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cast = props => {
+function Cast(props) {
   return (
     <svg
       className='feather feather-cast'
@@ -19,6 +19,6 @@ const Cast = props => {
       <line x1='2' x2='2.01' y1='20' y2='20' />
     </svg>
   );
-};
+}
 
 export default Cast;

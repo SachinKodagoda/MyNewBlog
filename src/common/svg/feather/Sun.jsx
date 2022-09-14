@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sun = props => {
+function Sun(props) {
   return (
     <svg
       className='feather feather-sun'
@@ -26,6 +26,6 @@ const Sun = props => {
       <line x1='18.36' x2='19.78' y1='5.64' y2='4.22' />
     </svg>
   );
-};
+}
 
 export default Sun;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PauseCircle = props => {
+function PauseCircle(props) {
   return (
     <svg
       className='feather feather-pause-circle'
@@ -20,6 +20,6 @@ const PauseCircle = props => {
       <line x1='14' x2='14' y1='15' y2='9' />
     </svg>
   );
-};
+}
 
 export default PauseCircle;

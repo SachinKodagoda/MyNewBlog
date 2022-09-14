@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChevronsUp = props => {
+function ChevronsUp(props) {
   return (
     <svg
       className='feather feather-chevrons-up'
@@ -19,6 +19,6 @@ const ChevronsUp = props => {
       <polyline points='17 18 12 13 7 18' />
     </svg>
   );
-};
+}
 
 export default ChevronsUp;

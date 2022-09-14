@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Frown = props => {
+function Frown(props) {
   return (
     <svg
       className='feather feather-frown'
@@ -21,6 +21,6 @@ const Frown = props => {
       <line x1='15' x2='15.01' y1='9' y2='9' />
     </svg>
   );
-};
+}
 
 export default Frown;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Music = props => {
+function Music(props) {
   return (
     <svg
       className='feather feather-music'
@@ -20,6 +20,6 @@ const Music = props => {
       <circle cx='18' cy='16' r='3' />
     </svg>
   );
-};
+}
 
 export default Music;

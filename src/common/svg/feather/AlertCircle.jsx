@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlertCircle = props => {
+function AlertCircle(props) {
   return (
     <svg
       className='feather feather-alert-circle'
@@ -20,6 +20,6 @@ const AlertCircle = props => {
       <line x1='12' x2='12.01' y1='16' y2='16' />
     </svg>
   );
-};
+}
 
 export default AlertCircle;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlignCenter = props => {
+function AlignCenter(props) {
   return (
     <svg
       className='feather feather-align-center'
@@ -21,6 +21,6 @@ const AlignCenter = props => {
       <line x1='18' x2='6' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default AlignCenter;

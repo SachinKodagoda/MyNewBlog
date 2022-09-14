@@ -1,4 +1,4 @@
-const Chrome = props => {
+function Chrome(props) {
   return (
     <svg
       className='feather feather-chrome'
@@ -20,6 +20,6 @@ const Chrome = props => {
       <line x1='10.88' x2='15.46' y1='21.94' y2='14' />
     </svg>
   );
-};
+}
 
 export default Chrome;

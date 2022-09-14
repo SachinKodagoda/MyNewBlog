@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Copy = props => {
+function Copy(props) {
   return (
     <svg
       className='feather feather-copy'
@@ -19,6 +19,6 @@ const Copy = props => {
       <path d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1' />
     </svg>
   );
-};
+}
 
 export default Copy;

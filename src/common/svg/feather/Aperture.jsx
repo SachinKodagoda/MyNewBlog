@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Aperture = props => {
+function Aperture(props) {
   return (
     <svg
       className='feather feather-aperture'
@@ -24,6 +24,6 @@ const Aperture = props => {
       <line x1='16.62' x2='10.88' y1='12' y2='21.94' />
     </svg>
   );
-};
+}
 
 export default Aperture;

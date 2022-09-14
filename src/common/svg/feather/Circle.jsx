@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Circle = props => {
+function Circle(props) {
   return (
     <svg
       className='feather feather-circle'
@@ -18,6 +18,6 @@ const Circle = props => {
       <circle cx='12' cy='12' r='10' />
     </svg>
   );
-};
+}
 
 export default Circle;

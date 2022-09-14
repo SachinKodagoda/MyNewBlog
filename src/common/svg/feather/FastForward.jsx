@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FastForward = props => {
+function FastForward(props) {
   return (
     <svg
       className='feather feather-fast-forward'
@@ -19,6 +19,6 @@ const FastForward = props => {
       <polygon points='2 19 11 12 2 5 2 19' />
     </svg>
   );
-};
+}
 
 export default FastForward;

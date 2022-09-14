@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreditCard = props => {
+function CreditCard(props) {
   return (
     <svg
       className='feather feather-credit-card'
@@ -19,6 +19,6 @@ const CreditCard = props => {
       <line x1='1' x2='23' y1='10' y2='10' />
     </svg>
   );
-};
+}
 
 export default CreditCard;

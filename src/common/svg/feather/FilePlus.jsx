@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilePlus = props => {
+function FilePlus(props) {
   return (
     <svg
       className='feather feather-file-plus'
@@ -21,6 +21,6 @@ const FilePlus = props => {
       <line x1='9' x2='15' y1='15' y2='15' />
     </svg>
   );
-};
+}
 
 export default FilePlus;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Airplay = props => {
+function Airplay(props) {
   return (
     <svg
       className='feather feather-airplay'
@@ -19,6 +19,6 @@ const Airplay = props => {
       <polygon points='12 15 17 21 7 21 12 15' />
     </svg>
   );
-};
+}
 
 export default Airplay;

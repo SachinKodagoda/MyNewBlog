@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HelpCircle = props => {
+function HelpCircle(props) {
   return (
     <svg
       className='feather feather-help-circle'
@@ -20,6 +20,6 @@ const HelpCircle = props => {
       <line x1='12' x2='12.01' y1='17' y2='17' />
     </svg>
   );
-};
+}
 
 export default HelpCircle;

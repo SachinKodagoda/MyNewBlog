@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloudDrizzle = props => {
+function CloudDrizzle(props) {
   return (
     <svg
       className='feather feather-cloud-drizzle'
@@ -24,6 +24,6 @@ const CloudDrizzle = props => {
       <path d='M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25' />
     </svg>
   );
-};
+}
 
 export default CloudDrizzle;

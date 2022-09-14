@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloudLightning = props => {
+function CloudLightning(props) {
   return (
     <svg
       className='feather feather-cloud-lightning'
@@ -19,6 +19,6 @@ const CloudLightning = props => {
       <polyline points='13 11 9 17 15 17 11 23' />
     </svg>
   );
-};
+}
 
 export default CloudLightning;

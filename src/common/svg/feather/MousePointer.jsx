@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MousePointer = props => {
+function MousePointer(props) {
   return (
     <svg
       className='feather feather-mouse-pointer'
@@ -19,6 +19,6 @@ const MousePointer = props => {
       <path d='M13 13l6 6' />
     </svg>
   );
-};
+}
 
 export default MousePointer;

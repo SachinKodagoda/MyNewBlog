@@ -1,4 +1,4 @@
-const Instagram = props => {
+function Instagram(props) {
   return (
     <svg
       className='feather feather-instagram'
@@ -18,6 +18,6 @@ const Instagram = props => {
       <line x1='17.5' x2='17.51' y1='6.5' y2='6.5' />
     </svg>
   );
-};
+}
 
 export default Instagram;

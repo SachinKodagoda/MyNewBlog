@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ZoomOut = props => {
+function ZoomOut(props) {
   return (
     <svg
       className='feather feather-zoom-out'
@@ -20,6 +20,6 @@ const ZoomOut = props => {
       <line x1='8' x2='14' y1='11' y2='11' />
     </svg>
   );
-};
+}
 
 export default ZoomOut;

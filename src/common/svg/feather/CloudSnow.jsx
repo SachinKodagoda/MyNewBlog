@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloudSnow = props => {
+function CloudSnow(props) {
   return (
     <svg
       className='feather feather-cloud-snow'
@@ -24,6 +24,6 @@ const CloudSnow = props => {
       <line x1='16' x2='16.01' y1='20' y2='20' />
     </svg>
   );
-};
+}
 
 export default CloudSnow;

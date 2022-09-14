@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Pause = props => {
+function Pause(props) {
   return (
     <svg
       className='feather feather-pause'
@@ -19,6 +19,6 @@ const Pause = props => {
       <rect height='16' width='4' x='14' y='4' />
     </svg>
   );
-};
+}
 
 export default Pause;

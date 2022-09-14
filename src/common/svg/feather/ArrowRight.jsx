@@ -1,4 +1,4 @@
-const ArrowRight = props => {
+function ArrowRight(props) {
   return (
     <svg
       className='feather feather-arrow-right'
@@ -17,6 +17,6 @@ const ArrowRight = props => {
       <polyline points='12 5 19 12 12 19' />
     </svg>
   );
-};
+}
 
 export default ArrowRight;

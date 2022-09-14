@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Youtube = props => {
+function Youtube(props) {
   return (
     <svg
       className='feather feather-youtube'
@@ -19,6 +19,6 @@ const Youtube = props => {
       <polygon points='9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02' />
     </svg>
   );
-};
+}
 
 export default Youtube;

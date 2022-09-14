@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Send = props => {
+function Send(props) {
   return (
     <svg
       className='feather feather-send'
@@ -19,6 +19,6 @@ const Send = props => {
       <polygon points='22 2 15 22 11 13 2 9 22 2' />
     </svg>
   );
-};
+}
 
 export default Send;

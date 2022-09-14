@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookOpen = props => {
+function BookOpen(props) {
   return (
     <svg
       className='feather feather-book-open'
@@ -19,6 +19,6 @@ const BookOpen = props => {
       <path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z' />
     </svg>
   );
-};
+}
 
 export default BookOpen;

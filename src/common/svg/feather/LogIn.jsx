@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogIn = props => {
+function LogIn(props) {
   return (
     <svg
       className='feather feather-log-in'
@@ -20,6 +20,6 @@ const LogIn = props => {
       <line x1='15' x2='3' y1='12' y2='12' />
     </svg>
   );
-};
+}
 
 export default LogIn;

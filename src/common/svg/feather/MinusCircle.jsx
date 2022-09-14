@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MinusCircle = props => {
+function MinusCircle(props) {
   return (
     <svg
       className='feather feather-minus-circle'
@@ -19,6 +19,6 @@ const MinusCircle = props => {
       <line x1='8' x2='16' y1='12' y2='12' />
     </svg>
   );
-};
+}
 
 export default MinusCircle;

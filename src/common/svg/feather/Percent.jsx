@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Percent = props => {
+function Percent(props) {
   return (
     <svg
       className='feather feather-percent'
@@ -20,6 +20,6 @@ const Percent = props => {
       <circle cx='17.5' cy='17.5' r='2.5' />
     </svg>
   );
-};
+}
 
 export default Percent;

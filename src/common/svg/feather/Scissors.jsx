@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Scissors = props => {
+function Scissors(props) {
   return (
     <svg
       className='feather feather-scissors'
@@ -22,6 +22,6 @@ const Scissors = props => {
       <line x1='8.12' x2='12' y1='8.12' y2='12' />
     </svg>
   );
-};
+}
 
 export default Scissors;

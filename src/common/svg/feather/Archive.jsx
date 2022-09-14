@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Archive = props => {
+function Archive(props) {
   return (
     <svg
       className='feather feather-archive'
@@ -20,6 +20,6 @@ const Archive = props => {
       <line x1='10' x2='14' y1='12' y2='12' />
     </svg>
   );
-};
+}
 
 export default Archive;

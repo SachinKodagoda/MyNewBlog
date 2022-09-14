@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Linkedin = props => {
+function Linkedin(props) {
   return (
     <svg
       className='feather feather-linkedin'
@@ -20,6 +20,6 @@ const Linkedin = props => {
       <circle cx='4' cy='4' r='2' />
     </svg>
   );
-};
+}
 
 export default Linkedin;

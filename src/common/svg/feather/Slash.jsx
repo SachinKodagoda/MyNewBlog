@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slash = props => {
+function Slash(props) {
   return (
     <svg
       className='feather feather-slash'
@@ -19,6 +19,6 @@ const Slash = props => {
       <line x1='4.93' x2='19.07' y1='4.93' y2='19.07' />
     </svg>
   );
-};
+}
 
 export default Slash;

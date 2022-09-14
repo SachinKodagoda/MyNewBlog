@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MapPin = props => {
+function MapPin(props) {
   return (
     <svg
       className='feather feather-map-pin'
@@ -19,6 +19,6 @@ const MapPin = props => {
       <circle cx='12' cy='10' r='3' />
     </svg>
   );
-};
+}
 
 export default MapPin;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Unlock = props => {
+function Unlock(props) {
   return (
     <svg
       className='feather feather-unlock'
@@ -19,6 +19,6 @@ const Unlock = props => {
       <path d='M7 11V7a5 5 0 0 1 9.9-1' />
     </svg>
   );
-};
+}
 
 export default Unlock;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Truck = props => {
+function Truck(props) {
   return (
     <svg
       className='feather feather-truck'
@@ -21,6 +21,6 @@ const Truck = props => {
       <circle cx='18.5' cy='18.5' r='2.5' />
     </svg>
   );
-};
+}
 
 export default Truck;

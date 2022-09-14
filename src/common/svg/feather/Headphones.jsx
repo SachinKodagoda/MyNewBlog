@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Headphones = props => {
+function Headphones(props) {
   return (
     <svg
       className='feather feather-headphones'
@@ -19,6 +19,6 @@ const Headphones = props => {
       <path d='M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z' />
     </svg>
   );
-};
+}
 
 export default Headphones;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Pocket = props => {
+function Pocket(props) {
   return (
     <svg
       className='feather feather-pocket'
@@ -19,6 +19,6 @@ const Pocket = props => {
       <polyline points='8 10 12 14 16 10' />
     </svg>
   );
-};
+}
 
 export default Pocket;

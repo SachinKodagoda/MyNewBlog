@@ -1,6 +1,6 @@
 import React from 'react';
 
-const XSquare = props => {
+function XSquare(props) {
   return (
     <svg
       className='feather feather-x-square'
@@ -20,6 +20,6 @@ const XSquare = props => {
       <line x1='15' x2='9' y1='9' y2='15' />
     </svg>
   );
-};
+}
 
 export default XSquare;

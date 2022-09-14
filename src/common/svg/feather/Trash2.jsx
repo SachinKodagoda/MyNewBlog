@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Trash2 = props => {
+function Trash2(props) {
   return (
     <svg
       className='feather feather-trash-2'
@@ -21,6 +21,6 @@ const Trash2 = props => {
       <line x1='14' x2='14' y1='11' y2='17' />
     </svg>
   );
-};
+}
 
 export default Trash2;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SkipBack = props => {
+function SkipBack(props) {
   return (
     <svg
       className='feather feather-skip-back'
@@ -19,6 +19,6 @@ const SkipBack = props => {
       <line x1='5' x2='5' y1='19' y2='5' />
     </svg>
   );
-};
+}
 
 export default SkipBack;

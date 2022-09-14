@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Download = props => {
+function Download(props) {
   return (
     <svg
       className='feather feather-download'
@@ -20,6 +20,6 @@ const Download = props => {
       <line x1='12' x2='12' y1='15' y2='3' />
     </svg>
   );
-};
+}
 
 export default Download;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VolumeX = props => {
+function VolumeX(props) {
   return (
     <svg
       className='feather feather-volume-x'
@@ -20,6 +20,6 @@ const VolumeX = props => {
       <line x1='17' x2='23' y1='9' y2='15' />
     </svg>
   );
-};
+}
 
 export default VolumeX;

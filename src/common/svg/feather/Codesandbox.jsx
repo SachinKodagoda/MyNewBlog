@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Codesandbox = props => {
+function Codesandbox(props) {
   return (
     <svg
       className='feather feather-codesandbox'
@@ -23,6 +23,6 @@ const Codesandbox = props => {
       <line x1='12' x2='12' y1='22.08' y2='12' />
     </svg>
   );
-};
+}
 
 export default Codesandbox;

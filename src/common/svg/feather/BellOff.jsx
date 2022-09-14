@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BellOff = props => {
+function BellOff(props) {
   return (
     <svg
       className='feather feather-bell-off'
@@ -22,6 +22,6 @@ const BellOff = props => {
       <line x1='1' x2='23' y1='1' y2='23' />
     </svg>
   );
-};
+}
 
 export default BellOff;

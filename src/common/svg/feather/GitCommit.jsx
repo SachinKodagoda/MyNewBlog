@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GitCommit = props => {
+function GitCommit(props) {
   return (
     <svg
       className='feather feather-git-commit'
@@ -20,6 +20,6 @@ const GitCommit = props => {
       <line x1='17.01' x2='22.96' y1='12' y2='12' />
     </svg>
   );
-};
+}
 
 export default GitCommit;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MoreHorizontal = props => {
+function MoreHorizontal(props) {
   return (
     <svg
       className='feather feather-more-horizontal'
@@ -20,6 +20,6 @@ const MoreHorizontal = props => {
       <circle cx='5' cy='12' r='1' />
     </svg>
   );
-};
+}
 
 export default MoreHorizontal;

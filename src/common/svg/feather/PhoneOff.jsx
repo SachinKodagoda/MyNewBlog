@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PhoneOff = props => {
+function PhoneOff(props) {
   return (
     <svg
       className='feather feather-phone-off'
@@ -19,6 +19,6 @@ const PhoneOff = props => {
       <line x1='23' x2='1' y1='1' y2='23' />
     </svg>
   );
-};
+}
 
 export default PhoneOff;

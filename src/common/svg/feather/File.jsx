@@ -1,6 +1,6 @@
 import React from 'react';
 
-const File = props => {
+function File(props) {
   return (
     <svg
       className='feather feather-file'
@@ -19,6 +19,6 @@ const File = props => {
       <polyline points='13 2 13 9 20 9' />
     </svg>
   );
-};
+}
 
 export default File;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Volume = props => {
+function Volume(props) {
   return (
     <svg
       className='feather feather-volume'
@@ -18,6 +18,6 @@ const Volume = props => {
       <polygon points='11 5 6 9 2 9 2 15 6 15 11 19 11 5' />
     </svg>
   );
-};
+}
 
 export default Volume;

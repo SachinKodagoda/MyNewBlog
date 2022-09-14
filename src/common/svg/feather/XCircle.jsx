@@ -1,6 +1,6 @@
 import React from 'react';
 
-const XCircle = props => {
+function XCircle(props) {
   return (
     <svg
       className='feather feather-x-circle'
@@ -20,6 +20,6 @@ const XCircle = props => {
       <line x1='9' x2='15' y1='9' y2='15' />
     </svg>
   );
-};
+}
 
 export default XCircle;

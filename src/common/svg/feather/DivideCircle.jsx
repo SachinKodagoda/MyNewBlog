@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DivideCircle = props => {
+function DivideCircle(props) {
   return (
     <svg
       className='feather feather-divide-circle'
@@ -21,6 +21,6 @@ const DivideCircle = props => {
       <circle cx='12' cy='12' r='10' />
     </svg>
   );
-};
+}
 
 export default DivideCircle;

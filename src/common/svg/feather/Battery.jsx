@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Battery = props => {
+function Battery(props) {
   return (
     <svg
       className='feather feather-battery'
@@ -19,6 +19,6 @@ const Battery = props => {
       <line x1='23' x2='23' y1='13' y2='11' />
     </svg>
   );
-};
+}
 
 export default Battery;

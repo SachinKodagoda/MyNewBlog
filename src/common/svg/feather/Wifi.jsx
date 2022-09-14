@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Wifi = props => {
+function Wifi(props) {
   return (
     <svg
       className='feather feather-wifi'
@@ -21,6 +21,6 @@ const Wifi = props => {
       <line x1='12' x2='12.01' y1='20' y2='20' />
     </svg>
   );
-};
+}
 
 export default Wifi;

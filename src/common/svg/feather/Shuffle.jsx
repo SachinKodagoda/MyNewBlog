@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Shuffle = props => {
+function Shuffle(props) {
   return (
     <svg
       className='feather feather-shuffle'
@@ -22,6 +22,6 @@ const Shuffle = props => {
       <line x1='4' x2='9' y1='4' y2='9' />
     </svg>
   );
-};
+}
 
 export default Shuffle;

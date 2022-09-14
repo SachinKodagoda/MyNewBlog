@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StopCircle = props => {
+function StopCircle(props) {
   return (
     <svg
       className='feather feather-stop-circle'
@@ -19,6 +19,6 @@ const StopCircle = props => {
       <rect height='6' width='6' x='9' y='9' />
     </svg>
   );
-};
+}
 
 export default StopCircle;

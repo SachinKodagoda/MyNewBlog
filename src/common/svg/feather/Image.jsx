@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Image = props => {
+function Image(props) {
   return (
     <svg
       className='feather feather-image'
@@ -20,6 +20,6 @@ const Image = props => {
       <polyline points='21 15 16 10 5 21' />
     </svg>
   );
-};
+}
 
 export default Image;

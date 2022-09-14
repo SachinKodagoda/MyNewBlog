@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Rss = props => {
+function Rss(props) {
   return (
     <svg
       className='feather feather-rss'
@@ -20,6 +20,6 @@ const Rss = props => {
       <circle cx='5' cy='19' r='1' />
     </svg>
   );
-};
+}
 
 export default Rss;

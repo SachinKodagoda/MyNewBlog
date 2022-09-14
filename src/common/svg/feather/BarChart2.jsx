@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BarChart2 = props => {
+function BarChart2(props) {
   return (
     <svg
       className='feather feather-bar-chart-2'
@@ -20,6 +20,6 @@ const BarChart2 = props => {
       <line x1='6' x2='6' y1='20' y2='14' />
     </svg>
   );
-};
+}
 
 export default BarChart2;

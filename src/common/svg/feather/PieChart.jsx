@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PieChart = props => {
+function PieChart(props) {
   return (
     <svg
       className='feather feather-pie-chart'
@@ -19,6 +19,6 @@ const PieChart = props => {
       <path d='M22 12A10 10 0 0 0 12 2v10z' />
     </svg>
   );
-};
+}
 
 export default PieChart;

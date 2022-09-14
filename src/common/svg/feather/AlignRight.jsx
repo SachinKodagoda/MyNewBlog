@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlignRight = props => {
+function AlignRight(props) {
   return (
     <svg
       className='feather feather-align-right'
@@ -21,6 +21,6 @@ const AlignRight = props => {
       <line x1='21' x2='7' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default AlignRight;

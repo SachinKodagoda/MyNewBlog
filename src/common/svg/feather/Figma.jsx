@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Figma = props => {
+function Figma(props) {
   return (
     <svg
       className='feather feather-figma'
@@ -22,6 +22,6 @@ const Figma = props => {
       <path d='M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z' />
     </svg>
   );
-};
+}
 
 export default Figma;

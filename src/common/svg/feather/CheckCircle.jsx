@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CheckCircle = props => {
+function CheckCircle(props) {
   return (
     <svg
       className='feather feather-check-circle'
@@ -19,6 +19,6 @@ const CheckCircle = props => {
       <polyline points='22 4 12 14.01 9 11.01' />
     </svg>
   );
-};
+}
 
 export default CheckCircle;

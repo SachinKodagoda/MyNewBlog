@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navigation2 = props => {
+function Navigation2(props) {
   return (
     <svg
       className='feather feather-navigation-2'
@@ -18,6 +18,6 @@ const Navigation2 = props => {
       <polygon points='12 2 19 21 12 17 5 21 12 2' />
     </svg>
   );
-};
+}
 
 export default Navigation2;

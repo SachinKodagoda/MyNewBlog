@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WifiOff = props => {
+function WifiOff(props) {
   return (
     <svg
       className='feather feather-wifi-off'
@@ -24,6 +24,6 @@ const WifiOff = props => {
       <path d='M8.53 16.11a6 6 0 0 1 6.95 0' />
     </svg>
   );
-};
+}
 
 export default WifiOff;

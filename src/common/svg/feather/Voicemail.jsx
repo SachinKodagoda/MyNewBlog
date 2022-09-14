@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Voicemail = props => {
+function Voicemail(props) {
   return (
     <svg
       className='feather feather-voicemail'
@@ -20,6 +20,6 @@ const Voicemail = props => {
       <line x1='5.5' x2='18.5' y1='16' y2='16' />
     </svg>
   );
-};
+}
 
 export default Voicemail;

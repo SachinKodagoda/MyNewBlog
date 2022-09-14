@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Flag = props => {
+function Flag(props) {
   return (
     <svg
       className='feather feather-flag'
@@ -19,6 +19,6 @@ const Flag = props => {
       <line x1='4' x2='4' y1='22' y2='15' />
     </svg>
   );
-};
+}
 
 export default Flag;

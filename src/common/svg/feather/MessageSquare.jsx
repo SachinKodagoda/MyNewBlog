@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MessageSquare = props => {
+function MessageSquare(props) {
   return (
     <svg
       className='feather feather-message-square'
@@ -18,6 +18,6 @@ const MessageSquare = props => {
       <path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z' />
     </svg>
   );
-};
+}
 
 export default MessageSquare;

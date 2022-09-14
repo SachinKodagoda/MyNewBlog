@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlertTriangle = props => {
+function AlertTriangle(props) {
   return (
     <svg
       className='feather feather-alert-triangle'
@@ -20,6 +20,6 @@ const AlertTriangle = props => {
       <line x1='12' x2='12.01' y1='17' y2='17' />
     </svg>
   );
-};
+}
 
 export default AlertTriangle;

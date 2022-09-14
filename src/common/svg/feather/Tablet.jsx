@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tablet = props => {
+function Tablet(props) {
   return (
     <svg
       className='feather feather-tablet'
@@ -19,6 +19,6 @@ const Tablet = props => {
       <line x1='12' x2='12.01' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default Tablet;

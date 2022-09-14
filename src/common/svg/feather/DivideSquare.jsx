@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DivideSquare = props => {
+function DivideSquare(props) {
   return (
     <svg
       className='feather feather-divide-square'
@@ -21,6 +21,6 @@ const DivideSquare = props => {
       <line x1='12' x2='12' y1='8' y2='8' />
     </svg>
   );
-};
+}
 
 export default DivideSquare;

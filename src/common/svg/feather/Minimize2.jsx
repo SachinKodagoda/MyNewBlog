@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Minimize2 = props => {
+function Minimize2(props) {
   return (
     <svg
       className='feather feather-minimize-2'
@@ -21,6 +21,6 @@ const Minimize2 = props => {
       <line x1='3' x2='10' y1='21' y2='14' />
     </svg>
   );
-};
+}
 
 export default Minimize2;

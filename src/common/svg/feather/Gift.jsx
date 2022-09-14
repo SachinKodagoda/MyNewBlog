@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Gift = props => {
+function Gift(props) {
   return (
     <svg
       className='feather feather-gift'
@@ -22,6 +22,6 @@ const Gift = props => {
       <path d='M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z' />
     </svg>
   );
-};
+}
 
 export default Gift;

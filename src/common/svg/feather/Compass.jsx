@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Compass = props => {
+function Compass(props) {
   return (
     <svg
       className='feather feather-compass'
@@ -19,6 +19,6 @@ const Compass = props => {
       <polygon points='16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76' />
     </svg>
   );
-};
+}
 
 export default Compass;

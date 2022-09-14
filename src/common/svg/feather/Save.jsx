@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Save = props => {
+function Save(props) {
   return (
     <svg
       className='feather feather-save'
@@ -20,6 +20,6 @@ const Save = props => {
       <polyline points='7 3 7 8 15 8' />
     </svg>
   );
-};
+}
 
 export default Save;

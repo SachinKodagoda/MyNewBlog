@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Server = props => {
+function Server(props) {
   return (
     <svg
       className='feather feather-server'
@@ -21,6 +21,6 @@ const Server = props => {
       <line x1='6' x2='6.01' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default Server;

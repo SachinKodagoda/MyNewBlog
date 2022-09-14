@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = props => {
+function Search(props) {
   return (
     <svg
       className='feather feather-search'
@@ -19,6 +19,6 @@ const Search = props => {
       <line x1='21' x2='16.65' y1='21' y2='16.65' />
     </svg>
   );
-};
+}
 
 export default Search;

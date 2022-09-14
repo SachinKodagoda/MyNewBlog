@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Power = props => {
+function Power(props) {
   return (
     <svg
       className='feather feather-power'
@@ -19,6 +19,6 @@ const Power = props => {
       <line x1='12' x2='12' y1='2' y2='12' />
     </svg>
   );
-};
+}
 
 export default Power;

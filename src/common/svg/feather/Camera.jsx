@@ -1,4 +1,4 @@
-const Camera = props => {
+function Camera(props) {
   return (
     <svg
       className='feather feather-camera'
@@ -17,6 +17,6 @@ const Camera = props => {
       <circle cx='12' cy='13' r='4' />
     </svg>
   );
-};
+}
 
 export default Camera;

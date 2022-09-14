@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ZapOff = props => {
+function ZapOff(props) {
   return (
     <svg
       className='feather feather-zap-off'
@@ -21,6 +21,6 @@ const ZapOff = props => {
       <line x1='1' x2='23' y1='1' y2='23' />
     </svg>
   );
-};
+}
 
 export default ZapOff;

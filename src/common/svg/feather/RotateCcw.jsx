@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RotateCcw = props => {
+function RotateCcw(props) {
   return (
     <svg
       className='feather feather-rotate-ccw'
@@ -19,6 +19,6 @@ const RotateCcw = props => {
       <path d='M3.51 15a9 9 0 1 0 2.13-9.36L1 10' />
     </svg>
   );
-};
+}
 
 export default RotateCcw;

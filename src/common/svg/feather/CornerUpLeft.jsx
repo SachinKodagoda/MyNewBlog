@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CornerUpLeft = props => {
+function CornerUpLeft(props) {
   return (
     <svg
       className='feather feather-corner-up-left'
@@ -19,6 +19,6 @@ const CornerUpLeft = props => {
       <path d='M20 20v-7a4 4 0 0 0-4-4H4' />
     </svg>
   );
-};
+}
 
 export default CornerUpLeft;

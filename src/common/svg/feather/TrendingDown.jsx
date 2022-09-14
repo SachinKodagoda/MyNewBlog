@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TrendingDown = props => {
+function TrendingDown(props) {
   return (
     <svg
       className='feather feather-trending-down'
@@ -19,6 +19,6 @@ const TrendingDown = props => {
       <polyline points='17 18 23 18 23 12' />
     </svg>
   );
-};
+}
 
 export default TrendingDown;

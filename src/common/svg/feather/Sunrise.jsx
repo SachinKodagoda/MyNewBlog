@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sunrise = props => {
+function Sunrise(props) {
   return (
     <svg
       className='feather feather-sunrise'
@@ -25,6 +25,6 @@ const Sunrise = props => {
       <polyline points='8 6 12 2 16 6' />
     </svg>
   );
-};
+}
 
 export default Sunrise;

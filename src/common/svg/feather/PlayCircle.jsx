@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlayCircle = props => {
+function PlayCircle(props) {
   return (
     <svg
       className='feather feather-play-circle'
@@ -19,6 +19,6 @@ const PlayCircle = props => {
       <polygon points='10 8 16 12 10 16 10 8' />
     </svg>
   );
-};
+}
 
 export default PlayCircle;

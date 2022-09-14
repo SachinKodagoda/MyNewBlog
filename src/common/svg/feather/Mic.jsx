@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Mic = props => {
+function Mic(props) {
   return (
     <svg
       className='feather feather-mic'
@@ -21,6 +21,6 @@ const Mic = props => {
       <line x1='8' x2='16' y1='23' y2='23' />
     </svg>
   );
-};
+}
 
 export default Mic;

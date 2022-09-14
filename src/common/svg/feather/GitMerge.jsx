@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GitMerge = props => {
+function GitMerge(props) {
   return (
     <svg
       className='feather feather-git-merge'
@@ -20,6 +20,6 @@ const GitMerge = props => {
       <path d='M6 21V9a9 9 0 0 0 9 9' />
     </svg>
   );
-};
+}
 
 export default GitMerge;

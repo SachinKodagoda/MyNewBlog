@@ -1,4 +1,4 @@
-const FileText = props => {
+function FileText(props) {
   return (
     <svg
       className='feather feather-file-text'
@@ -20,6 +20,6 @@ const FileText = props => {
       <line x1='16' x2='8' y1='17' y2='17' />
     </svg>
   );
-};
+}
 
 export default FileText;

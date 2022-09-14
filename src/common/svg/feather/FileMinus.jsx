@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FileMinus = props => {
+function FileMinus(props) {
   return (
     <svg
       className='feather feather-file-minus'
@@ -20,6 +20,6 @@ const FileMinus = props => {
       <line x1='9' x2='15' y1='15' y2='15' />
     </svg>
   );
-};
+}
 
 export default FileMinus;

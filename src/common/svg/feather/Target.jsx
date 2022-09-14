@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Target = props => {
+function Target(props) {
   return (
     <svg
       className='feather feather-target'
@@ -20,6 +20,6 @@ const Target = props => {
       <circle cx='12' cy='12' r='2' />
     </svg>
   );
-};
+}
 
 export default Target;

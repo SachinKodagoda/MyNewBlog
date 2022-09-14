@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Type = props => {
+function Type(props) {
   return (
     <svg
       className='feather feather-type'
@@ -20,6 +20,6 @@ const Type = props => {
       <line x1='12' x2='12' y1='4' y2='20' />
     </svg>
   );
-};
+}
 
 export default Type;

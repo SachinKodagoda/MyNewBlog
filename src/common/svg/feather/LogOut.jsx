@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogOut = props => {
+function LogOut(props) {
   return (
     <svg
       className='feather feather-log-out'
@@ -20,6 +20,6 @@ const LogOut = props => {
       <line x1='21' x2='9' y1='12' y2='12' />
     </svg>
   );
-};
+}
 
 export default LogOut;

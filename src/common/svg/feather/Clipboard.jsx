@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Clipboard = props => {
+function Clipboard(props) {
   return (
     <svg
       className='feather feather-clipboard'
@@ -19,6 +19,6 @@ const Clipboard = props => {
       <rect height='4' width='8' rx='1' ry='1' x='8' y='2' />
     </svg>
   );
-};
+}
 
 export default Clipboard;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PenTool = props => {
+function PenTool(props) {
   return (
     <svg
       className='feather feather-pen-tool'
@@ -21,6 +21,6 @@ const PenTool = props => {
       <circle cx='11' cy='11' r='2' />
     </svg>
   );
-};
+}
 
 export default PenTool;

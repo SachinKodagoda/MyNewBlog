@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Smartphone = props => {
+function Smartphone(props) {
   return (
     <svg
       className='feather feather-smartphone'
@@ -19,6 +19,6 @@ const Smartphone = props => {
       <line x1='12' x2='12.01' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default Smartphone;

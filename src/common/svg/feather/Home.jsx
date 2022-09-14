@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = props => {
+function Home(props) {
   return (
     <svg
       className='feather feather-home'
@@ -19,6 +19,6 @@ const Home = props => {
       <polyline points='9 22 9 12 15 12 15 22' />
     </svg>
   );
-};
+}
 
 export default Home;

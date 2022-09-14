@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cpu = props => {
+function Cpu(props) {
   return (
     <svg
       className='feather feather-cpu'
@@ -27,6 +27,6 @@ const Cpu = props => {
       <line x1='1' x2='4' y1='14' y2='14' />
     </svg>
   );
-};
+}
 
 export default Cpu;

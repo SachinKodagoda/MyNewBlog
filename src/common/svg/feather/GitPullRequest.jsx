@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GitPullRequest = props => {
+function GitPullRequest(props) {
   return (
     <svg
       className='feather feather-git-pull-request'
@@ -21,6 +21,6 @@ const GitPullRequest = props => {
       <line x1='6' x2='6' y1='9' y2='21' />
     </svg>
   );
-};
+}
 
 export default GitPullRequest;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Briefcase = props => {
+function Briefcase(props) {
   return (
     <svg
       className='feather feather-briefcase'
@@ -19,6 +19,6 @@ const Briefcase = props => {
       <path d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16' />
     </svg>
   );
-};
+}
 
 export default Briefcase;

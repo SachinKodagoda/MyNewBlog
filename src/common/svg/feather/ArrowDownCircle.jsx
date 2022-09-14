@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArrowDownCircle = props => {
+function ArrowDownCircle(props) {
   return (
     <svg
       className='feather feather-arrow-down-circle'
@@ -20,6 +20,6 @@ const ArrowDownCircle = props => {
       <line x1='12' x2='12' y1='8' y2='16' />
     </svg>
   );
-};
+}
 
 export default ArrowDownCircle;

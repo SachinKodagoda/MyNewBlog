@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VideoOff = props => {
+function VideoOff(props) {
   return (
     <svg
       className='feather feather-video-off'
@@ -19,6 +19,6 @@ const VideoOff = props => {
       <line x1='1' x2='23' y1='1' y2='23' />
     </svg>
   );
-};
+}
 
 export default VideoOff;

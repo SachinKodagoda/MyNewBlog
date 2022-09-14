@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tv = props => {
+function Tv(props) {
   return (
     <svg
       className='feather feather-tv'
@@ -19,6 +19,6 @@ const Tv = props => {
       <polyline points='17 2 12 7 7 2' />
     </svg>
   );
-};
+}
 
 export default Tv;

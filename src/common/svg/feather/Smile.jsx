@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Smile = props => {
+function Smile(props) {
   return (
     <svg
       className='feather feather-smile'
@@ -21,6 +21,6 @@ const Smile = props => {
       <line x1='15' x2='15.01' y1='9' y2='9' />
     </svg>
   );
-};
+}
 
 export default Smile;

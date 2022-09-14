@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Bookmark = props => {
+function Bookmark(props) {
   return (
     <svg
       className='feather feather-bookmark'
@@ -18,6 +18,6 @@ const Bookmark = props => {
       <path d='M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z' />
     </svg>
   );
-};
+}
 
 export default Bookmark;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Grid = props => {
+function Grid(props) {
   return (
     <svg
       className='feather feather-grid'
@@ -21,6 +21,6 @@ const Grid = props => {
       <rect height='7' width='7' x='3' y='14' />
     </svg>
   );
-};
+}
 
 export default Grid;

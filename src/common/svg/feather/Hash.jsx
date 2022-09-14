@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hash = props => {
+function Hash(props) {
   return (
     <svg
       className='feather feather-hash'
@@ -21,6 +21,6 @@ const Hash = props => {
       <line x1='16' x2='14' y1='3' y2='21' />
     </svg>
   );
-};
+}
 
 export default Hash;

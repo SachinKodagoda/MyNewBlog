@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Disc = props => {
+function Disc(props) {
   return (
     <svg
       className='feather feather-disc'
@@ -19,6 +19,6 @@ const Disc = props => {
       <circle cx='12' cy='12' r='3' />
     </svg>
   );
-};
+}
 
 export default Disc;

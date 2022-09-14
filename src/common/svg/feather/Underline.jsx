@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Underline = props => {
+function Underline(props) {
   return (
     <svg
       className='feather feather-underline'
@@ -19,6 +19,6 @@ const Underline = props => {
       <line x1='4' x2='20' y1='21' y2='21' />
     </svg>
   );
-};
+}
 
 export default Underline;

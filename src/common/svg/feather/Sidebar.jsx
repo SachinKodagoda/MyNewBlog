@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sidebar = props => {
+function Sidebar(props) {
   return (
     <svg
       className='feather feather-sidebar'
@@ -19,6 +19,6 @@ const Sidebar = props => {
       <line x1='9' x2='9' y1='3' y2='21' />
     </svg>
   );
-};
+}
 
 export default Sidebar;

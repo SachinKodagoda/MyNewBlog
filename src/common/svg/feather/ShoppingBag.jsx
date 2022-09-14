@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShoppingBag = props => {
+function ShoppingBag(props) {
   return (
     <svg
       className='feather feather-shopping-bag'
@@ -20,6 +20,6 @@ const ShoppingBag = props => {
       <line x1='3' x2='21' y1='6' y2='6' />
     </svg>
   );
-};
+}
 
 export default ShoppingBag;

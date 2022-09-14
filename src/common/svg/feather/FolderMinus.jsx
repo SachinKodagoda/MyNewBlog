@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FolderMinus = props => {
+function FolderMinus(props) {
   return (
     <svg
       className='feather feather-folder-minus'
@@ -19,6 +19,6 @@ const FolderMinus = props => {
       <line x1='9' x2='15' y1='14' y2='14' />
     </svg>
   );
-};
+}
 
 export default FolderMinus;

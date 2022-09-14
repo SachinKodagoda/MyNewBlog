@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlignLeft = props => {
+function AlignLeft(props) {
   return (
     <svg
       className='feather feather-align-left'
@@ -21,6 +21,6 @@ const AlignLeft = props => {
       <line x1='17' x2='3' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default AlignLeft;

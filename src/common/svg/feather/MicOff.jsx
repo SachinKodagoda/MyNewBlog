@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MicOff = props => {
+function MicOff(props) {
   return (
     <svg
       className='feather feather-mic-off'
@@ -22,6 +22,6 @@ const MicOff = props => {
       <path d='M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23' />
     </svg>
   );
-};
+}
 
 export default MicOff;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Rewind = props => {
+function Rewind(props) {
   return (
     <svg
       className='feather feather-rewind'
@@ -19,6 +19,6 @@ const Rewind = props => {
       <polygon points='22 19 13 12 22 5 22 19' />
     </svg>
   );
-};
+}
 
 export default Rewind;

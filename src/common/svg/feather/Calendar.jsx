@@ -1,4 +1,4 @@
-const Calendar = props => {
+function Calendar(props) {
   return (
     <svg
       className='feather feather-calendar'
@@ -19,6 +19,6 @@ const Calendar = props => {
       <line x1='3' x2='21' y1='10' y2='10' />
     </svg>
   );
-};
+}
 
 export default Calendar;

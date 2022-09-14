@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Share = props => {
+function Share(props) {
   return (
     <svg
       className='feather feather-share'
@@ -20,6 +20,6 @@ const Share = props => {
       <line x1='12' x2='12' y1='2' y2='15' />
     </svg>
   );
-};
+}
 
 export default Share;

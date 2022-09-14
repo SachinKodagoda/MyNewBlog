@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserPlus = props => {
+function UserPlus(props) {
   return (
     <svg
       className='feather feather-user-plus'
@@ -21,6 +21,6 @@ const UserPlus = props => {
       <line x1='23' x2='17' y1='11' y2='11' />
     </svg>
   );
-};
+}
 
 export default UserPlus;

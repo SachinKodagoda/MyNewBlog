@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slack = props => {
+function Slack(props) {
   return (
     <svg
       className='feather feather-slack'
@@ -25,6 +25,6 @@ const Slack = props => {
       <path d='M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z' />
     </svg>
   );
-};
+}
 
 export default Slack;

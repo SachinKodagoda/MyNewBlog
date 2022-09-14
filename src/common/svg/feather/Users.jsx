@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Users = props => {
+function Users(props) {
   return (
     <svg
       className='feather feather-users'
@@ -21,6 +21,6 @@ const Users = props => {
       <circle cx='9' cy='7' r='4' />
     </svg>
   );
-};
+}
 
 export default Users;

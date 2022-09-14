@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExternalLink = props => {
+function ExternalLink(props) {
   return (
     <svg
       className='feather feather-external-link'
@@ -20,6 +20,6 @@ const ExternalLink = props => {
       <line x1='10' x2='21' y1='14' y2='3' />
     </svg>
   );
-};
+}
 
 export default ExternalLink;

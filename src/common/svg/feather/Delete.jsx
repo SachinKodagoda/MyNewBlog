@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Delete = props => {
+function Delete(props) {
   return (
     <svg
       className='feather feather-delete'
@@ -20,6 +20,6 @@ const Delete = props => {
       <line x1='12' x2='18' y1='9' y2='15' />
     </svg>
   );
-};
+}
 
 export default Delete;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CloudOff = props => {
+function CloudOff(props) {
   return (
     <svg
       className='feather feather-cloud-off'
@@ -19,6 +19,6 @@ const CloudOff = props => {
       <line x1='1' x2='23' y1='1' y2='23' />
     </svg>
   );
-};
+}
 
 export default CloudOff;

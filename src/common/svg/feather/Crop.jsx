@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Crop = props => {
+function Crop(props) {
   return (
     <svg
       className='feather feather-crop'
@@ -19,6 +19,6 @@ const Crop = props => {
       <path d='M1 6.13L16 6a2 2 0 0 1 2 2v15' />
     </svg>
   );
-};
+}
 
 export default Crop;

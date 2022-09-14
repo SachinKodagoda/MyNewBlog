@@ -1,4 +1,4 @@
-const Eye = props => {
+function Eye(props) {
   return (
     <svg
       className='feather feather-eye'
@@ -17,6 +17,6 @@ const Eye = props => {
       <circle cx='12' cy='12' r='3' />
     </svg>
   );
-};
+}
 
 export default Eye;

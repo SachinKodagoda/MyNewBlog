@@ -1,6 +1,6 @@
 import React from 'react';
 
-const XOctagon = props => {
+function XOctagon(props) {
   return (
     <svg
       className='feather feather-x-octagon'
@@ -20,6 +20,6 @@ const XOctagon = props => {
       <line x1='9' x2='15' y1='9' y2='15' />
     </svg>
   );
-};
+}
 
 export default XOctagon;

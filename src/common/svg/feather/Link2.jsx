@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Link2 = props => {
+function Link2(props) {
   return (
     <svg
       className='feather feather-link-2'
@@ -19,6 +19,6 @@ const Link2 = props => {
       <line x1='8' x2='16' y1='12' y2='12' />
     </svg>
   );
-};
+}
 
 export default Link2;

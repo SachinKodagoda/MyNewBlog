@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Volume1 = props => {
+function Volume1(props) {
   return (
     <svg
       className='feather feather-volume-1'
@@ -19,6 +19,6 @@ const Volume1 = props => {
       <path d='M15.54 8.46a5 5 0 0 1 0 7.07' />
     </svg>
   );
-};
+}
 
 export default Volume1;

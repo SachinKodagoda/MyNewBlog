@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Map = props => {
+function Map(props) {
   return (
     <svg
       className='feather feather-map'
@@ -20,6 +20,6 @@ const Map = props => {
       <line x1='16' x2='16' y1='6' y2='22' />
     </svg>
   );
-};
+}
 
 export default Map;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Menu = props => {
+function Menu(props) {
   return (
     <svg
       className='feather feather-menu'
@@ -20,6 +20,6 @@ const Menu = props => {
       <line x1='3' x2='21' y1='18' y2='18' />
     </svg>
   );
-};
+}
 
 export default Menu;

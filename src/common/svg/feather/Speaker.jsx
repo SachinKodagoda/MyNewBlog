@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Speaker = props => {
+function Speaker(props) {
   return (
     <svg
       className='feather feather-speaker'
@@ -20,6 +20,6 @@ const Speaker = props => {
       <line x1='12' x2='12.01' y1='6' y2='6' />
     </svg>
   );
-};
+}
 
 export default Speaker;

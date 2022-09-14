@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Trello = props => {
+function Trello(props) {
   return (
     <svg
       className='feather feather-trello'
@@ -20,6 +20,6 @@ const Trello = props => {
       <rect height='5' width='3' x='14' y='7' />
     </svg>
   );
-};
+}
 
 export default Trello;

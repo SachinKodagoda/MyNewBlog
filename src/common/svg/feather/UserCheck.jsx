@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserCheck = props => {
+function UserCheck(props) {
   return (
     <svg
       className='feather feather-user-check'
@@ -20,6 +20,6 @@ const UserCheck = props => {
       <polyline points='17 11 19 13 23 9' />
     </svg>
   );
-};
+}
 
 export default UserCheck;

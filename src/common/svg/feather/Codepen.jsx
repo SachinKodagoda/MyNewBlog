@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Codepen = props => {
+function Codepen(props) {
   return (
     <svg
       className='feather feather-codepen'
@@ -22,6 +22,6 @@ const Codepen = props => {
       <polyline points='2 15.5 12 8.5 22 15.5' />
     </svg>
   );
-};
+}
 
 export default Codepen;

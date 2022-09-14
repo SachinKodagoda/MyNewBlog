@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Repeat = props => {
+function Repeat(props) {
   return (
     <svg
       className='feather feather-repeat'
@@ -21,6 +21,6 @@ const Repeat = props => {
       <path d='M21 13v2a4 4 0 0 1-4 4H3' />
     </svg>
   );
-};
+}
 
 export default Repeat;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Coffee = props => {
+function Coffee(props) {
   return (
     <svg
       className='feather feather-coffee'
@@ -22,6 +22,6 @@ const Coffee = props => {
       <line x1='14' x2='14' y1='1' y2='4' />
     </svg>
   );
-};
+}
 
 export default Coffee;

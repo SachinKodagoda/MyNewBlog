@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LifeBuoy = props => {
+function LifeBuoy(props) {
   return (
     <svg
       className='feather feather-life-buoy'
@@ -24,6 +24,6 @@ const LifeBuoy = props => {
       <line x1='4.93' x2='9.17' y1='19.07' y2='14.83' />
     </svg>
   );
-};
+}
 
 export default LifeBuoy;

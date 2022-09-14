@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sliders = props => {
+function Sliders(props) {
   return (
     <svg
       className='feather feather-sliders'
@@ -26,6 +26,6 @@ const Sliders = props => {
       <line x1='17' x2='23' y1='16' y2='16' />
     </svg>
   );
-};
+}
 
 export default Sliders;

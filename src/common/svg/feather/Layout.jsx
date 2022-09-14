@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Layout = props => {
+function Layout(props) {
   return (
     <svg
       className='feather feather-layout'
@@ -20,6 +20,6 @@ const Layout = props => {
       <line x1='9' x2='9' y1='21' y2='9' />
     </svg>
   );
-};
+}
 
 export default Layout;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Database = props => {
+function Database(props) {
   return (
     <svg
       className='feather feather-database'
@@ -20,6 +20,6 @@ const Database = props => {
       <path d='M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5' />
     </svg>
   );
-};
+}
 
 export default Database;

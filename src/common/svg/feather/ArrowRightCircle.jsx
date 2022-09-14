@@ -1,4 +1,4 @@
-const ArrowRightCircle = props => {
+function ArrowRightCircle(props) {
   return (
     <svg
       className='feather feather-arrow-right-circle'
@@ -18,6 +18,6 @@ const ArrowRightCircle = props => {
       <line x1='8' x2='16' y1='12' y2='12' />
     </svg>
   );
-};
+}
 
 export default ArrowRightCircle;

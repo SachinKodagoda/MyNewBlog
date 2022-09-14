@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Monitor = props => {
+function Monitor(props) {
   return (
     <svg
       className='feather feather-monitor'
@@ -20,6 +20,6 @@ const Monitor = props => {
       <line x1='12' x2='12' y1='17' y2='21' />
     </svg>
   );
-};
+}
 
 export default Monitor;

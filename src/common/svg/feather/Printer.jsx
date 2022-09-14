@@ -1,4 +1,4 @@
-const Printer = props => {
+function Printer(props) {
   return (
     <svg
       className='feather feather-printer'
@@ -18,6 +18,6 @@ const Printer = props => {
       <rect height='8' width='12' x='6' y='14' />
     </svg>
   );
-};
+}
 
 export default Printer;

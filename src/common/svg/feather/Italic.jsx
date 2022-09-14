@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Italic = props => {
+function Italic(props) {
   return (
     <svg
       className='feather feather-italic'
@@ -20,6 +20,6 @@ const Italic = props => {
       <line x1='15' x2='9' y1='4' y2='20' />
     </svg>
   );
-};
+}
 
 export default Italic;

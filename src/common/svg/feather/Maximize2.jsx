@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Maximize2 = props => {
+function Maximize2(props) {
   return (
     <svg
       className='feather feather-maximize-2'
@@ -21,6 +21,6 @@ const Maximize2 = props => {
       <line x1='3' x2='10' y1='21' y2='14' />
     </svg>
   );
-};
+}
 
 export default Maximize2;

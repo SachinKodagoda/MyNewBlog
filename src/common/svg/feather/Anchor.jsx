@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Anchor = props => {
+function Anchor(props) {
   return (
     <svg
       className='feather feather-anchor'
@@ -20,6 +20,6 @@ const Anchor = props => {
       <path d='M5 12H2a10 10 0 0 0 20 0h-3' />
     </svg>
   );
-};
+}
 
 export default Anchor;

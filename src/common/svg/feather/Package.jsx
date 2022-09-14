@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Package = props => {
+function Package(props) {
   return (
     <svg
       className='feather feather-package'
@@ -21,6 +21,6 @@ const Package = props => {
       <polyline points='3.27 6.96 12 12.01 20.73 6.96' />
     </svg>
   );
-};
+}
 
 export default Package;

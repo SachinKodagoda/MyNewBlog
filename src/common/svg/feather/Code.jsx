@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Code = props => {
+function Code(props) {
   return (
     <svg
       className='feather feather-code'
@@ -19,6 +19,6 @@ const Code = props => {
       <polyline points='8 6 2 12 8 18' />
     </svg>
   );
-};
+}
 
 export default Code;

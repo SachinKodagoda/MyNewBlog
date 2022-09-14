@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Move = props => {
+function Move(props) {
   return (
     <svg
       className='feather feather-move'
@@ -23,6 +23,6 @@ const Move = props => {
       <line x1='12' x2='12' y1='2' y2='22' />
     </svg>
   );
-};
+}
 
 export default Move;
