@@ -1,21 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const MinusCircle = (props) => {
+const MinusCircle = props => {
   return (
     <svg
-      className="feather feather-minus-circle"
-      height="24"
-      width="24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg" {...props}
+      className='feather feather-minus-circle'
+      height='24'
+      width='24'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='2'
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
-      <circle cx="12" cy="12" r="10" />
-      <line x1="8" x2="16" y1="12" y2="12" />
+      <circle cx='12' cy='12' r='10' />
+      <line x1='8' x2='16' y1='12' y2='12' />
     </svg>
   );
 };
