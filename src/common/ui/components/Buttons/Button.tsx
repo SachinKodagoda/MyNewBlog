@@ -1,6 +1,5 @@
 import ArrowRight from '@svg/feather/ArrowRight';
 import { colors } from '@theme/baseTheme';
-import React from 'react';
 import styled from 'styled-components';
 
 type TArrow = {
@@ -39,7 +38,7 @@ function Button({
           background={background}
           color={color}
         >
-          {text}&nbsp;{arrow && <ArrowRight className='arrowRight' />}
+          {text}&nbsp;{arrow && <ArrowRight />}
         </NormalBtn>
       )}
       {type === 'submit' && (
@@ -75,7 +74,7 @@ const NormalBtn = styled.button<TBtn>`
   cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'pointer')};
   font-weight: 500;
   text-transform: uppercase;
-  .arrowRight {
+  .feather-arrow-right {
     width: ${p => p?.arrow?.size || 24}px;
     height: ${p => p?.arrow?.size || 24}px;
   }

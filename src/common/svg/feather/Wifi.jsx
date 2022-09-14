@@ -13,7 +13,6 @@ function Wifi() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <path d='M5 12.55a11 11 0 0 1 14.08 0' />
       <path d='M1.42 9a16 16 0 0 1 21.16 0' />

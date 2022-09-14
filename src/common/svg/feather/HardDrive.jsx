@@ -13,7 +13,6 @@ function HardDrive() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <line x1='22' x2='2' y1='12' y2='12' />
       <line x1='6' x2='6.01' y1='16' y2='16' />

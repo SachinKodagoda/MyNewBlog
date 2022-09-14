@@ -13,7 +13,6 @@ function PhoneForwarded() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <polyline points='19 1 23 5 19 9' />
       <line x1='15' x2='23' y1='5' y2='5' />

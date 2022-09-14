@@ -13,7 +13,6 @@ function Trello() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <rect height='18' width='18' rx='2' ry='2' x='3' y='3' />
       <rect height='9' width='3' x='7' y='7' />

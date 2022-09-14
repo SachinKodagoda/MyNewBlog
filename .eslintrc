@@ -11,6 +11,7 @@
     "no-console": "warn",
     "react/react-in-jsx-scope": "off", // next will add React
     "react/jsx-filename-extension": [1, { "extensions": [".tsx",".jsx"] }],
-    "no-use-before-define": "off" // Because of Hoisting
+    "no-use-before-define": "off", // Because of Hoisting
+    "react/require-default-props": 0 // this is a tricky need to check this
   }
 }

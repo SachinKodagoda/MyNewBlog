@@ -13,7 +13,6 @@ function RefreshCw() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <polyline points='23 4 23 10 17 10' />
       <polyline points='1 20 1 14 7 14' />

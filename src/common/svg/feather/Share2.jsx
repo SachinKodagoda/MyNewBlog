@@ -13,7 +13,6 @@ function Share2() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <circle cx='18' cy='5' r='3' />
       <circle cx='6' cy='12' r='3' />

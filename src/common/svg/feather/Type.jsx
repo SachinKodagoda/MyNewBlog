@@ -13,7 +13,6 @@ function Type() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <polyline points='4 7 4 4 20 4 20 7' />
       <line x1='9' x2='15' y1='20' y2='20' />

@@ -13,7 +13,6 @@ function Sunset() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <path d='M17 18a5 5 0 0 0-10 0' />
       <line x1='12' x2='12' y1='9' y2='2' />

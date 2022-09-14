@@ -13,7 +13,6 @@ function GitCommit() {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-
     >
       <circle cx='12' cy='12' r='4' />
       <line x1='1.05' x2='7' y1='12' y2='12' />
