@@ -1,0 +1,19 @@
+{
+  "ignores": [
+    "@public/*",
+    "@components/*",
+    "@layouts/*",
+    "@ctx/*",
+    "@data/*",
+    "@hooks/*",
+    "@images/*",
+    "@lib/*",
+    "@svg/*",
+    "@translations/*",
+    "@ts/*",
+    "@util/*",
+    "@styles/*",
+    "@theme/*",
+    "depcheck"
+  ]
+}

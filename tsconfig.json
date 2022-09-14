@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "allowJs": true, // orginal
+    "esModuleInterop": true, // orginal
+    "forceConsistentCasingInFileNames": true, // orginal
+    "incremental": true, // orginal
+    "isolatedModules": true, // orginal
+    "jsx": "preserve", // orginal
+    "lib": ["dom", "dom.iterable", "esnext"], // orginal
+    "module": "esnext", // orginal
+    "moduleResolution": "node", // orginal
+    "noEmit": true, // orginal
+    "resolveJsonModule": true, // orginal
+    "skipLibCheck": true, // orginal
+    "strict": true, // orginal
+    "target": "es5", // orginal
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "importHelpers": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    // "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "paths": {
+      //short imports with TS -->
+      "@public/*": ["public/*"],
+      "@images/*": ["public/images/*"],
+      "@styles/*": ["styles/*"],
+      "@ctx/*": ["src/common/ctx/*"],
+      "@data/*": ["src/common/data/*"],
+      "@hooks/*": ["src/common/hooks/*"],
+      "@lib/*": ["src/common/lib/*"],
+      "@svg/*": ["src/common/svg/*"],
+      "@translations/*": ["src/common/translations/*"],
+      "@ts/*": ["src/common/ts/*"],
+      "@util/*": ["src/common/util/*"],
+      "@theme/*": ["src/common/theme/*"],
+      "@components/*": ["src/common/ui/components/*"],
+      "@layouts/*": ["src/common/ui/layouts/*"]
+    }
+  },
+  "exclude": ["node_modules", ".github", ".vscode"], // orginal - node_modules
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"] // orginal
+}
