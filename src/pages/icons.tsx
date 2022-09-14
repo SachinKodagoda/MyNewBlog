@@ -21,15 +21,11 @@ import Instagram from '@svg/feather/Instagram';
 import Printer from '@svg/feather/Printer';
 import Twitter from '@svg/feather/Twitter';
 import User from '@svg/feather/User';
-import XCircle from '@svg/feather/XCircle';
+import XCircle from '@svg/feather/XCircle.svg';
 
 import styled from 'styled-components';
 
 function icons(): JSX.Element {
-  const test = {
-    value: 'hi',
-    value: 'hiss',
-  };
   return (
     <Container>
       <ArrowRight />
