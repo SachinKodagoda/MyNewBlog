@@ -1,5 +1,6 @@
-import BigCross from '@components/Buttons/BigCross';
 import styled from 'styled-components';
+
+import BigCross from '@components/Buttons/BigCross';
 
 function Home(): JSX.Element {
   const wow = {

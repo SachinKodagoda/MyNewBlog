@@ -8,12 +8,31 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
+  parser: '@typescript-eslint/parser',
   plugins: ['sort-keys-fix', 'sort-destructure-keys'],
-  // use plugins if need to manually add all rules if not add to extends and dissable what not needed
   rules: {
     '@next/next/no-img-element': 'off',
-    // sort destructure
-    // So that .ts and .tsx should not be in imports
+    '@typescript-eslint/camelcase': 0,
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        custom: {
+          match: true,
+          regex: '^I[A-Z][a-zA-Z0-9]+$',
+        },
+        format: ['PascalCase'],
+        selector: 'interface',
+      },
+      {
+        custom: {
+          match: true,
+          regex: '^T[A-Z][a-zA-Z0-9]+$',
+        },
+        format: ['PascalCase'],
+        selector: 'typeAlias',
+      },
+    ],
+    '@typescript-eslint/no-use-before-define': 0,
     'import/extensions': [
       'error',
       {
@@ -27,15 +46,7 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: [
-          'builtin', // Built-in types are first
-          'external',
-          'internal',
-          'unknown',
-          ['sibling', 'parent'], // Then sibling and parent types. They can be mingled together
-          'index', // Then the index file
-          'object',
-        ],
+        groups: ['builtin', 'external', 'internal', 'unknown', ['sibling', 'parent'], 'index', 'object'],
         'newlines-between': 'always',
         pathGroups: [
           {
@@ -68,17 +79,21 @@ module.exports = {
         warnOnUnassignedImports: true,
       },
     ],
+    'import/prefer-default-export': 'off',
     'no-console': 'warn',
     'no-use-before-define': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
     'react/jsx-filename-extension': [
       1,
       {
         extensions: ['.tsx', '.jsx'],
       },
-    ], // next will add React
-    'react/react-in-jsx-scope': 'off', // Because of Hoisting
-    'react/require-default-props': 0, // this is a tricky need to check this
-    'sort-destructure-keys/sort-destructure-keys': 2, // Sort destructure
-    'sort-keys-fix/sort-keys-fix': 'warn', // Sort object
+    ],
+    'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 0,
+    'sort-destructure-keys/sort-destructure-keys': 2,
+    'sort-keys-fix/sort-keys-fix': 'warn',
+    'spaced-comment': ['error', 'always', { markers: ['/'] }],
   },
 };
