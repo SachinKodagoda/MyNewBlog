@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Percent(props) {
+function Percent() {
   return (
     <svg
       className='feather feather-percent'
@@ -13,7 +13,7 @@ function Percent(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <line x1='19' x2='5' y1='5' y2='19' />
       <circle cx='6.5' cy='6.5' r='2.5' />

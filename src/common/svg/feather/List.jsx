@@ -1,6 +1,6 @@
 import React from 'react';
 
-function List(props) {
+function List() {
   return (
     <svg
       className='feather feather-list'
@@ -13,7 +13,6 @@ function List(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <line x1='8' x2='21' y1='6' y2='6' />
       <line x1='8' x2='21' y1='12' y2='12' />

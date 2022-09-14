@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ArrowUpRight(props) {
+function ArrowUpRight() {
   return (
     <svg
       className='feather feather-arrow-up-right'
@@ -13,7 +13,7 @@ function ArrowUpRight(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <line x1='7' x2='17' y1='17' y2='7' />
       <polyline points='7 7 17 7 17 17' />

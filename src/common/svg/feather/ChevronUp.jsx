@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ChevronUp(props) {
+function ChevronUp() {
   return (
     <svg
       className='feather feather-chevron-up'
@@ -13,7 +13,6 @@ function ChevronUp(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <polyline points='18 15 12 9 6 15' />
     </svg>

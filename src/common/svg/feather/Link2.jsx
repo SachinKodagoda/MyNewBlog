@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Link2(props) {
+function Link2() {
   return (
     <svg
       className='feather feather-link-2'
@@ -13,7 +13,7 @@ function Link2(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <path d='M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3' />
       <line x1='8' x2='16' y1='12' y2='12' />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PhoneOutgoing(props) {
+function PhoneOutgoing() {
   return (
     <svg
       className='feather feather-phone-outgoing'
@@ -13,7 +13,7 @@ function PhoneOutgoing(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <polyline points='23 7 23 1 17 1' />
       <line x1='16' x2='23' y1='8' y2='1' />

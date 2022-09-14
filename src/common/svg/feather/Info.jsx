@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Info(props) {
+function Info() {
   return (
     <svg
       className='feather feather-info'
@@ -13,7 +13,7 @@ function Info(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <circle cx='12' cy='12' r='10' />
       <line x1='12' x2='12' y1='16' y2='12' />

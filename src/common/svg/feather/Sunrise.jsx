@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Sunrise(props) {
+function Sunrise() {
   return (
     <svg
       className='feather feather-sunrise'
@@ -13,7 +13,6 @@ function Sunrise(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <path d='M17 18a5 5 0 0 0-10 0' />
       <line x1='12' x2='12' y1='2' y2='9' />

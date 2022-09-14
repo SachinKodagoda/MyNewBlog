@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Check(props) {
+function Check() {
   return (
     <svg
       className='feather feather-check'
@@ -13,7 +13,6 @@ function Check(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <polyline points='20 6 9 17 4 12' />
     </svg>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Film(props) {
+function Film() {
   return (
     <svg
       className='feather feather-film'
@@ -13,7 +13,7 @@ function Film(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <rect height='20' width='20' rx='2.18' ry='2.18' x='2' y='2' />
       <line x1='7' x2='7' y1='2' y2='22' />

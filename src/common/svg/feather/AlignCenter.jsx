@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AlignCenter(props) {
+function AlignCenter() {
   return (
     <svg
       className='feather feather-align-center'
@@ -13,7 +13,6 @@ function AlignCenter(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <line x1='18' x2='6' y1='10' y2='10' />
       <line x1='21' x2='3' y1='6' y2='6' />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function UploadCloud(props) {
+function UploadCloud() {
   return (
     <svg
       className='feather feather-upload-cloud'
@@ -13,7 +13,7 @@ function UploadCloud(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <polyline points='16 16 12 12 8 16' />
       <polyline points='16 16 12 12 8 16' />

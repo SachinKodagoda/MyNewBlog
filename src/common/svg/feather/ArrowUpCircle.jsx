@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ArrowUpCircle(props) {
+function ArrowUpCircle() {
   return (
     <svg
       className='feather feather-arrow-up-circle'
@@ -13,7 +13,7 @@ function ArrowUpCircle(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <circle cx='12' cy='12' r='10' />
       <polyline points='16 12 12 8 8 12' />

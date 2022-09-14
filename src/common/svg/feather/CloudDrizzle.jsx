@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CloudDrizzle(props) {
+function CloudDrizzle() {
   return (
     <svg
       className='feather feather-cloud-drizzle'
@@ -13,7 +13,7 @@ function CloudDrizzle(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <line x1='8' x2='8' y1='19' y2='21' />
       <line x1='8' x2='8' y1='13' y2='15' />

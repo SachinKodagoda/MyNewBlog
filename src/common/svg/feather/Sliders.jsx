@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Sliders(props) {
+function Sliders() {
   return (
     <svg
       className='feather feather-sliders'
@@ -13,7 +13,7 @@ function Sliders(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <line x1='4' x2='4' y1='21' y2='14' />
       <line x1='4' x2='4' y1='10' y2='3' />

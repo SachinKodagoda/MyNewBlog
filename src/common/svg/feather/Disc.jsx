@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Disc(props) {
+function Disc() {
   return (
     <svg
       className='feather feather-disc'
@@ -13,7 +13,6 @@ function Disc(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <circle cx='12' cy='12' r='10' />
       <circle cx='12' cy='12' r='3' />

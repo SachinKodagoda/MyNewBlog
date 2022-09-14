@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LifeBuoy(props) {
+function LifeBuoy() {
   return (
     <svg
       className='feather feather-life-buoy'
@@ -13,7 +13,7 @@ function LifeBuoy(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <circle cx='12' cy='12' r='10' />
       <circle cx='12' cy='12' r='4' />

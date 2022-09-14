@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ZoomOut(props) {
+function ZoomOut() {
   return (
     <svg
       className='feather feather-zoom-out'
@@ -13,7 +13,7 @@ function ZoomOut(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <circle cx='11' cy='11' r='8' />
       <line x1='21' x2='16.65' y1='21' y2='16.65' />

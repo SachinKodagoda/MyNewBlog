@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Layout(props) {
+function Layout() {
   return (
     <svg
       className='feather feather-layout'
@@ -13,7 +13,7 @@ function Layout(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <rect height='18' width='18' rx='2' ry='2' x='3' y='3' />
       <line x1='3' x2='21' y1='9' y2='9' />

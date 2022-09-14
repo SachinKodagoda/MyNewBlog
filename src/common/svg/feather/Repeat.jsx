@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Repeat(props) {
+function Repeat() {
   return (
     <svg
       className='feather feather-repeat'
@@ -13,7 +13,6 @@ function Repeat(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <polyline points='17 1 21 5 17 9' />
       <polyline points='7 23 3 19 7 15' />

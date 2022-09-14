@@ -1,6 +1,6 @@
 import React from 'react';
 
-function RefreshCcw(props) {
+function RefreshCcw() {
   return (
     <svg
       className='feather feather-refresh-ccw'
@@ -13,7 +13,7 @@ function RefreshCcw(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <polyline points='1 4 1 10 7 10' />
       <polyline points='23 20 23 14 17 14' />

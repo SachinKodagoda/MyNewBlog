@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Move(props) {
+function Move() {
   return (
     <svg
       className='feather feather-move'
@@ -13,7 +13,6 @@ function Move(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <polyline points='5 9 2 12 5 15' />
       <polyline points='9 5 12 2 15 5' />

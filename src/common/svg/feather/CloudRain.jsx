@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CloudRain(props) {
+function CloudRain() {
   return (
     <svg
       className='feather feather-cloud-rain'
@@ -13,7 +13,7 @@ function CloudRain(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <line x1='16' x2='16' y1='13' y2='21' />
       <line x1='8' x2='8' y1='13' y2='21' />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Voicemail(props) {
+function Voicemail() {
   return (
     <svg
       className='feather feather-voicemail'
@@ -13,7 +13,7 @@ function Voicemail(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <circle cx='5.5' cy='11.5' r='4.5' />
       <circle cx='18.5' cy='11.5' r='4.5' />

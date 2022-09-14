@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Truck(props) {
+function Truck() {
   return (
     <svg
       className='feather feather-truck'
@@ -13,7 +13,7 @@ function Truck(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <rect height='13' width='15' x='1' y='3' />
       <polygon points='16 8 20 8 23 11 23 16 16 16 16 8' />

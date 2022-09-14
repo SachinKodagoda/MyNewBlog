@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Package(props) {
+function Package() {
   return (
     <svg
       className='feather feather-package'
@@ -13,7 +13,7 @@ function Package(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <line x1='16.5' x2='7.5' y1='9.4' y2='4.21' />
       <line x1='12' x2='12' y1='22.08' y2='12' />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Maximize2(props) {
+function Maximize2() {
   return (
     <svg
       className='feather feather-maximize-2'
@@ -13,7 +13,7 @@ function Maximize2(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <polyline points='15 3 21 3 21 9' />
       <polyline points='9 21 3 21 3 15' />

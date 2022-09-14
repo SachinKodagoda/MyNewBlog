@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Hash(props) {
+function Hash() {
   return (
     <svg
       className='feather feather-hash'
@@ -13,7 +13,7 @@ function Hash(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <line x1='4' x2='20' y1='9' y2='9' />
       <line x1='4' x2='20' y1='15' y2='15' />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function XCircle(props) {
+function XCircle() {
   return (
     <svg
       className='feather feather-x-circle'
@@ -13,7 +13,7 @@ function XCircle(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <circle cx='12' cy='12' r='10' />
       <line x1='15' x2='9' y1='9' y2='15' />

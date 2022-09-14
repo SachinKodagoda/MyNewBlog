@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Speaker(props) {
+function Speaker() {
   return (
     <svg
       className='feather feather-speaker'
@@ -13,7 +13,7 @@ function Speaker(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
+
     >
       <rect height='20' width='16' rx='2' ry='2' x='4' y='2' />
       <circle cx='12' cy='14' r='4' />

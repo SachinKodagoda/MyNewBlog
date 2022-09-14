@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GitPullRequest(props) {
+function GitPullRequest() {
   return (
     <svg
       className='feather feather-git-pull-request'
@@ -13,7 +13,6 @@ function GitPullRequest(props) {
       strokeWidth='2'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
     >
       <circle cx='18' cy='18' r='3' />
       <circle cx='6' cy='6' r='3' />
