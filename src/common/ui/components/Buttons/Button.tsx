@@ -37,8 +37,7 @@ function Button({
           type='button'
           arrow={arrow}
           background={background}
-          color={color}
-        >
+          color={color}>
           {text}&nbsp;{arrow && <ArrowRight />}
         </NormalBtn>
       )}
@@ -50,8 +49,7 @@ function Button({
             if (isDisabled) {
               e.preventDefault();
             }
-          }}
-        >
+          }}>
           {text}
         </SubmitBtn>
       )}
