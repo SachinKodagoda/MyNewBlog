@@ -3,6 +3,8 @@
 // 1 = server error
 // 2 = no data
 
+import { SVGProps } from 'react';
+
 export interface IOptions {
   readonly label?: string;
   readonly value?: string | null;
@@ -161,3 +163,5 @@ export type TFilteredModalDataResponse = {
   errorMsg: string | null;
   errorCode: number;
 };
+
+export type TSvg = SVGProps<SVGSVGElement>;

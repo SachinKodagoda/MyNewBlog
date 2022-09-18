@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { CssBaseline } from '@nextui-org/react';
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -37,6 +38,7 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap'
             rel='stylesheet'
           />
+          {CssBaseline.flush()}
         </Head>
         <body>
           <Main />

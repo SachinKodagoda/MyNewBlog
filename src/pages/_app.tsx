@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { NextUIProvider } from '@nextui-org/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Router } from 'next/router';
@@ -38,11 +39,11 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
         <meta name='apple-mobile-web-app-status-bar-style' content='#000' />
       </Head>
       <ThemeProvider theme={{ ...theme }}>
-        <>
+        <NextUIProvider>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Component {...pageProps} />
           <Toaster />
-        </>
+        </NextUIProvider>
       </ThemeProvider>
     </>
   );
