@@ -165,3 +165,7 @@ export type TFilteredModalDataResponse = {
 };
 
 export type TSvg = SVGProps<SVGSVGElement>;
+
+export interface ISvg extends SVGProps<SVGSVGElement> {
+  size?: number;
+}

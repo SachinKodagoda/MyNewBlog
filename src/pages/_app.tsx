@@ -1,29 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
 import { NextUIProvider } from '@nextui-org/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Router } from 'next/router';
-import NProgress from 'nprogress';
-import 'nprogress/nprogress.css';
-import { Toaster } from 'react-hot-toast';
-import { ThemeProvider } from 'styled-components';
 
-import '@styles/globals.css';
-import theme from '@theme/baseTheme';
-
-NProgress.configure({ showSpinner: false });
-Router.events.on('routeChangeStart', () => {
-  NProgress.start();
-});
-
-Router.events.on('routeChangeComplete', () => {
-  NProgress.done();
-});
-
-Router.events.on('routeChangeError', () => {
-  NProgress.done();
-});
+// import '@styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   return (
@@ -38,13 +20,9 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
         <meta name='theme-color' content='#000' />
         <meta name='apple-mobile-web-app-status-bar-style' content='#000' />
       </Head>
-      <ThemeProvider theme={{ ...theme }}>
-        <NextUIProvider>
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Component {...pageProps} />
-          <Toaster />
-        </NextUIProvider>
-      </ThemeProvider>
+      <NextUIProvider>
+        <Component {...pageProps} />
+      </NextUIProvider>
     </>
   );
 }
