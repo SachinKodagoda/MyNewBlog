@@ -1,6 +1,6 @@
 import { Spacer, Text } from '@nextui-org/react';
 
-import { Box } from './Main/Box';
+import { Box } from './Box';
 
 export function Content() {
   return (

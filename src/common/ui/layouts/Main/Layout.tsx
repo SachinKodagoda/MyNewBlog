@@ -1,5 +1,5 @@
+import { Box } from './Box';
 import { Content } from './Content';
-import { Box } from './Main/Box';
 
 type TProps = {
   children: JSX.Element;
