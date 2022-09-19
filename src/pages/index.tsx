@@ -5,8 +5,8 @@ import { Avatar, Button, Dropdown, Input, Link, Link as MenuLink, Navbar, Text }
 import LoginModal from '@layouts/Login/LoginModal';
 import { Layout } from '@layouts/Main/Layout';
 import { AcmeLogo } from '@svg/boxIcons/AcmeLogo';
-import { icons } from '@svg/Icons';
-import { SearchIcon } from '@svg/icons/SearchIcon';
+import { icons } from '@svg/boxIcons/Icons';
+import { SearchIcon } from '@svg/boxIcons/SearchIcon';
 
 function Test(): JSX.Element {
   const [visible, setVisible] = useState(false);
