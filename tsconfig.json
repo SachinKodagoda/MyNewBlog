@@ -38,7 +38,10 @@
       "@util/*": ["src/common/util/*"],
       "@theme/*": ["src/common/theme/*"],
       "@components/*": ["src/common/ui/components/*"],
-      "@layouts/*": ["src/common/ui/layouts/*"]
+      "@layouts/*": ["src/common/ui/layouts/*"],
+      "@schemas/*": ["src/common/schemas/*"],
+      "@middleware/*": ["src/middleware/*"],
+      "@handlers/*": ["src/common/handlers/*"]
     }
   },
   "exclude": ["node_modules", ".github", ".vscode"], // orginal - node_modules
