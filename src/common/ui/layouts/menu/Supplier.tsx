@@ -133,8 +133,7 @@ const Home: NextPage = () => {
             enableReinitialize
             onSubmit={data => {
               onModalSubmitHandler(data, formState);
-            }}
-          >
+            }}>
             {({ handleSubmit }) => (
               <Form onSubmit={handleSubmit} className='supdetail-form'>
                 <div className='supdetail-form-body'>
@@ -237,16 +236,14 @@ const Home: NextPage = () => {
                       onClick={() => {
                         setFormState('create');
                         handleSubmit();
-                      }}
-                    >
+                      }}>
                       Create
                     </div>
                     <div
                       className='supdetail-btn-margin'
                       onClick={() => {
                         deleteAllUsers();
-                      }}
-                    >
+                      }}>
                       Delete All
                     </div>
                     {formState === 'update' && (
@@ -255,8 +252,7 @@ const Home: NextPage = () => {
                         onClick={() => {
                           setFormState('update');
                           handleSubmit();
-                        }}
-                      >
+                        }}>
                         Update
                       </div>
                     )}
@@ -297,8 +293,7 @@ const Home: NextPage = () => {
                     <FormBtn
                       onClick={() => {
                         deleteAUser(item.supplierId);
-                      }}
-                    >
+                      }}>
                       Delete
                     </FormBtn>
                     <FormBtn
@@ -314,8 +309,7 @@ const Home: NextPage = () => {
                           PhoneNumber: item.PhoneNumber,
                           category: item.category,
                         });
-                      }}
-                    >
+                      }}>
                       Update
                     </FormBtn>
                   </BtnCtr>

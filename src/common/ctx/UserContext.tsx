@@ -134,8 +134,7 @@ export function UserContextProvider({ children }: TProps): React.ReactElement {
         ...ctxValues2,
         ...ctxValues3,
         ...contextFns,
-      }}
-    >
+      }}>
       {children}
     </UserContext.Provider>
   );

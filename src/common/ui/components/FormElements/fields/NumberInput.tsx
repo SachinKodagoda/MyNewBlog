@@ -58,8 +58,7 @@ function NumberInput({
             if (temp - scale >= min) {
               setFieldValue(field.name, temp - scale);
             }
-          }}
-        >
+          }}>
           <ChevronLeft className='chevronLeft' />
         </LeftArrow>
         <RightArrow
@@ -68,8 +67,7 @@ function NumberInput({
             if (temp + scale <= max) {
               setFieldValue(field.name, temp + scale);
             }
-          }}
-        >
+          }}>
           <ChevronRight className='chevronRight' />
         </RightArrow>
       </InputElementCtr>

@@ -79,8 +79,7 @@ const Tbl = ({
                   style={{
                     width: minWidthReached ? headerArr[j].maxWidth : headerArr[j].minWidth,
                     justifyContent: headerArr[j].align,
-                  }}
-                >
+                  }}>
                   {item.title}
                 </HeadItem>
               );
@@ -99,8 +98,7 @@ const Tbl = ({
                           opened={openArr.includes(i)}
                           onClick={() => {
                             setOpenArr(val => (val.includes(i) ? val.filter(iVal => iVal !== i) : [...val, i]));
-                          }}
-                        ></Dp>
+                          }}></Dp>
                       )}
                       <DataItemInner>
                         {row.map((rowItem, j) => {
@@ -113,8 +111,7 @@ const Tbl = ({
                               style={{
                                 width: minWidthReached ? headerArr[j].maxWidth : headerArr[j].minWidth,
                                 justifyContent: headerArr[j].align,
-                              }}
-                            >
+                              }}>
                               {rowItem}
                             </DataItemInnerD>
                           );
@@ -138,8 +135,7 @@ const Tbl = ({
                                 style={{
                                   width: minWidthReached ? headerArr[j].maxWidth : headerArr[j].minWidth,
                                   justifyContent: headerArr[j].align,
-                                }}
-                              >
+                                }}>
                                 {rowItem}
                               </RDRow>
                               <Line></Line>

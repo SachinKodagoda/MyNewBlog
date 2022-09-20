@@ -221,8 +221,7 @@ function Profile({ rType }: TProps): JSX.Element {
         validationSchema={userUpdateSchema}
         onSubmit={data => {
           setUserDetails(data);
-        }}
-      >
+        }}>
         {({ values, handleSubmit, setFieldValue, errors }) => (
           <Form onSubmit={handleSubmit} autoComplete='off'>
             <InnerCtr>
@@ -265,8 +264,7 @@ function Profile({ rType }: TProps): JSX.Element {
                   <RadioGroup
                     role='group'
                     aria-labelledby='gender-radio-group'
-                    color={getOnlineDarkColor(initialData.onlineStatus)}
-                  >
+                    color={getOnlineDarkColor(initialData.onlineStatus)}>
                     Gender :
                     <RadioLabel>
                       <Field
@@ -412,8 +410,7 @@ function Profile({ rType }: TProps): JSX.Element {
                       <path
                         fill={getOnlineMiddleColor(initialData.onlineStatus)}
                         fillOpacity='1'
-                        d='M0,288L48,288C96,288,192,288,288,277.3C384,267,480,245,576,224C672,203,768,181,864,186.7C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-                      ></path>
+                        d='M0,288L48,288C96,288,192,288,288,277.3C384,267,480,245,576,224C672,203,768,181,864,186.7C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path>
                     </svg>
                   </WaveArea>
                   <WaveAreaUpsideDown>
@@ -421,8 +418,7 @@ function Profile({ rType }: TProps): JSX.Element {
                       <path
                         fill={getOnlineMiddleColor(initialData.onlineStatus)}
                         fillOpacity='1'
-                        d='M0,288L48,288C96,288,192,288,288,277.3C384,267,480,245,576,224C672,203,768,181,864,186.7C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-                      ></path>
+                        d='M0,288L48,288C96,288,192,288,288,277.3C384,267,480,245,576,224C672,203,768,181,864,186.7C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path>
                     </svg>
                   </WaveAreaUpsideDown>
                   <DetailItem color={getOnlineDarkColor(initialData.onlineStatus)}>
@@ -671,8 +667,7 @@ function Profile({ rType }: TProps): JSX.Element {
                   </ProgressTitle>
                   <ProgressBar
                     percentage={+percentage.toFixed(0)}
-                    color={getBarColor(+percentage.toFixed(0))}
-                  ></ProgressBar>
+                    color={getBarColor(+percentage.toFixed(0))}></ProgressBar>
                   <NumberCtr>{percentage.toFixed(0)}%</NumberCtr>
                   <ProgressTitle>
                     <ArrowRightCircle className='circleArrow' />

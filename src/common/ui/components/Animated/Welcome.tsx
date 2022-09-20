@@ -10,8 +10,7 @@ function Welcome(): JSX.Element {
         viewBox='0 0 104 114'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
-        className='welcomeAni'
-      >
+        className='welcomeAni'>
         <g clipPath='url(#clip0_1450_11887)'>
           <path
             opacity='0.1'

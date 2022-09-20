@@ -103,8 +103,7 @@ function DateFieldInput({
         <TextReplicate
           onClick={() => {
             setIsMenuOpen(true);
-          }}
-        >
+          }}>
           {format(selected, 'PPP')}
         </TextReplicate>
         <CalendarCtr>

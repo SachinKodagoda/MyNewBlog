@@ -69,8 +69,7 @@ export function WeatherCtxProvider({ children }: TProps): React.ReactElement {
       value={{
         ...ctxValues,
         ...contextFns,
-      }}
-    >
+      }}>
       {children}
     </WeatherCtx.Provider>
   );

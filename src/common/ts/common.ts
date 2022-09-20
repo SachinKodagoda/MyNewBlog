@@ -63,7 +63,7 @@ export type TUData = {
   role: Role;
   email: string;
 };
-export interface NextApiRequestExtended extends NextApiRequest {
+export interface INextApiRequestExtended extends NextApiRequest {
   user?: {
     userId: number | null;
     userName: string | null;
@@ -72,7 +72,8 @@ export interface NextApiRequestExtended extends NextApiRequest {
 
 export type TFormState = 'edit' | 'insert';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type TExtendedNextApiHandler<T = any> = (
-  req: NextApiRequestExtended,
+  req: INextApiRequestExtended,
   res: NextApiResponse<T>
 ) => void | Promise<void>;

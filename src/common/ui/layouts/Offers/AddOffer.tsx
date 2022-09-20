@@ -25,8 +25,7 @@ function AddOffer({ onModalSubmitHandler, initialData, formState }: TProps): JSX
           validationSchema={offerSchema}
           onSubmit={data => {
             onModalSubmitHandler(data, formState);
-          }}
-        >
+          }}>
           {({ values, handleSubmit, setFieldValue, errors }) => (
             <Form onSubmit={handleSubmit}>
               {/* <pre>{JSON.stringify(values, null, 4)}</pre> */}

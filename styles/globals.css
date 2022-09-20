@@ -213,6 +213,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   background-color: var(--body-bg);
@@ -411,6 +412,8 @@ button {
   top: 0;
   right: 0;
   bottom: 0;
+  background: transparent;
+  z-index: -1;
 }
 
 /* Chrome, Safari, Edge, Opera */

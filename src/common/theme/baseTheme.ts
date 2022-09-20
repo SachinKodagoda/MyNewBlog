@@ -1,5 +1,7 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 // #region Global Imports
 import { DefaultTheme } from 'styled-components';
+
 type TColors = {
   dark0: string;
   dark1: string;
@@ -411,13 +413,58 @@ export const misc = {
   fullWidth: widths.minDesktopLG - 1,
 };
 
+export const fonts = {
+  primary: `Roboto, sans-serif`, // default
+  secondary: `'Playfair Display', Georgia, serif`,
+  turnery: `Montserrat, sans-serif`,
+  quaternary: `Bree Serif`,
+};
+
+export const borders = {
+  primary: `1px solid ${colors.black}`,
+  secondary: `1px solid ${colors.gray5}`,
+};
+
+export const shadows = {
+  primary: ``,
+  secondary: ``,
+  turnery: `0 1px 18px -12px ${colors.transparent_black7}`,
+};
+
+export const sizes = {
+  xs: { vl: 4, px: '4px', pr: '4%', f: '10px', ani: '0.2s' },
+  sm: { vl: 8, px: '8px', pr: '8%', f: '14px', ani: '0.3s' },
+  md: { vl: 16, px: '16px', pr: '16%', f: '16px', ani: '0.4s' }, // default
+  lg: { vl: 32, px: '32px', pr: '32%', f: '18px', ani: '0.5s' },
+  xl: { vl: 48, px: '48px', pr: '48%', f: '20px', ani: '0.6s' },
+  xxl: { vl: 64, px: '64px', pr: '64%', f: '36px', ani: '0.7s' },
+  xxxl: { vl: 128, px: '128px', pr: '128%', f: '64px', ani: '0.8s' },
+};
+
+export const weights = {
+  hairline: 100,
+  thin: 200,
+  light: 300,
+  normal: 400, // default
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+};
+
 const theme = {
   colors,
   devices,
   widths,
   misc,
+  fonts,
+  sizes,
+  weights,
+  borders,
+  shadows,
 };
 
-export type TNoonTheme = typeof theme;
+export type TTheme = typeof theme;
 
 export default theme;

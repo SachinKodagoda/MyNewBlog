@@ -47,11 +47,12 @@ const Container = styled.div`
   padding: 0 16px;
   display: flex;
   justify-content: center;
-  position: relative;
+  align-items: center;
 `;
 
 const Left = styled.div`
   display: flex;
+  background: red;
 `;
 
 const Body = styled.div`
@@ -63,7 +64,7 @@ const BodyImg = styled.img`
   width: 100%;
   height: auto;
   display: block;
-  /* background: #fff; */
+  background: #fff;
   border: none;
 `;
 
@@ -83,6 +84,7 @@ const BodyDesc = styled.div`
 const Right = styled.div`
   display: flex;
   flex-direction: column;
+  background: blue;
 `;
 
 const RightFirst = styled.div`

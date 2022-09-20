@@ -23,8 +23,7 @@ const Pagination = ({ pageCount, onPageChange, currentPage, onQuickChange }: TPa
           if (currentPage > 1) {
             onQuickChange(1);
           }
-        }}
-      >
+        }}>
         <ChevronsLeft />
       </DoubleArrowBtn>
       <ReactPaginate
@@ -49,8 +48,7 @@ const Pagination = ({ pageCount, onPageChange, currentPage, onQuickChange }: TPa
         isDisabled={currentPage === pageCount}
         onClick={() => {
           onQuickChange(pageCount);
-        }}
-      >
+        }}>
         <ChevronsRight />
       </DoubleArrowBtn>
     </Container>

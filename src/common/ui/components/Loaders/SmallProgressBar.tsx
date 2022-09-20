@@ -40,8 +40,7 @@ function SmallProgressBar({
       width={width}
       outerWidth={width * trackRatio}
       background={background}
-      track={track}
-    >
+      track={track}>
       <div className='inner' />
       <div className='outer' />
       <div className='circle'>

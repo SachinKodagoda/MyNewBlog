@@ -13,8 +13,7 @@ function BackTopTop(): JSX.Element {
       onClick={() => {
         scroll.scrollToTop({ smooth: true });
       }}
-      isVisible={scrollPosition > 200}
-    >
+      isVisible={scrollPosition > 200}>
       {t.top}
     </Container>
   );

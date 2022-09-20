@@ -59,8 +59,7 @@ function LeftMenu({ menuItemsArr, selectedItem, setSelectedItem, rType }: TProps
                 router.push(`/dashboard/${rType}?menu=${item}${query}`, undefined, { shallow: true });
                 setSelectedItem(item);
               }}
-              key={`menu-${i + 1}`}
-            >
+              key={`menu-${i + 1}`}>
               <MenuIcons type={item} />
               {!smallMenu && item}
             </button>

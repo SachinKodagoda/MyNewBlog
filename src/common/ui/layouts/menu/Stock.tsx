@@ -139,8 +139,7 @@ const Home: NextPage = () => {
                     }),
                   });
                   getstockData();
-                }}
-              >
+                }}>
                 SUBMITE
               </button>
             </div>
@@ -180,8 +179,7 @@ const Home: NextPage = () => {
                       method: 'DELETE',
                     });
                     getstockData();
-                  }}
-                >
+                  }}>
                   Delete
                 </div>
               </td>

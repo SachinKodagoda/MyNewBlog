@@ -38,8 +38,7 @@ function NavBar(): JSX.Element {
             router.push('/');
           }}
           role='button'
-          tabIndex={0}
-        >
+          tabIndex={0}>
           TWIN-SHIELD
         </Logo>
         <MCtr>
@@ -127,8 +126,7 @@ function NavBar(): JSX.Element {
               } else {
                 router.push('/login');
               }
-            }}
-          >
+            }}>
             {uData?.email ? 'LogOut' : 'Login'}
           </LoginBtn>
         </MCtr>

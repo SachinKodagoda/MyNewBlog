@@ -87,8 +87,7 @@ function Register(): JSX.Element | null {
           <path
             fill='#0099ff'
             fillOpacity='1'
-            d='M0,192L48,208C96,224,192,256,288,266.7C384,277,480,267,576,266.7C672,267,768,277,864,277.3C960,277,1056,267,1152,240C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-          ></path>
+            d='M0,192L48,208C96,224,192,256,288,266.7C384,277,480,267,576,266.7C672,267,768,277,864,277.3C960,277,1056,267,1152,240C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path>
         </svg>
       </WaveArea>
       <FormTitle>Register Here!</FormTitle>
@@ -98,8 +97,7 @@ function Register(): JSX.Element | null {
         validationSchema={userRegisterSchema}
         onSubmit={data => {
           onModalSubmitHandler(data);
-        }}
-      >
+        }}>
         {({ values, handleSubmit, setFieldValue, errors }) => (
           <Form onSubmit={handleSubmit}>
             <TwoColumnForm>

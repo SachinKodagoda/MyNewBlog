@@ -51,8 +51,7 @@ function InputElement({
           <InputCross
             onClick={() => onChange('')}
             aria-hidden='true'
-            isError={!!errorMsg && errorMsg.trim().length > 0}
-          >
+            isError={!!errorMsg && errorMsg.trim().length > 0}>
             <XCircle />
           </InputCross>
         )}

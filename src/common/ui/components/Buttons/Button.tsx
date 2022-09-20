@@ -58,8 +58,7 @@ function Button({
       background={background}
       color={color}
       height={height}
-      outlined={outlined}
-    >
+      outlined={outlined}>
       {text}&nbsp;{arrow && <ArrowRight className='arrowRight' />}
       {loading && (
         <LoaderCtr>

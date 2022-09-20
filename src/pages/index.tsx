@@ -58,6 +58,9 @@ const Container = styled.div`
   max-width: ${widths.min4K};
   margin: 0 auto;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   @media ${devices.min4K} {
     .top_wrapper {
       margin: 0 auto;

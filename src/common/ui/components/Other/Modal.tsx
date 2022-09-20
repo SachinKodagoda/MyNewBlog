@@ -19,8 +19,7 @@ function Modal({ children, modalOpen, onClickOutside }: TProps): JSX.Element | n
       onClick={e => {
         e.stopPropagation();
         onClickOutside();
-      }}
-    >
+      }}>
       <div
         className='innerContainer'
         tabIndex={0}
@@ -30,16 +29,14 @@ function Modal({ children, modalOpen, onClickOutside }: TProps): JSX.Element | n
         }}
         onClick={e => {
           e.stopPropagation();
-        }}
-      >
+        }}>
         <button
           type='button'
           className='button'
           onClick={e => {
             e.stopPropagation();
             onClickOutside();
-          }}
-        >
+          }}>
           <Cross cls='cross' />
         </button>
         {children}

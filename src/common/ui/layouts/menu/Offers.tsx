@@ -452,8 +452,7 @@ function Offers({ rType }: TProps): JSX.Element {
             onClick={() => {
               setSubmitType('insert');
               setModelOpened(true);
-            }}
-          >
+            }}>
             Add Offer <FiPlusCircle />
           </BlackBtn>
           <ClearAll onClick={() => deleteAll()}>
@@ -479,8 +478,7 @@ function Offers({ rType }: TProps): JSX.Element {
                     if (range?.from && range?.to) {
                       getGraph(format(range.from, 'yyyy-MM-dd').toString(), format(range.to, 'yyyy-MM-dd').toString());
                     }
-                  }}
-                >
+                  }}>
                   from {format(range.from, 'yyyy-MM-dd')} to {format(range.to, 'yyyy-MM-dd')}
                 </DateFooter>
               ) : (
@@ -521,8 +519,7 @@ function Offers({ rType }: TProps): JSX.Element {
           setModelOpened(false);
           setOfferInput({ ...initialValues });
         }}
-        modalOpen={modelOpened}
-      >
+        modalOpen={modelOpened}>
         <AddOffer onModalSubmitHandler={onModalSubmitHandler} initialData={offerInput} formState={submitType} />
       </Modal>
     </Container>
