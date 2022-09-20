@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "coenraads.bracket-pair-colorizer-2",
+    "dbaeumer.vscode-eslint",
+    "dzannotti.vscode-babel-coloring",
+    "styled-components.vscode-styled-components",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "qcz.text-power-tools",
+    "blanu.vscode-styled-jsx"
+  ],
+  "unwantedRecommendations": ["esbenp.prettier-vscode", "ms-vscode.vscode-typescript-tslint-plugin"]
+}

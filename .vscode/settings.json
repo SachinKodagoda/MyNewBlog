@@ -1,0 +1,35 @@
+{
+  "files.watcherExclude": {
+    "**/.dev_assets/**": true,
+    "**/.git/**": true,
+    "**/.github/**": true,
+    "**/.next/**": true,
+    "**/.vscode/**": true,
+    "**/build/**": true,
+    "**/node_modules/**": true
+  },
+  "npm.packageManager": "yarn",
+  "search.exclude": {
+    "**/.dev_assets/**": true,
+    "**/.git/**": true,
+    "**/.github/**": true,
+    "**/.next/**": true,
+    "**/.vscode/**": true,
+    "**/build/**": true,
+    "**/node_modules/**": true
+  },
+  "editor.tabSize": 2,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "cSpell.words": [
+    "Akila",
+    "Dropzone",
+    "nprogress",
+    "Parens",
+    "preconnect",
+    "serializable",
+    "unmount",
+    "unmounts",
+    "Unstyled"
+  ]
+}
