@@ -23,23 +23,25 @@ function Food(): JSX.Element {
     <Container>
       <ScrollRef name='Restaurant' />
       <InnerContainer>
-        <Topic title='OUR MENU' subTitle='Restaurant & Bar' />
+        <Topic title='Our Menu' subTitle='Restaurant & Bar' />
         <Body>
           <TopicCover>
-            {titleListData.map(item => (
+            {titleListData.map((item, i) => (
               <TopicItem
                 onClick={() => {
                   setSelectedMenuItem(item);
+                  setSelectedMenuData(menuListData[item.title]);
                 }}
-                isSelected={item.title === selectedMenuItem?.title}>
+                isSelected={item.title === selectedMenuItem?.title}
+                key={`titles-${i + 1}`}>
                 <TopicMenuImg src={item.image} alt='title icon' />
                 <TopicTitle>{item.title}</TopicTitle>
               </TopicItem>
             ))}
           </TopicCover>
           <ItemCover>
-            {selectedMenuData.map(item => (
-              <FoodItem>
+            {selectedMenuData.map((item, i) => (
+              <FoodItem key={`food-${i + 1}`}>
                 <ItemLeftImg src={item.image} alt='food icon' />
                 <ItemMiddle>
                   <ItemTitle>{item.title}</ItemTitle>
@@ -69,9 +71,9 @@ const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${sizes.xl.px};
-  @media only screen and (min-width: 992px) {
+  @media ${devices.minDesktopSM} {
     border: ${borders.turnery};
-    padding: ${sizes.md.px} 0;
+    padding: ${sizes.xxl.px} ${sizes.md.px};
   }
 `;
 
@@ -121,18 +123,17 @@ const TopicMenuImg = styled.img`
 const ItemCover = styled.div`
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: space-around;
   gap: ${sizes.md.px} ${sizes.xxl.px};
-  width: 100%;
   margin: 0 auto;
   @media ${devices.minDesktopSM} {
-    width: 50%;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
 const MiddleSubContent = styled.div`
-  color: #000;
+  color: ${colors.black};
   transition: color ${sizes.md.ani} ease;
 `;
 
@@ -157,10 +158,10 @@ const FoodItem = styled.div`
   word-wrap: break-word;
   user-select: none;
   &:hover {
-    background-color: #ff6239;
-    border-color: #000;
+    background-color: ${colors.themeRed};
+    border-color: ${colors.black};
     ${MiddleSubContent},${ItemRight} {
-      color: #fff;
+      color: ${colors.white};
     }
   }
 `;
@@ -174,7 +175,7 @@ const ItemLeftImg = styled.img`
 const ItemMiddle = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: ${sizes.xs.px};
 `;
 
 const ItemTitle = styled.div`

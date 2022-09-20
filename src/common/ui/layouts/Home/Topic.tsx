@@ -26,6 +26,7 @@ const Head = styled.div`
   color: ${colors.transparent_black5};
   text-align: center;
   font-size: ${sizes.xl.f};
+  text-transform: uppercase;
 `;
 
 const SubHead = styled.div`
