@@ -1,35 +1,46 @@
+import { useEffect, useState } from 'react';
+
 import styled from 'styled-components';
 
 import ScrollRef from '@components/ScrollRef';
-import { foodMenuData } from '@data/foodMenu';
+import { IFoodMenuItem, IFoodTitles, menuListData, titleListData } from '@data/foodMenu';
 import { borders, colors, devices, fonts, shadows, sizes, weights } from '@theme/baseTheme';
 
+import Topic from './Topic';
+
 function Food(): JSX.Element {
+  const [selectedMenuItem, setSelectedMenuItem] = useState<IFoodTitles>([]);
+  const [selectedMenuData, setSelectedMenuData] = useState<IFoodMenuItem[]>([]);
+  useEffect(() => {
+    const selectedTitle = titleListData.filter(title => title.selected);
+    if (selectedTitle.length > 0) {
+      setSelectedMenuItem(selectedTitle[0]);
+      setSelectedMenuData(menuListData[selectedTitle[0].title]);
+    }
+  }, []);
+
   return (
     <Container>
       <ScrollRef name='Restaurant' />
       <InnerContainer>
-        <Head>OUR MENU</Head>
-        <SubHead>Restaurant & Bar</SubHead>
+        <Topic title='OUR MENU' subTitle='Restaurant & Bar' />
         <Body>
-          <Topic>
-            <TopicMenu>
-              <TopicMenuImg src='/images/home/menu.svg' alt='s' />
-              Main
-            </TopicMenu>
-            <TopicMenu>
-              <TopicMenuImg src='/images/home/fruits.svg' alt='s' />
-              Dessert
-            </TopicMenu>
-            <TopicMenu className='food_sp_r_margin_topic'>
-              <TopicMenuImg src='/images/home/beverage.svg' alt='s' />
-              Drinks
-            </TopicMenu>
-          </Topic>
+          <TopicCover>
+            {titleListData.map(item => (
+              <TopicItem
+                onClick={() => {
+                  setSelectedMenuItem(item);
+                }}
+                isSelected={item.title === selectedMenuItem.title}>
+                <TopicMenuImg src={item.image} alt='title icon' />
+                <TopicTitle>{item.title}</TopicTitle>
+              </TopicItem>
+            ))}
+          </TopicCover>
           <ItemCover>
-            {foodMenuData.map(item => (
+            {selectedMenuData.map(item => (
               <FoodItem>
-                <ItemLeftImg src={item.image} alt='food item' />
+                <ItemLeftImg src={item.image} alt='food icon' />
                 <ItemMiddle>
                   <ItemTitle>{item.title}</ItemTitle>
                   <ItemContent>{item.ingredients.map(ingredient => ingredient)}</ItemContent>
@@ -49,85 +60,61 @@ export default Food;
 // Styles 👕🧦👗🧣🧥👔 -->
 
 const Container = styled.div`
-  padding: 0 16px;
-  position: relative;
-  margin-bottom: 10px;
-  .food_sp_r_margin_body {
-    margin: 0 auto;
-  }
-  @media only screen and (min-width: 992px) {
-    .food_sp_r_margin_body {
-      margin: 8px auto;
-    }
-  }
+  padding: ${sizes.md.px};
 `;
 
 const InnerContainer = styled.div`
-  padding: 16px 0;
   height: auto;
-  background: #f8faff;
+  background: ${colors.themeBackground};
+  display: flex;
+  flex-direction: column;
+  gap: ${sizes.xl.px};
   @media only screen and (min-width: 992px) {
-    border-left: 1px dashed #000;
-    border-right: 1px dashed #000;
-    border-bottom: 1px dashed #000;
-    padding: 32px 0;
+    border: ${borders.turnery};
+    padding: ${sizes.md.px} 0;
   }
 `;
 
-const Head = styled.div`
-  color: ${colors.transparent_black5};
-  text-align: center;
-  font-size: 20px;
+const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${sizes.md.px};
 `;
 
-const SubHead = styled.div`
-  font-family: 'Playfair Display', Georgia, serif;
-  text-align: center;
-  font-size: 25px;
-`;
-
-const Body = styled.div``;
-
-const Topic = styled.div`
+const TopicCover = styled.div`
   display: flex;
   justify-content: center;
-  padding: ${sizes.md.px} 0;
-  &:after,
-  &:before {
-    content: '';
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-  @media ${devices.minDesktopSM} {
-    padding: ${sizes.lg.px} 0;
-  }
 `;
 
-const TopicMenu = styled.div`
-  width: 110px;
-  background: #fff;
-  text-align: center;
-  border: 1px solid ${colors.transparent_black2};
-  color: #a5a5ab;
+const TopicTitle = styled.div`
+  color: ${colors.menuTitle};
   font-weight: ${weights.bold};
-  padding: 20px 0;
+`;
+
+const TopicItem = styled.div<{ isSelected: boolean }>`
+  background: ${p => `${p.isSelected ? colors.royalGold : colors.white}`};
+  text-align: center;
+  border: 1px solid ${colors.black};
+  padding: ${sizes.md.px} ${sizes.lg.px};
   user-select: none;
+  display: flex;
+  gap: ${sizes.md.px};
+  cursor: pointer;
   &:hover {
-    background: #ff6239;
-    color: #fff;
+    background: ${p => `${p.isSelected ? colors.royalGold : colors.themeRed}`};
+    ${TopicTitle} {
+      color: ${p => `${p.isSelected ? colors.menuTitle : colors.white}`};
+    }
   }
-  &.food_sp_r_margin_topic {
-    margin-right: 0;
+  & + & {
+    border-left: none;
   }
 `;
 
 const TopicMenuImg = styled.img`
-  width: 20px;
-  height: 20px;
+  width: ${sizes.lg.px};
+  height: ${sizes.lg.px};
   margin-bottom: 0;
-  margin-right: 5px;
   vertical-align: middle;
 `;
 
@@ -136,7 +123,7 @@ const ItemCover = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
-  gap: ${sizes.md.px};
+  gap: ${sizes.md.px} ${sizes.xxl.px};
   width: 100%;
   margin: 0 auto;
   @media ${devices.minDesktopSM} {
@@ -152,7 +139,7 @@ const MiddleSubContent = styled.div`
 const ItemRight = styled.div`
   font-family: ${fonts.secondary};
   color: ${colors.themeRed};
-  font-size: ${sizes.lg.px};
+  font-size: ${sizes.xl.px};
   transition: color ${sizes.md.ani} ease;
 `;
 
@@ -179,8 +166,8 @@ const FoodItem = styled.div`
 `;
 
 const ItemLeftImg = styled.img`
-  width: ${sizes.xxl.px};
-  height: ${sizes.xxl.px};
+  width: ${sizes.xxxl.px};
+  height: ${sizes.xxxl.px};
   border-radius: 100%;
 `;
 
@@ -192,7 +179,7 @@ const ItemMiddle = styled.div`
 
 const ItemTitle = styled.div`
   font-weight: ${weights.bold};
-  font-size: ${sizes.lg.f};
+  font-size: ${sizes.xl.f};
 `;
 
 const ItemContent = styled.div``;

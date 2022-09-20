@@ -1,174 +1,231 @@
 {
-  "data": [
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
+  "menuList": {
+    "desert": [
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
         },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
+        "title": "Fruit Vanilla Ice Cream"
+      }
+    ],
+    "drinks": [
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      }
+    ],
+    "main": [
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
       },
-      "title": "Fruit Vanilla Ice Cream"
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      },
+      {
+        "image": "/images/home/food_item.jpg",
+        "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
+        "price": {
+          "en": {
+            "currency": "$",
+            "value": 29,
+            "valueWithCurrency": "$29"
+          },
+          "sl": {
+            "currency": "LKR",
+            "value": 29,
+            "valueWithCurrency": "29LKR"
+          }
+        },
+        "title": "Fruit Vanilla Ice Cream"
+      }
+    ]
+  },
+  "titleList": [
+    {
+      "image": "/images/home/fruits.svg",
+      "selected": false,
+      "title": "desert"
     },
     {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
+      "image": "/images/home/beverage.svg",
+      "selected": false,
+      "title": "drinks"
     },
     {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
-    },
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
-    },
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
-    },
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
-    },
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
-    },
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
-    },
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
-    },
-    {
-      "image": "/images/home/food_item.jpg",
-      "ingredients": ["Meat", "Potatoes", "Rice", "Tomatoe"],
-      "price": {
-        "en": {
-          "currency": "$",
-          "value": 29,
-          "valueWithCurrency": "$29"
-        },
-        "sl": {
-          "currency": "LKR",
-          "value": 29,
-          "valueWithCurrency": "29LKR"
-        }
-      },
-      "title": "Fruit Vanilla Ice Cream"
+      "image": "/images/home/menu.svg",
+      "selected": true,
+      "title": "main"
     }
   ]
 }

@@ -183,6 +183,9 @@ type TColors = {
   transparent_white7: string;
   transparent_white8: string;
   transparent_white9: string;
+
+  menuTitle: string;
+  themeBackground: string;
 };
 
 export const colors: TColors = {
@@ -340,14 +343,6 @@ export const colors: TColors = {
   orange8: '#E8590C',
   orange9: '#D9480F',
 
-  themeRed: '#ff6239',
-  black: '#000',
-  white: '#fff',
-  royalGold: '#f5bd02',
-  blue: '#20639b',
-  goldenBrown: '#996515',
-  niceBlue: 'rgb(43, 88, 118)',
-
   transparent_black1: 'rgba(0,0,0,0.1)',
   transparent_black2: 'rgba(0,0,0,0.2)',
   transparent_black3: 'rgba(0,0,0,0.3)',
@@ -367,6 +362,16 @@ export const colors: TColors = {
   transparent_white7: 'rgba(255,255,255,0.7)',
   transparent_white8: 'rgba(255,255,255,0.8)',
   transparent_white9: 'rgba(255,255,255,0.9)',
+
+  themeRed: '#ff6239',
+  black: '#000',
+  white: '#fff',
+  royalGold: '#f5bd02',
+  blue: '#20639b',
+  goldenBrown: '#996515',
+  niceBlue: 'rgb(43, 88, 118)',
+  menuTitle: '#000',
+  themeBackground: '#f8faff',
 };
 
 export const themeDark: DefaultTheme = {
@@ -423,6 +428,7 @@ export const fonts = {
 export const borders = {
   primary: `1px solid ${colors.black}`,
   secondary: `1px solid ${colors.gray5}`,
+  turnery: `1px dashed ${colors.black}`,
 };
 
 export const shadows = {
@@ -435,10 +441,11 @@ export const sizes = {
   xs: { vl: 4, px: '4px', pr: '4%', f: '10px', ani: '0.2s' },
   sm: { vl: 8, px: '8px', pr: '8%', f: '14px', ani: '0.3s' },
   md: { vl: 16, px: '16px', pr: '16%', f: '16px', ani: '0.4s' }, // default
-  lg: { vl: 32, px: '32px', pr: '32%', f: '18px', ani: '0.5s' },
-  xl: { vl: 48, px: '48px', pr: '48%', f: '20px', ani: '0.6s' },
-  xxl: { vl: 64, px: '64px', pr: '64%', f: '36px', ani: '0.7s' },
-  xxxl: { vl: 128, px: '128px', pr: '128%', f: '64px', ani: '0.8s' },
+  lg: { vl: 24, px: '24px', pr: '24%', f: '18px', ani: '0.5s' },
+  xl: { vl: 32, px: '32px', pr: '32%', f: '20px', ani: '0.6s' },
+  xxl: { vl: 48, px: '48px', pr: '48%', f: '36px', ani: '0.7s' },
+  xxxl: { vl: 64, px: '64px', pr: '64%', f: '64px', ani: '0.8s' },
+  xxxxl: { vl: 128, px: '128px', pr: '128%', f: '72px', ani: '0.9s' },
 };
 
 export const weights = {

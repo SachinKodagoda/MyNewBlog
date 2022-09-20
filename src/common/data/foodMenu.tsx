@@ -1,6 +1,6 @@
 import foodMenu from './foodMenu.json';
 
-export interface IFoodMenu {
+export interface IFoodMenuItem {
   image: string;
   ingredients: string[];
   price: {
@@ -18,4 +18,15 @@ export interface IFoodMenu {
   title: string;
 }
 
-export const foodMenuData: IFoodMenu[] = foodMenu.data;
+export interface IFoodMenus {
+  [key: string]: IFoodMenuItem[];
+}
+
+export interface IFoodTitles {
+  title: string;
+  selected: boolean;
+  image: string;
+}
+
+export const menuListData: IFoodMenus = foodMenu.menuList;
+export const titleListData: IFoodTitles[] = foodMenu.titleList;
