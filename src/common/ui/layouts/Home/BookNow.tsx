@@ -1,3 +1,13 @@
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
+
+import { PayPalButtons } from '@paypal/react-paypal-js';
+import { MealType, RoomType } from '@prisma/client';
+import { differenceInDays, eachWeekendOfInterval } from 'date-fns';
+import { Field, Form, Formik } from 'formik';
+import { useRouter } from 'next/router';
+import toast from 'react-hot-toast';
+import styled from 'styled-components';
+
 import Welcome from '@components/Animated/Welcome';
 import Button from '@components/Buttons/Button';
 import DateFieldInput from '@components/FormElements/fields/DateFieldInput';
@@ -9,16 +19,8 @@ import ScrollRef from '@components/ScrollRef';
 import { UserContext } from '@ctx/UserContext';
 import useDebounce from '@hooks/useDebounce';
 import { roomTypeOpt } from '@lib/optionLib';
-import { PayPalButtons } from '@paypal/react-paypal-js';
-import { MealType, RoomType } from '@prisma/client';
 import { bookingSchema, initBookingSchema, TBookingSchema } from '@schemas/bookingSchema';
-import { colors } from '@theme/baseTheme';
-import { differenceInDays, eachWeekendOfInterval } from 'date-fns';
-import { Field, Form, Formik } from 'formik';
-import { useRouter } from 'next/router';
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
-import styled from 'styled-components';
+import { colors, devices } from '@theme/baseTheme';
 
 function BookNow(): JSX.Element {
   const { uData } = useContext(UserContext);
@@ -36,9 +38,11 @@ function BookNow(): JSX.Element {
   const calculateNumberOfPeople = (selected: RoomType, numberOfRooms: number) => {
     if (selected === RoomType.single) {
       return numberOfRooms * 1;
-    } else if (selected === RoomType.double) {
+    }
+    if (selected === RoomType.double) {
       return numberOfRooms * 2;
-    } else if (selected === RoomType.deluxe) {
+    }
+    if (selected === RoomType.deluxe) {
       return numberOfRooms * 2;
     }
     return numberOfRooms * 1;
@@ -47,9 +51,11 @@ function BookNow(): JSX.Element {
   const getNumberOfPeople = (selected: RoomType) => {
     if (selected === RoomType.single) {
       return 1;
-    } else if (selected === RoomType.double) {
+    }
+    if (selected === RoomType.double) {
       return 2;
-    } else if (selected === RoomType.deluxe) {
+    }
+    if (selected === RoomType.deluxe) {
       return 2;
     }
     return 1;
@@ -58,9 +64,11 @@ function BookNow(): JSX.Element {
   const getRoomPrice = (selected: RoomType, numberOfRooms: number) => {
     if (selected === RoomType.single) {
       return numberOfRooms * 33;
-    } else if (selected === RoomType.double) {
+    }
+    if (selected === RoomType.double) {
       return numberOfRooms * 66;
-    } else if (selected === RoomType.deluxe) {
+    }
+    if (selected === RoomType.deluxe) {
       return numberOfRooms * 99;
     }
     return numberOfRooms * 33;
@@ -69,9 +77,11 @@ function BookNow(): JSX.Element {
   const getOneRoomPrice = (selected: RoomType) => {
     if (selected === RoomType.single) {
       return 33;
-    } else if (selected === RoomType.double) {
+    }
+    if (selected === RoomType.double) {
       return 66;
-    } else if (selected === RoomType.deluxe) {
+    }
+    if (selected === RoomType.deluxe) {
       return 99;
     }
     return 33;
@@ -80,22 +90,21 @@ function BookNow(): JSX.Element {
   const getMealPrice = (selected: MealType) => {
     if (selected === MealType.full_board) {
       return 10;
-    } else {
-      return 5;
     }
+    return 5;
   };
 
   const getOfferData = async (offerCode: string) => {
     setLoading(true);
     fetch(`/api/dashboard?type=offer_get`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        authorization: `${process.env.JWT}`,
-      },
       body: JSON.stringify({
-        offerCode: offerCode,
+        offerCode,
       }),
+      headers: {
+        authorization: `${process.env.JWT}`,
+        'content-type': 'application/json',
+      },
+      method: 'POST',
     })
       .then(res => res.json())
       .then(async res => {
@@ -108,7 +117,7 @@ function BookNow(): JSX.Element {
         }
         setLoading(false);
       })
-      .catch(res => {
+      .catch(() => {
         setLoading(false);
       });
   };
@@ -116,22 +125,22 @@ function BookNow(): JSX.Element {
   const setBooking = async (data: TBookingSchema) => {
     setLoading(true);
     fetch(`/api/dashboard?type=booking_set`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        authorization: `${process.env.JWT}`,
-      },
       body: JSON.stringify({
         checkIn: data.checkIn,
         checkOut: data.checkOut,
-        roomType: data.roomType,
-        offerId: offerId,
         meal: data.meal,
         note: data.note,
         numberOfRooms: data.numberOfRooms,
-        userEmail: uData?.email,
+        offerId,
+        roomType: data.roomType,
         totalPayment: totalPrice,
+        userEmail: uData?.email,
       }),
+      headers: {
+        authorization: `${process.env.JWT}`,
+        'content-type': 'application/json',
+      },
+      method: 'POST',
     })
       .then(res => res.json())
       .then(async res => {
@@ -152,10 +161,10 @@ function BookNow(): JSX.Element {
     }
   }, [debouncedOfferVal]);
 
-  const getFinalPrice = (roomPrice: number, mealPrice: number, weekend: number, offerPercentage: number) =>
-    (roomPrice + mealPrice + weekend) * (1 - 0.01 * offerPercentage);
-  const getDeductionVal = (roomPrice: number, mealPrice: number, weekend: number, offerPercentage: number) =>
-    (roomPrice + mealPrice + weekend) * (0.01 * offerPercentage);
+  const getFinalPrice = (roomPrice: number, mealPrice: number, weekend: number, _offerPercentage: number) =>
+    (roomPrice + mealPrice + weekend) * (1 - 0.01 * _offerPercentage);
+  const getDeductionVal = (roomPrice: number, mealPrice: number, weekend: number, _offerPercentage: number) =>
+    (roomPrice + mealPrice + weekend) * (0.01 * _offerPercentage);
 
   const getDateDifference = (outDate: Date, inDate: Date) => {
     if (outDate && inDate) {
@@ -167,8 +176,8 @@ function BookNow(): JSX.Element {
   const getNoOfWeekends = (outDate: Date, inDate: Date) => {
     if (outDate && inDate) {
       return eachWeekendOfInterval({
-        start: inDate,
         end: outDate,
+        start: inDate,
       }).length;
     }
     return 0;
@@ -184,9 +193,8 @@ function BookNow(): JSX.Element {
           onSubmit={data => {
             setBooking(data);
             // onModalSubmitHandler(data, formState);
-          }}
-        >
-          {({ values, handleSubmit, setFieldValue, errors }) => (
+          }}>
+          {({ errors, handleSubmit, setFieldValue, values }) => (
             <Form onSubmit={handleSubmit} className='order-form'>
               <OrderFormHead>
                 <span>{uData?.email ? `Booking for (${uData?.email})` : 'BOOK NOW'}</span>
@@ -432,8 +440,7 @@ function BookNow(): JSX.Element {
                 onClickOutside={() => {
                   setModelOpened(false);
                 }}
-                modalOpen={modelOpened}
-              >
+                modalOpen={modelOpened}>
                 <StripeCtr>
                   {!paid ? (
                     <>
@@ -577,9 +584,12 @@ const Price = styled.div`
 
 const TwoColumnForm = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   column-gap: 20px;
   row-gap: 5px;
+  @media ${devices.minDesktopSM} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const StripeCtr = styled.div`

@@ -1,3 +1,6 @@
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import styled from 'styled-components';
+
 import NavBar from '@components/NavBar';
 import { WeatherCtxProvider } from '@ctx/weatherCtx';
 import BookNow from '@layouts/Home/BookNow';
@@ -11,10 +14,7 @@ import PoolBarSpa from '@layouts/Home/PoolBarSpa';
 import Room from '@layouts/Home/Room';
 import Subscribe from '@layouts/Home/Subscribe';
 import BackTopTop from '@layouts/HomeMisc/BackTopTop';
-import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { devices, widths } from '@theme/baseTheme';
-import React from 'react';
-import styled from 'styled-components';
 
 function Home(): JSX.Element {
   return (
@@ -35,18 +35,19 @@ function Home(): JSX.Element {
   );
 }
 
-const HomeProvider = (): JSX.Element => (
-  <PayPalScriptProvider
-    options={{
-      'client-id': 'AUxsVWk5PpDreJQA0e4Qa4oYZrwfNmDEjnbJiDPEJhdB8esfk_Kjfms5f7IVMi8r9Oe1wsmbYtTZnIUv',
-      currency: 'USD',
-    }}
-  >
-    <WeatherCtxProvider>
-      <Home />
-    </WeatherCtxProvider>
-  </PayPalScriptProvider>
-);
+function HomeProvider(): JSX.Element {
+  return (
+    <PayPalScriptProvider
+      options={{
+        'client-id': 'AUxsVWk5PpDreJQA0e4Qa4oYZrwfNmDEjnbJiDPEJhdB8esfk_Kjfms5f7IVMi8r9Oe1wsmbYtTZnIUv',
+        currency: 'USD',
+      }}>
+      <WeatherCtxProvider>
+        <Home />
+      </WeatherCtxProvider>
+    </PayPalScriptProvider>
+  );
+}
 
 export default HomeProvider;
 
