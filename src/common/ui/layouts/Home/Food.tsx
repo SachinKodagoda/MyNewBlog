@@ -9,7 +9,7 @@ import { borders, colors, devices, fonts, shadows, sizes, weights } from '@theme
 import Topic from './Topic';
 
 function Food(): JSX.Element {
-  const [selectedMenuItem, setSelectedMenuItem] = useState<IFoodTitles>([]);
+  const [selectedMenuItem, setSelectedMenuItem] = useState<IFoodTitles>();
   const [selectedMenuData, setSelectedMenuData] = useState<IFoodMenuItem[]>([]);
   useEffect(() => {
     const selectedTitle = titleListData.filter(title => title.selected);
@@ -31,7 +31,7 @@ function Food(): JSX.Element {
                 onClick={() => {
                   setSelectedMenuItem(item);
                 }}
-                isSelected={item.title === selectedMenuItem.title}>
+                isSelected={item.title === selectedMenuItem?.title}>
                 <TopicMenuImg src={item.image} alt='title icon' />
                 <TopicTitle>{item.title}</TopicTitle>
               </TopicItem>
