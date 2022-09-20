@@ -75,3 +75,18 @@ export const userNameValidatorBoolean = (userName: string): boolean => {
 };
 
 export const fistCapitalLetter = (val: string): string => (val.length > 0 ? val.charAt(0).toUpperCase() : 'A');
+
+export const accumulateByKey = (arr: any[], key: string) =>
+  arr.map(
+    (
+      sum => value =>
+        (sum += value[key])
+    )(0)
+  );
+
+export const sortBy = (arr: any[], k: string): number[] =>
+  arr.concat().sort((a, b) => (a[k] > b[k] ? 1 : a[k] < b[k] ? -1 : 0));
+export const sumBy = (arr: any[], k: string): number => arr.reduce((a, b) => a + b[k], 0);
+
+export const sentenceCase = ([first, ...rest]: string[], lowerRest = false) =>
+  first.toUpperCase() + (lowerRest ? rest.join('').toLowerCase() : rest.join(''));

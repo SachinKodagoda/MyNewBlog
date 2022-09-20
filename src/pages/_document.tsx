@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { CssBaseline } from '@nextui-org/react';
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -35,10 +34,9 @@ class MyDocument extends Document {
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
           <link
-            href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap'
             rel='stylesheet'
           />
-          {CssBaseline.flush()}
         </Head>
         <body>
           <Main />

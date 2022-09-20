@@ -1,19 +1,18 @@
-import { useRouter } from 'next/router';
-
 import en from '@translations/english';
-import de from '@translations/german';
+import si from '@translations/sinhala';
 import { TTranslations } from '@ts/localize';
+import { useRouter } from 'next/router';
 
 export const Translations = (): TTranslations => {
   const router = useRouter();
   switch (router.locale) {
     case 'en':
       return en;
-    case 'de': // German
-      return de;
+    case 'si':
+      return si;
     default:
       return en;
   }
 };
 
-export { en as english, de as german };
+export { en as english, si as sinhala };

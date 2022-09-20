@@ -1,0 +1,136 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  user
+  admin
+  supplier
+  hr
+  finance
+}
+
+enum Gender {
+  male
+  female
+  other
+}
+
+enum OnlineStatus {
+  available
+  busy
+  away
+  offline
+}
+
+enum RoomType {
+  single
+  double
+  deluxe
+}
+
+enum MealType {
+  full_board
+  half_board
+}
+
+// id String @id @default(cuid());
+// anith ewa string athi
+model User {
+  id             Int          @id @default(autoincrement())
+  email          String       @unique
+  password       String       @db.VarChar(255)
+  address        String?      @db.VarChar(255)
+  mobileNo       String?      @db.VarChar(255)
+  fName          String?      @db.VarChar(255)
+  lName          String?      @db.VarChar(255)
+  role           Role         @default(user)
+  website        String?
+  gitHub         String?
+  twitter        String?
+  instagram      String?
+  facebook       String?
+  gender         Gender       @default(male)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  onlineStatus   OnlineStatus @default(available)
+  lastModifiedBy String?
+  deleted        Boolean      @default(false)
+}
+
+model Offer {
+  id        Int      @id @default(autoincrement())
+  status    String   @db.VarChar(255)
+  type      String   @db.VarChar(255)
+  desc      String   @db.VarChar(255)
+  offerCode String   @db.VarChar(255)
+  discount  Decimal
+  startDate DateTime @db.Timestamp(3)
+  endDate   DateTime @db.Timestamp(3)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Rooms {
+  roomID          Int    @id @default(autoincrement())
+  availability    String @db.VarChar(255)
+  priceCategory   String @db.VarChar(255)
+  unAvailableDays String @db.VarChar(255)
+}
+
+// bed-view-area-type
+
+model RoomCategory {
+  categoryId     Int    @id @default(autoincrement())
+  categoryName   String @db.VarChar(255)
+  bedCount       String @db.VarChar(255)
+  numberOfPeople String @db.VarChar(255)
+  view           String @db.VarChar(255)
+  area           String @db.VarChar(255)
+  type           String @db.VarChar(255)
+  image          String @db.VarChar(255)
+  description    String @db.VarChar(255)
+}
+
+model Booking {
+  id            Int      @id @default(autoincrement())
+  checkIn       DateTime
+  checkOut      DateTime
+  roomType      RoomType
+  offerId       Int?
+  meal          MealType
+  note          String?
+  numberOfRooms Int      @default(1)
+  userEmail     String?
+  totalPayment  Float    @default(1)
+}
+
+model stock {
+  itemId       Int      @id @default(autoincrement())
+  supplierName String   @db.VarChar(255)
+  orderDate    DateTime @db.Timestamp(3)
+  itemCode     String   @db.VarChar(255)
+  itemName     String   @db.VarChar(255)
+  quanitity    String   @db.VarChar(255)
+  unitePrice   Int      @db.Int
+  total        Int      @db.Int
+}
+
+model supplier {
+  supplierId    Int    @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  supplierEmail String
+  supplierNIC   String
+  CompanyName   String
+  PhoneNumber   String
+  category      String
+}
