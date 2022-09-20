@@ -44,6 +44,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
   @media ${devices.minTabletLC} {
     flex-direction: row;
   }
