@@ -2,6 +2,7 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import styled from 'styled-components';
 
 import NavBar from '@components/NavBar';
+import RatingStars from '@components/Ratings/RatingStars';
 import { WeatherCtxProvider } from '@ctx/weatherCtx';
 import BookNow from '@layouts/Home/BookNow';
 import Conference from '@layouts/Home/Conference';
@@ -23,6 +24,18 @@ function Home(): JSX.Element {
       <HeroArea />
       <BookNow />
       <Room />
+      <TestDiv>
+        <RatingStars size={40} isHoverable={false} rating={0} />
+        <RatingStars size={40} isHoverable={false} rating={0.3} />
+        <RatingStars size={40} isHoverable={false} rating={0.5} />
+        <RatingStars size={40} isHoverable={false} rating={0.7} />
+        <RatingStars size={40} isHoverable={false} rating={1} />
+        <RatingStars size={40} isHoverable={false} rating={2} />
+        <RatingStars size={40} isHoverable={false} rating={3} />
+        <RatingStars size={40} isHoverable={false} rating={4} />
+        <RatingStars size={40} isHoverable={false} rating={5} />
+        <RatingStars size={40} isHoverable={false} rating={6} />
+      </TestDiv>
       <Conference />
       <Food />
       <PoolBarSpa />
@@ -67,4 +80,10 @@ const Container = styled.div`
       border: 1px solid #ccc;
     }
   }
+`;
+
+const TestDiv = styled.div`
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 `;

@@ -385,18 +385,19 @@ export const colors: TColors = {
   menuTitle: '#000',
   themeBackground: '#f8faff',
 
-  ratingGreen: '#40C057',
-  ratingLightGreen: '#82C91E',
-  ratingYellow: '#FAB005',
+  ratingGreen: '#51CF66',
+  ratingLightGreen: '#A9E34B',
+  ratingYellow: '#f5bd02',
   ratingOrange: '#FD7E14',
   ratingRed: '#ff6239',
-  ratingGray: '#ccc',
-  ratingGreenFilter: 'invert(65%) sepia(7%) saturate(3646%) hue-rotate(79deg) brightness(94%) contrast(93%)',
-  ratingLightGreenFilter: 'invert(92%) sepia(13%) saturate(6994%) hue-rotate(30deg) brightness(90%) contrast(78%)',
-  ratingYellowFilter: 'invert(70%) sepia(45%) saturate(1924%) hue-rotate(351deg) brightness(103%) contrast(109%)',
-  ratingOrangeFilter: 'invert(55%) sepia(100%) saturate(1610%) hue-rotate(347deg) brightness(96%) contrast(106%)',
-  ratingRedFilter: 'invert(44%) sepia(93%) saturate(1315%) hue-rotate(336deg) brightness(100%) contrast(102%)',
-  ratingGrayFilter: 'invert(88%) sepia(8%) saturate(14%) hue-rotate(43deg) brightness(91%) contrast(95%)',
+  ratingGray: '#DEE2E6',
+
+  ratingGreenFilter: 'invert(42%) sepia(20%) saturate(1479%) hue-rotate(80deg) brightness(99%) contrast(88%)',
+  ratingLightGreenFilter: 'invert(41%) sepia(98%) saturate(1902%) hue-rotate(56deg) brightness(96%) contrast(90%)',
+  ratingYellowFilter: 'invert(63%) sepia(60%) saturate(1779%) hue-rotate(10deg) brightness(111%) contrast(98%)',
+  ratingOrangeFilter: 'invert(53%) sepia(66%) saturate(1931%) hue-rotate(351deg) brightness(101%) contrast(98%)',
+  ratingRedFilter: 'invert(40%) sepia(91%) saturate(5076%) hue-rotate(6deg) brightness(94%) contrast(88%)',
+  ratingGrayFilter: 'invert(89%) sepia(3%) saturate(1033%) hue-rotate(193deg) brightness(109%) contrast(80%)',
   /* convert hex valies into filter values here: https://codepen.io/sosuke/pen/Pjoqqp */
 };
 

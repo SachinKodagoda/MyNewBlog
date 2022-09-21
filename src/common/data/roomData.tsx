@@ -30,7 +30,7 @@ export const roomData: IRoom[] = [
         valueWithCurrency: '29LKR',
       },
     },
-    rating: 1,
+    rating: 0.4,
     type: 'Single Room',
   },
   {
@@ -47,7 +47,7 @@ export const roomData: IRoom[] = [
         valueWithCurrency: '29LKR',
       },
     },
-    rating: 2,
+    rating: 4.7,
     type: 'Single Room',
   },
   {
@@ -64,7 +64,7 @@ export const roomData: IRoom[] = [
         valueWithCurrency: '29LKR',
       },
     },
-    rating: 3,
+    rating: 5.5,
     type: 'Single Room',
   },
 ];

@@ -10,23 +10,23 @@ function Room(): JSX.Element {
   return (
     <Container>
       <ScrollRef name='Rooms' />
-      {roomData.map(room => (
-        <RoomCtr>
+      {roomData.map((room, i) => (
+        <RoomCtr key={`room-${i + 1}`}>
           <Header>
             <HeaderImg className='room-header_img' src='/images/home/img_1.jpg' alt='room_1' />
           </Header>
           <Body>
             <TitleBar>
               <TopicLeft>
-                <RatingStars isActive rating={room.rating} />
+                <RatingStars isHoverable={false} rating={room.rating} />
                 <div className='room-body_topic_name'>Single Room</div>
               </TopicLeft>
               <div className='room-body_topic_right'>
                 $33<span className='room-body_topic_right_span'>/night</span>
               </div>
             </TitleBar>
-            {room.description.map(item => (
-              <div className='room-body_desc'>
+            {room.description.map((item, j) => (
+              <div className='room-body_desc' key={`desc-${j + 1}`}>
                 <img className='room-body_desc_correct' src='/images/home/correct.svg' alt='s' />
                 {item}
               </div>
