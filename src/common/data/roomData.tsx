@@ -64,7 +64,7 @@ export const roomData: IRoom[] = [
         valueWithCurrency: '29LKR',
       },
     },
-    rating: 5.5,
+    rating: 2.5,
     type: 'Single Room',
   },
 ];

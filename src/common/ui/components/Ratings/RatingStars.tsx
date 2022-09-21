@@ -13,6 +13,7 @@ type TProps = {
 };
 
 function RatingStars({ isActive = true, isHoverable = true, onClick, rating = 0, size = 20 }: TProps): JSX.Element {
+  const sanitizedRating = parseFloat(`${rating}`);
   const [forcedRatingHoverIndex, setForcedRatingHoverIndex] = useState<number>(0);
   const getColor = (index: number) => {
     if (index >= 5) {
@@ -33,35 +34,40 @@ function RatingStars({ isActive = true, isHoverable = true, onClick, rating = 0,
     return colors.ratingGrayFilter;
   };
 
-  const checkAvailability = (i: number, _rating: number) => {
-    return i <= _rating && i + 1 > _rating;
+  const checkAvailability = (_number: number, _rating: number, _isActive: boolean) => {
+    return _isActive && _number === Math.ceil(_rating) && _rating % 1 !== 0;
+  };
+
+  const getSelected = (_number: number, _rating: number, _isActive: boolean) => {
+    return _isActive && _number <= Math.ceil(_rating) ? getColor(_rating) : getColor(0);
   };
   return (
     <Container hoverColorFilter={getColor(forcedRatingHoverIndex)} isHoverable={isHoverable ? 'yes' : 'no'}>
-      {[1, 2, 3, 4, 5].map(item => (
-        <ImageCtr key={`ratings-${item}`}>
+      {[1, 2, 3, 4, 5].map(number => (
+        <ImageCtr key={`ratings-${number}`}>
           <Image
-            onClick={() => onClick && onClick(item)}
-            onMouseEnter={() => isHoverable && setForcedRatingHoverIndex(item)}
+            onClick={() => onClick && onClick(number)}
+            onMouseEnter={() => isHoverable && setForcedRatingHoverIndex(number)}
             onMouseLeave={() => isHoverable && setForcedRatingHoverIndex(0)}
             alt='starFilled'
-            className={item <= forcedRatingHoverIndex ? 'forcedHover' : ''}
-            selectedColorFilter={item <= rating && isActive ? getColor(rating) : getColor(0)}
+            className={number <= forcedRatingHoverIndex ? 'forcedHover' : ''}
+            selectedColorFilter={getSelected(number, sanitizedRating, isActive)}
             height={size}
             src='/images/home/full-star.svg'
             width='auto'
           />
-          {checkAvailability(item, rating) && (
-            <NoFilledCtr width={`${(1 - rating + item) * 100}%`}>
+          {checkAvailability(number, sanitizedRating, isActive) && (
+            <NoFilledCtr width={`${(1 - (sanitizedRating % 1)) * 100}%`}>
               <NoFilledImage
-                onClick={() => onClick && onClick(item)}
+                onClick={() => onClick && onClick(number)}
+                onMouseEnter={() => isHoverable && setForcedRatingHoverIndex(number)}
+                onMouseLeave={() => isHoverable && setForcedRatingHoverIndex(0)}
                 alt='starFilled'
-                className={item <= forcedRatingHoverIndex ? 'forcedHover' : ''}
+                className={number <= forcedRatingHoverIndex ? 'forcedHover' : ''}
                 selectedColorFilter={getColor(0)}
                 height={size}
                 src='/images/home/full-star.svg'
                 width='auto'
-                data-test={(rating - item) % 1}
               />
             </NoFilledCtr>
           )}
