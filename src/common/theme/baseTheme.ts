@@ -186,6 +186,18 @@ type TColors = {
 
   menuTitle: string;
   themeBackground: string;
+  ratingGreen: string;
+  ratingLightGreen: string;
+  ratingYellow: string;
+  ratingOrange: string;
+  ratingRed: string;
+  ratingGray: string;
+  ratingGreenFilter: string;
+  ratingLightGreenFilter: string;
+  ratingYellowFilter: string;
+  ratingOrangeFilter: string;
+  ratingRedFilter: string;
+  ratingGrayFilter: string;
 };
 
 export const colors: TColors = {
@@ -372,6 +384,20 @@ export const colors: TColors = {
   niceBlue: 'rgb(43, 88, 118)',
   menuTitle: '#000',
   themeBackground: '#f8faff',
+
+  ratingGreen: '#40C057',
+  ratingLightGreen: '#82C91E',
+  ratingYellow: '#FAB005',
+  ratingOrange: '#FD7E14',
+  ratingRed: '#ff6239',
+  ratingGray: '#ccc',
+  ratingGreenFilter: 'invert(65%) sepia(7%) saturate(3646%) hue-rotate(79deg) brightness(94%) contrast(93%)',
+  ratingLightGreenFilter: 'invert(92%) sepia(13%) saturate(6994%) hue-rotate(30deg) brightness(90%) contrast(78%)',
+  ratingYellowFilter: 'invert(70%) sepia(45%) saturate(1924%) hue-rotate(351deg) brightness(103%) contrast(109%)',
+  ratingOrangeFilter: 'invert(55%) sepia(100%) saturate(1610%) hue-rotate(347deg) brightness(96%) contrast(106%)',
+  ratingRedFilter: 'invert(44%) sepia(93%) saturate(1315%) hue-rotate(336deg) brightness(100%) contrast(102%)',
+  ratingGrayFilter: 'invert(88%) sepia(8%) saturate(14%) hue-rotate(43deg) brightness(91%) contrast(95%)',
+  /* convert hex valies into filter values here: https://codepen.io/sosuke/pen/Pjoqqp */
 };
 
 export const themeDark: DefaultTheme = {
