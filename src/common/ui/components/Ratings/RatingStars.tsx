@@ -9,10 +9,18 @@ type TProps = {
   isHoverable?: boolean;
   onClick?: (rating: number) => void;
   rating?: number;
-  size?: number;
+  size?: string;
+  gap?: string;
 };
 
-function RatingStars({ isActive = true, isHoverable = true, onClick, rating = 0, size = 20 }: TProps): JSX.Element {
+function RatingStars({
+  isActive = true,
+  isHoverable = true,
+  onClick,
+  rating = 0,
+  size = '20px',
+  gap = sizes.xs.px,
+}: TProps): JSX.Element {
   const sanitizedRating = parseFloat(`${rating}`);
   const [forcedRatingHoverIndex, setForcedRatingHoverIndex] = useState<number>(0);
   const getColor = (index: number) => {
@@ -42,7 +50,7 @@ function RatingStars({ isActive = true, isHoverable = true, onClick, rating = 0,
     return _isActive && _number <= Math.ceil(_rating) ? getColor(_rating) : getColor(0);
   };
   return (
-    <Container hoverColorFilter={getColor(forcedRatingHoverIndex)} isHoverable={isHoverable ? 'yes' : 'no'}>
+    <Container hoverColorFilter={getColor(forcedRatingHoverIndex)} isHoverable={isHoverable ? 'yes' : 'no'} gap={gap}>
       {[1, 2, 3, 4, 5].map(number => (
         <ImageCtr key={`ratings-${number}`}>
           <Image
@@ -81,9 +89,9 @@ export default RatingStars;
 
 // Styles 👕🧦👗🧣🧥👔 -->
 
-const Container = styled.div<{ hoverColorFilter: string; isHoverable: string }>`
+const Container = styled.div<{ hoverColorFilter: string; isHoverable: string; gap: string }>`
   display: flex;
-  column-gap: ${sizes.xs.px};
+  column-gap: ${p => p.gap};
   @media (hover: hover) and (pointer: fine) {
     &:hover img {
       ${p => (p.isHoverable === 'yes' ? `filter: ${colors.ratingGrayFilter}; cursor: pointer;` : '')};

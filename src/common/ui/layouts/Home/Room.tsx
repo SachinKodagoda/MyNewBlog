@@ -18,7 +18,7 @@ function Room(): JSX.Element {
           <Body>
             <TitleBar>
               <TopicLeft>
-                <RatingStars isHoverable={false} rating={room.rating} />
+                <RatingStars isHoverable={false} rating={room.rating} gap={sizes.sm.px} size={sizes.lg.px} />
                 <div className='room-body_topic_name'>Single Room</div>
               </TopicLeft>
               <div className='room-body_topic_right'>
