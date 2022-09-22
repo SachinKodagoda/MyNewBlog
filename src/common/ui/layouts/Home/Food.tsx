@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import ScrollRef from '@components/ScrollRef';
 import { IFoodMenuItem, IFoodTitles, menuListData, titleListData } from '@data/foodMenu';
-import { borders, colors, devices, fonts, shadows, sizes, weights } from '@theme/baseTheme';
+import { animation, borders, colors, devices, fonts, shadows, sizes } from '@theme/baseTheme';
 
 import Topic from './Topic';
 
@@ -90,7 +90,7 @@ const TopicCover = styled.div`
 
 const TopicTitle = styled.div`
   color: ${colors.menuTitle};
-  font-weight: ${weights.bold};
+  font-weight: ${fonts.weight.bold};
 `;
 
 const TopicItem = styled.div<{ isSelected: boolean }>`
@@ -134,14 +134,14 @@ const ItemCover = styled.div`
 
 const MiddleSubContent = styled.div`
   color: ${colors.black};
-  transition: color ${sizes.md.ani} ease;
+  transition: color ${animation.medium} ease;
 `;
 
 const ItemRight = styled.div`
-  font-family: ${fonts.secondary};
+  font-family: ${fonts.family.secondary};
   color: ${colors.themeRed};
   font-size: ${sizes.xl.px};
-  transition: color ${sizes.md.ani} ease;
+  transition: color ${animation.medium} ease;
 `;
 
 const FoodItem = styled.div`
@@ -153,7 +153,7 @@ const FoodItem = styled.div`
   cursor: pointer;
   background-color: ${colors.white};
   border: ${borders.secondary};
-  transition: border-color ${sizes.md.ani} ease, background-color ${sizes.md.ani} ease;
+  transition: border-color ${animation.medium} ease, background-color ${animation.medium} ease;
   box-shadow: ${shadows.turnery};
   word-wrap: break-word;
   user-select: none;
@@ -179,8 +179,8 @@ const ItemMiddle = styled.div`
 `;
 
 const ItemTitle = styled.div`
-  font-weight: ${weights.bold};
-  font-size: ${sizes.xl.f};
+  font-weight: ${fonts.weight.bold};
+  font-size: ${fonts.size.l2};
 `;
 
 const ItemContent = styled.div``;

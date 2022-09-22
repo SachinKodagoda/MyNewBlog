@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import ScrollRef from '@components/ScrollRef';
-import { colors, devices, sizes } from '@theme/baseTheme';
+import { colors, devices, fonts, sizes } from '@theme/baseTheme';
 
 function PoolBarSpa(): JSX.Element {
   return (
@@ -101,7 +101,7 @@ const BodyImg = styled.img`
 
 const BodyDesc = styled.div`
   position: absolute;
-  font-size: ${sizes.xl.f};
+  font-size: ${fonts.size.l2};
   left: ${sizes.sm.px};
   bottom: ${sizes.sm.px};
   color: ${colors.white};

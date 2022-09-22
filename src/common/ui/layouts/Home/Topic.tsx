@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, fonts, sizes, weights } from '@theme/baseTheme';
+import { colors, fonts, sizes } from '@theme/baseTheme';
 
 type TProps = { title: string; subTitle: string };
 function Topic({ subTitle, title }: TProps): JSX.Element {
@@ -25,13 +25,13 @@ const Container = styled.div`
 const Head = styled.div`
   color: ${colors.transparent_black5};
   text-align: center;
-  font-size: ${sizes.xl.f};
+  font-size: ${fonts.size.l2};
   text-transform: uppercase;
 `;
 
 const SubHead = styled.div`
-  font-family: ${fonts.secondary};
+  font-family: ${fonts.family.secondary};
   text-align: center;
-  font-size: ${sizes.xxl.f};
-  font-weight: ${weights.medium};
+  font-size: ${fonts.size.l4};
+  font-weight: ${fonts.weight.medium};
 `;

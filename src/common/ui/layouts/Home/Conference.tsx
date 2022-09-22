@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import ScrollRef from '@components/ScrollRef';
-import { colors, sizes, weights } from '@theme/baseTheme';
+import { colors, fonts, sizes } from '@theme/baseTheme';
 
 function Conference(): JSX.Element {
   return (
@@ -49,7 +49,7 @@ const ConferenceBody = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: ${sizes.xxl.f};
+  font-size: ${fonts.size.l3};
   display: flex;
   flex-direction: column;
   gap: ${sizes.md.px};
@@ -58,17 +58,17 @@ const ConferenceBody = styled.div`
 const ConferenceBodyBtn = styled.div`
   border: 2px solid ${colors.white};
   padding: ${sizes.md.px};
-  font-weight: ${weights.bold};
+  font-weight: ${fonts.weight.bold};
   margin: auto;
   cursor: pointer;
   width: 300px;
-  font-size: ${sizes.xl.f};
+  font-size: ${fonts.size.l2};
 `;
 
 const Title = styled.div`
-  font-size: ${sizes.xxl.f};
+  font-size: ${fonts.size.l3};
 `;
 
 const SubTitle = styled.div`
-  font-size: ${sizes.xl.f};
+  font-size: ${fonts.size.l2};
 `;

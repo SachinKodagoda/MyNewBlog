@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import RatingStars from '@components/Ratings/RatingStars';
 import ScrollRef from '@components/ScrollRef';
 import { roomData } from '@data/roomData';
-import { devices, sizes } from '@theme/baseTheme';
+import { colors, devices, fonts, sizes } from '@theme/baseTheme';
 
 function Room(): JSX.Element {
   return (
@@ -18,24 +18,27 @@ function Room(): JSX.Element {
           <Body>
             <TitleBar>
               <TopicLeft>
-                <RatingStars isHoverable={false} rating={room.rating} gap={sizes.sm.px} size={sizes.lg.px} />
-                <div className='room-body_topic_name'>Single Room</div>
+                <RatingStars isHoverable={false} rating={room.rating} gap={sizes.sm.px} size={sizes.lg.px} flip />
+                <Topic>Single Room</Topic>
               </TopicLeft>
-              <div className='room-body_topic_right'>
-                $33<span className='room-body_topic_right_span'>/night</span>
-              </div>
+              <TopicRight>
+                <Price>$33</Price>
+                <PerNight>/night</PerNight>
+              </TopicRight>
             </TitleBar>
-            {room.description.map((item, j) => (
-              <div className='room-body_desc' key={`desc-${j + 1}`}>
-                <img className='room-body_desc_correct' src='/images/home/correct.svg' alt='s' />
-                {item}
-              </div>
-            ))}
-            <div className='room-body_btn'>
+            <DescriptionCtr>
+              {room.description.map((item, j) => (
+                <Description key={`desc-${j + 1}`}>
+                  <img className='room-body_desc_correct' src='/images/home/correct.svg' alt='s' />
+                  {item}
+                </Description>
+              ))}
+            </DescriptionCtr>
+            <SubmitCtr>
               <LinkScroll to='BookNow' smooth offset={-65} isDynamic>
                 Reserve a room
               </LinkScroll>
-            </div>
+            </SubmitCtr>
           </Body>
         </RoomCtr>
       ))}
@@ -55,52 +58,6 @@ const Container = styled.div`
     flex-direction: row;
   }
 
-  .room-container {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-  }
-  .room-body_topic {
-    font-family: 'Playfair Display', Georgia, serif;
-    text-align: left;
-    position: relative;
-    height: 50px;
-    padding: 0 16px;
-    margin-bottom: 16px;
-  }
-  .room-body_topic:after,
-  .room-body_topic:before {
-    content: '';
-    display: table;
-  }
-  .room-body_topic:after {
-    clear: both;
-  }
-  .room-body_topic_star_cover {
-    width: 80px;
-    height: 20px;
-  }
-  .room-body_topic_star_cover:after,
-  .room-body_topic_star_cover:before {
-    content: '';
-    display: table;
-  }
-  .room-body_topic_star_cover:after {
-    clear: both;
-  }
-  .room-body_topic_star {
-    width: 15px;
-    height: 15px;
-    float: left;
-  }
-  .room-body_topic_name {
-    font-size: 20px;
-  }
-  .room-body_topic_left {
-    float: left;
-    width: 70%;
-    height: 50px;
-  }
   .room-body_topic_right {
     text-align: center;
     float: right;
@@ -125,18 +82,6 @@ const Container = styled.div`
     margin-right: 10px;
   }
   .room-body_btn {
-    cursor: pointer;
-    width: 50%;
-    background: #ff6138;
-    color: #fff;
-    text-align: center;
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
-    margin: 16px auto;
-    border-radius: 5px;
-    position: relative;
-    z-index: 2;
   }
 `;
 
@@ -156,6 +101,9 @@ const HeaderImg = styled.img`
 `;
 
 const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${sizes.md.px};
   padding-top: ${sizes.md.px};
   @media ${devices.minTablet} {
     padding: ${sizes.md.px};
@@ -171,4 +119,54 @@ const TitleBar = styled.div`
 const TopicLeft = styled.div`
   display: flex;
   flex-direction: column;
+  gap: ${sizes.xs.px};
+  padding-bottom: ${sizes.sm.px};
+`;
+
+const Topic = styled.div`
+  font-family: ${fonts.family.secondary};
+  font-weight: ${fonts.weight.semibold};
+  font-size: ${fonts.size.l2};
+`;
+
+const TopicRight = styled.div`
+  border-bottom: 2px solid #ff6138;
+  display: flex;
+  gap: ${sizes.sm.px};
+  align-items: center;
+  line-height: 1;
+  padding-bottom: ${sizes.sm.px};
+`;
+
+const Price = styled.div`
+  color: #ff6138;
+  font-size: ${fonts.size.l3};
+`;
+
+const PerNight = styled.div`
+  font-size: ${fonts.size.l};
+  align-self: flex-end;
+`;
+
+const Description = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${sizes.sm.px};
+`;
+
+const DescriptionCtr = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${sizes.sm.px};
+`;
+
+const SubmitCtr = styled.div`
+  cursor: pointer;
+  background: ${colors.themeRed};
+  color: ${colors.white};
+  padding: ${sizes.sm.px};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: ${fonts.weight.bold};
 `;

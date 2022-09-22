@@ -11,6 +11,7 @@ type TProps = {
   rating?: number;
   size?: string;
   gap?: string;
+  flip?: boolean;
 };
 
 function RatingStars({
@@ -20,6 +21,7 @@ function RatingStars({
   rating = 0,
   size = '20px',
   gap = sizes.xs.px,
+  flip = false,
 }: TProps): JSX.Element {
   const sanitizedRating = parseFloat(`${rating}`);
   const [forcedRatingHoverIndex, setForcedRatingHoverIndex] = useState<number>(0);
@@ -50,7 +52,11 @@ function RatingStars({
     return _isActive && _number <= Math.ceil(_rating) ? getColor(_rating) : getColor(0);
   };
   return (
-    <Container hoverColorFilter={getColor(forcedRatingHoverIndex)} isHoverable={isHoverable ? 'yes' : 'no'} gap={gap}>
+    <Container
+      hoverColorFilter={getColor(forcedRatingHoverIndex)}
+      isHoverable={isHoverable ? 'yes' : 'no'}
+      gap={gap}
+      flip={flip ? 'flip' : 'noFlip'}>
       {[1, 2, 3, 4, 5].map(number => (
         <ImageCtr key={`ratings-${number}`}>
           <Image
@@ -87,11 +93,10 @@ function RatingStars({
 
 export default RatingStars;
 
-// Styles 👕🧦👗🧣🧥👔 -->
-
-const Container = styled.div<{ hoverColorFilter: string; isHoverable: string; gap: string }>`
+const Container = styled.div<{ hoverColorFilter: string; isHoverable: string; gap: string; flip: string }>`
   display: flex;
   column-gap: ${p => p.gap};
+  transform: ${p => (p.flip === 'flip' ? 'scaleX(-1)' : 'scale(1)')};
   @media (hover: hover) and (pointer: fine) {
     &:hover img {
       ${p => (p.isHoverable === 'yes' ? `filter: ${colors.ratingGrayFilter}; cursor: pointer;` : '')};
