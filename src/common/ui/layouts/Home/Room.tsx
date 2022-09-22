@@ -18,7 +18,7 @@ function Room(): JSX.Element {
           <Body>
             <TitleBar>
               <TopicLeft>
-                <RatingStars isHoverable={false} rating={room.rating} gap={sizes.sm.px} size={sizes.lg.px} />
+                <RatingStars isHoverable={false} rating={room.rating} gap={sizes.sm.px} size={sizes.l1.px} />
                 <Topic>Single Room</Topic>
               </TopicLeft>
               <TopicRight>
@@ -29,7 +29,7 @@ function Room(): JSX.Element {
             <DescriptionCtr>
               {room.description.map((item, j) => (
                 <Description key={`desc-${j + 1}`}>
-                  <img className='room-body_desc_correct' src='/images/home/correct.svg' alt='s' />
+                  <CheckMark src='/images/home/correct.svg' alt='s' />
                   {item}
                 </Description>
               ))}
@@ -147,4 +147,10 @@ const SubmitCtr = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: ${fonts.weight.bold};
+`;
+
+const CheckMark = styled.img`
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
 `;

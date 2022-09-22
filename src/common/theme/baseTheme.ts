@@ -186,6 +186,7 @@ type TColors = {
 
   menuTitle: string;
   themeBackground: string;
+  themeBackground2: string;
   ratingGreen: string;
   ratingLightGreen: string;
   ratingYellow: string;
@@ -384,6 +385,7 @@ export const colors: TColors = {
   niceBlue: 'rgb(43, 88, 118)',
   menuTitle: '#000',
   themeBackground: '#f8faff',
+  themeBackground2: '#fafafa',
 
   ratingGreen: '#51CF66',
   ratingLightGreen: '#A9E34B',
@@ -498,11 +500,11 @@ export const sizes = {
   xs: { vl: 4, px: '4px', pr: '4%' },
   sm: { vl: 8, px: '8px', pr: '8%' },
   md: { vl: 16, px: '16px', pr: '16%' }, // default
-  lg: { vl: 24, px: '24px', pr: '24%' },
-  xl: { vl: 32, px: '32px', pr: '32%' },
-  xxl: { vl: 48, px: '48px', pr: '48%' },
-  xxxl: { vl: 64, px: '64px', pr: '64%' },
-  xxxxl: { vl: 128, px: '128px', pr: '128%' },
+  l1: { vl: 24, px: '24px', pr: '24%' },
+  l2: { vl: 32, px: '32px', pr: '32%' },
+  l3: { vl: 48, px: '48px', pr: '48%' },
+  l4: { vl: 64, px: '64px', pr: '64%' },
+  l5: { vl: 128, px: '128px', pr: '128%' },
 };
 
 const theme = {

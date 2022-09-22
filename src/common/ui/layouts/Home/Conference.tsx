@@ -23,7 +23,7 @@ export default Conference;
 
 const Container = styled.div`
   position: relative;
-  width: calc(100% - ${sizes.xl.px});
+  width: calc(100% - ${sizes.l2.px});
   height: 400px;
   background: ${colors.themeRed};
   color: ${colors.white};
@@ -62,7 +62,7 @@ const ConferenceBodyBtn = styled.div`
   margin: auto;
   cursor: pointer;
   width: 300px;
-  font-size: ${fonts.size.l2};
+  font-size: ${fonts.size.l3};
 `;
 
 const Title = styled.div`

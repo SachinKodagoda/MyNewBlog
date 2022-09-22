@@ -70,10 +70,10 @@ const InnerContainer = styled.div`
   background: ${colors.themeBackground};
   display: flex;
   flex-direction: column;
-  gap: ${sizes.xl.px};
+  gap: ${sizes.l2.px};
   @media ${devices.minDesktopSM} {
     border: ${borders.turnery};
-    padding: ${sizes.xxl.px} ${sizes.md.px};
+    padding: ${sizes.l3.px} ${sizes.md.px};
   }
 `;
 
@@ -97,7 +97,7 @@ const TopicItem = styled.div<{ isSelected: boolean }>`
   background: ${p => `${p.isSelected ? colors.royalGold : colors.white}`};
   text-align: center;
   border: 1px solid ${colors.black};
-  padding: ${sizes.md.px} ${sizes.lg.px};
+  padding: ${sizes.md.px} ${sizes.l1.px};
   user-select: none;
   display: flex;
   gap: ${sizes.md.px};
@@ -114,8 +114,8 @@ const TopicItem = styled.div<{ isSelected: boolean }>`
 `;
 
 const TopicMenuImg = styled.img`
-  width: ${sizes.lg.px};
-  height: ${sizes.lg.px};
+  width: ${sizes.l1.px};
+  height: ${sizes.l1.px};
   margin-bottom: 0;
   vertical-align: middle;
 `;
@@ -125,7 +125,7 @@ const ItemCover = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   justify-content: space-around;
-  gap: ${sizes.md.px} ${sizes.xxl.px};
+  gap: ${sizes.md.px} ${sizes.l3.px};
   margin: 0 auto;
   @media ${devices.minDesktopSM} {
     grid-template-columns: 1fr 1fr;
@@ -140,7 +140,7 @@ const MiddleSubContent = styled.div`
 const ItemRight = styled.div`
   font-family: ${fonts.family.secondary};
   color: ${colors.themeRed};
-  font-size: ${sizes.xl.px};
+  font-size: ${sizes.l2.px};
   transition: color ${animation.medium} ease;
 `;
 
@@ -167,8 +167,8 @@ const FoodItem = styled.div`
 `;
 
 const ItemLeftImg = styled.img`
-  width: ${sizes.xxxl.px};
-  height: ${sizes.xxxl.px};
+  width: ${sizes.l4.px};
+  height: ${sizes.l4.px};
   border-radius: 100%;
 `;
 
