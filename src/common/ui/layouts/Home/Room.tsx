@@ -18,7 +18,7 @@ function Room(): JSX.Element {
           <Body>
             <TitleBar>
               <TopicLeft>
-                <RatingStars isHoverable={false} rating={room.rating} gap={sizes.sm.px} size={sizes.lg.px} flip />
+                <RatingStars isHoverable={false} rating={room.rating} gap={sizes.sm.px} size={sizes.lg.px} />
                 <Topic>Single Room</Topic>
               </TopicLeft>
               <TopicRight>
@@ -47,41 +47,19 @@ function Room(): JSX.Element {
 }
 export default Room;
 
-// Styles 👕🧦👗🧣🧥👔 -->
-
 const Container = styled.div`
   position: relative;
-  padding: 8px;
+  padding: ${sizes.md.px};
   display: flex;
   flex-direction: column;
+  gap: ${sizes.md.px};
   @media ${devices.minDesktopSM} {
     flex-direction: row;
-  }
-
-  .room-body_topic_right {
-    text-align: center;
-    float: right;
-    width: 30%;
-    height: 50px;
-    font-size: 28px;
-    color: #ff6138;
-    line-height: 50px;
-    border-bottom: 2px solid #ff6138;
-  }
-  .room-body_topic_right_span {
-    font-size: 15px;
-    color: #000;
-  }
-  .room-body_desc {
-    font-size: 16px;
-    padding-left: 16px;
   }
   .room-body_desc_correct {
     width: 15px;
     height: 15px;
     margin-right: 10px;
-  }
-  .room-body_btn {
   }
 `;
 
@@ -144,7 +122,7 @@ const Price = styled.div`
 `;
 
 const PerNight = styled.div`
-  font-size: ${fonts.size.l};
+  font-size: ${fonts.size.l1};
   align-self: flex-end;
 `;
 

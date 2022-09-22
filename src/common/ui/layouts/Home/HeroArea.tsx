@@ -1,18 +1,18 @@
+import styled from 'styled-components';
+
 import BookingLogo from '@layouts/HomeMisc/BookingLogo';
 import Weather from '@layouts/HomeMisc/Weather';
 import { colors } from '@theme/baseTheme';
-import React from 'react';
-import styled from 'styled-components';
 
 function HeroArea(): JSX.Element {
   return (
     <Container>
       <BookingBg>
-        <video className='booking-video' playsInline loop muted autoPlay>
-          <track kind='captions' />
-          <source src='video/hotel.mp4' type='video/mp4' />
+        <BookingVideo playsInline loop muted autoPlay>
+          <Track kind='captions' />
+          <Source src='video/hotel.mp4' type='video/mp4' />
           Your browser does not support the video tag.
-        </video>
+        </BookingVideo>
       </BookingBg>
       <GuestImg src='/images/home/food.svg' alt='guest' />
       <BookingLogo />
@@ -78,11 +78,15 @@ const BookingBg = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-
-  .booking-video {
-    width: auto;
-    height: 100vh;
-    margin: auto;
-    display: block;
-  }
 `;
+
+const BookingVideo = styled.video`
+  width: auto;
+  height: 100vh;
+  margin: auto;
+  display: block;
+`;
+
+const Track = styled.track``;
+
+const Source = styled.source``;

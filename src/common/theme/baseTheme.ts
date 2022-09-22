@@ -465,9 +465,9 @@ export const fonts = {
   },
   size: {
     xs: '10px',
-    s: '14px',
-    m: '16px', // default
-    l: '18px',
+    sm: '14px',
+    md: '16px', // default
+    l1: '18px',
     l2: '20px',
     l3: '24px',
     l4: '36px',
@@ -495,14 +495,14 @@ export const animation = {
 };
 
 export const sizes = {
-  xs: { vl: 4, px: '4px', pr: '4%', ani: '0.2s' },
-  sm: { vl: 8, px: '8px', pr: '8%', ani: '0.3s' },
-  md: { vl: 16, px: '16px', pr: '16%', ani: '0.4s' }, // default
-  lg: { vl: 24, px: '24px', pr: '24%', ani: '0.5s' },
-  xl: { vl: 32, px: '32px', pr: '32%', ani: '0.6s' },
-  xxl: { vl: 48, px: '48px', pr: '48%', ani: '0.7s' },
-  xxxl: { vl: 64, px: '64px', pr: '64%', ani: '0.8s' },
-  xxxxl: { vl: 128, px: '128px', pr: '128%', ani: '0.9s' },
+  xs: { vl: 4, px: '4px', pr: '4%' },
+  sm: { vl: 8, px: '8px', pr: '8%' },
+  md: { vl: 16, px: '16px', pr: '16%' }, // default
+  lg: { vl: 24, px: '24px', pr: '24%' },
+  xl: { vl: 32, px: '32px', pr: '32%' },
+  xxl: { vl: 48, px: '48px', pr: '48%' },
+  xxxl: { vl: 64, px: '64px', pr: '64%' },
+  xxxxl: { vl: 128, px: '128px', pr: '128%' },
 };
 
 const theme = {
