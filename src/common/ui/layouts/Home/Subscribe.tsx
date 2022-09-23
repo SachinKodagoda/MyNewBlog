@@ -1,17 +1,17 @@
-import ScrollRef from '@components/ScrollRef';
-import React from 'react';
 import styled from 'styled-components';
+
+import ScrollRef from '@components/ScrollRef';
+import { colors, fonts, sizes } from '@theme/baseTheme';
 
 function Subscribe(): JSX.Element {
   return (
     <Container>
       <ScrollRef name='Offers' />
-      <div className='subscribe-container'>
-        <div className='subscribe-head'>Get the best offers first!</div>
-        <form className='subscribe-form'>
-          <div className='subscribe-form_group'>
-            <input
-              className='subscribe-form_group_input'
+      <InnerContainer>
+        <Title>Get the best offers first!</Title>
+        <Form>
+          <FromGroup>
+            <TextInput
               type='text'
               placeholder='Your Email Address'
               onChange={() => {
@@ -19,10 +19,10 @@ function Subscribe(): JSX.Element {
                 console.log('test=-->');
               }}
             />
-          </div>
-        </form>
-        <div className='subscribe-btn'>Subscribe</div>
-      </div>
+          </FromGroup>
+        </Form>
+        <SubscribeBtn>Subscribe</SubscribeBtn>
+      </InnerContainer>
     </Container>
   );
 }
@@ -33,48 +33,43 @@ export default Subscribe;
 
 const Container = styled.div`
   position: relative;
-  padding: 0 16px;
-  .subscribe-container {
-    height: auto;
-    background: #606060;
-    padding: 0 16px 16px 16px;
-    color: #fff;
-    font-size: 20px;
-  }
-  .subscribe-head {
-    text-align: center;
-    height: 60px;
-    line-height: 60px;
-  }
-  .subscribe-form {
-    height: auto;
-  }
-  .subscribe-form_group {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  .subscribe-form_group_input {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    padding: 8px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    background-color: #fff;
-  }
-  @media only screen and (min-width: 992px) {
-    .subscribe-form_group_input {
-      width: 50%;
-    }
-  }
-  .subscribe-btn {
-    background: #ff6138;
-    border-radius: 4px;
-    height: 40px;
-    color: #fff;
-    width: 150px;
-    line-height: 40px;
-    text-align: center;
-    margin: auto;
-  }
+  padding: ${sizes.xs.px} ${sizes.md.px};
+`;
+
+const InnerContainer = styled.div`
+  background-color: ${colors.themeGrey};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: ${sizes.md.px};
+  padding: ${sizes.md.px};
+`;
+
+const Title = styled.div`
+  color: ${colors.white};
+  font-size: ${fonts.size.l2};
+`;
+
+const Form = styled.div`
+  width: 100%;
+`;
+
+const FromGroup = styled.div``;
+
+const TextInput = styled.input`
+  padding: ${sizes.md.px};
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+`;
+
+const SubscribeBtn = styled.div`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${colors.themeRed};
+  color: ${colors.white};
+  border-radius: ${sizes.xs.px};
+  padding: ${sizes.sm.px} ${sizes.l4.px};
 `;

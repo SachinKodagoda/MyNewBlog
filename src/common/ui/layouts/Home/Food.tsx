@@ -62,7 +62,7 @@ export default Food;
 // Styles 👕🧦👗🧣🧥👔 -->
 
 const Container = styled.div`
-  padding: ${sizes.md.px};
+  padding: ${sizes.xs.px} ${sizes.md.px};
 `;
 
 const InnerContainer = styled.div`

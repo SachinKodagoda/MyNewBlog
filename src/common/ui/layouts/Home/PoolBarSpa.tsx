@@ -39,7 +39,7 @@ export default PoolBarSpa;
 
 const Container = styled.div`
   height: auto;
-  padding: 0 ${sizes.md.px};
+  padding: ${sizes.xs.px} ${sizes.md.px};
   display: flex;
   justify-content: center;
   align-items: center;

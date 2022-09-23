@@ -187,6 +187,8 @@ type TColors = {
   menuTitle: string;
   themeBackground: string;
   themeBackground2: string;
+  themeGrey: string;
+
   ratingGreen: string;
   ratingLightGreen: string;
   ratingYellow: string;
@@ -386,6 +388,7 @@ export const colors: TColors = {
   menuTitle: '#000',
   themeBackground: '#f8faff',
   themeBackground2: '#fafafa',
+  themeGrey: '#606060',
 
   ratingGreen: '#51CF66',
   ratingLightGreen: '#A9E34B',

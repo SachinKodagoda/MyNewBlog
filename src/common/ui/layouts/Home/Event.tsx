@@ -39,7 +39,7 @@ function Event(): JSX.Element {
 export default Event;
 
 const Container = styled.div`
-  padding: ${sizes.md.px};
+  padding: ${sizes.xs.px} ${sizes.md.px};
   position: relative;
 `;
 

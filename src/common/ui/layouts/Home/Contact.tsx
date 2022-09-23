@@ -1,6 +1,6 @@
-import ScrollRef from '@components/ScrollRef';
-import React from 'react';
 import styled from 'styled-components';
+
+import ScrollRef from '@components/ScrollRef';
 
 function Contact(): JSX.Element {
   return (
@@ -40,6 +40,17 @@ function Contact(): JSX.Element {
         </div>
         <div className='contact-btn'>Send Message</div>
       </div>
+      <ContainerInner>
+        <Head>Contact</Head>
+        <Body>
+          If you have any questions, do not hesitate to ask them.
+          <Form>
+            <FormGroup>
+              <TextInput />
+            </FormGroup>
+          </Form>
+        </Body>
+      </ContainerInner>
     </Container>
   );
 }
