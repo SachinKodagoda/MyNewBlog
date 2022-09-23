@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import ScrollRef from '@components/ScrollRef';
+import { eventData } from '@data/eventData';
 import { borders, colors, devices, fonts, sizes } from '@theme/baseTheme';
 
 function Event(): JSX.Element {
@@ -12,42 +13,23 @@ function Event(): JSX.Element {
           <LeftImg className='event-container-sub_left_img' src='/images/home/events.png' alt='location' />
         </Left>
         <Right>
-          <EventItem>
-            <CalendarItem>
-              <CalendarDate>12</CalendarDate>
-              <CalendarMonth>JANUARY</CalendarMonth>
-              <CalendarYear>2019</CalendarYear>
-            </CalendarItem>
-            <Details>
-              <Title>Big summer meetups</Title>
-              <SubTitle>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts
-              </SubTitle>
-              <EventBtnCtr>
-                <JoinBtn>join event</JoinBtn>
-                <MoreDetailBtn>see details</MoreDetailBtn>
-              </EventBtnCtr>
-            </Details>
-          </EventItem>
-          <EventItem>
-            <CalendarItem>
-              <CalendarDate>12</CalendarDate>
-              <CalendarMonth>JANUARY</CalendarMonth>
-              <CalendarYear>2019</CalendarYear>
-            </CalendarItem>
-            <Details>
-              <Title>Big summer meetups</Title>
-              <SubTitle>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts
-              </SubTitle>
-              <EventBtnCtr>
-                <JoinBtn>join event</JoinBtn>
-                <MoreDetailBtn>see details</MoreDetailBtn>
-              </EventBtnCtr>
-            </Details>
-          </EventItem>
+          {eventData.map((event, i) => (
+            <EventItem key={`event-${i + 1}`}>
+              <CalendarItem>
+                <CalendarDate>{event?.dateValue?.date}</CalendarDate>
+                <CalendarMonth>{event?.dateValue?.month}</CalendarMonth>
+                <CalendarYear>{event?.dateValue?.year}</CalendarYear>
+              </CalendarItem>
+              <Details>
+                <Title>{event?.title}</Title>
+                <SubTitle>{event?.subtitle}</SubTitle>
+                <EventBtnCtr>
+                  <JoinBtn>join event</JoinBtn>
+                  <MoreDetailBtn>see details</MoreDetailBtn>
+                </EventBtnCtr>
+              </Details>
+            </EventItem>
+          ))}
         </Right>
       </InnerCtr>
     </Container>
