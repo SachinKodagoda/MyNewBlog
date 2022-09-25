@@ -26,7 +26,6 @@
     "test:jest": "jest"
   },
   "dependencies": {
-    "boxicons": "^2.1.4",
     "next": "12.3.1",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
@@ -36,7 +35,6 @@
     "react-select": "^5.4.0",
     "styled-components": "^5.3.5",
     "swiper": "^8.4.2",
-
     "@paypal/react-paypal-js": "^7.8.1",
     "@prisma/client": "^4.3.1",
     "@stripe/react-stripe-js": "^1.10.0",
@@ -84,7 +82,6 @@
     "prettier": "^2.7.1",
     "typescript": "4.8.3",
     "vercel": "^28.3.0",
-
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "14.4.3",
