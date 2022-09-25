@@ -15,15 +15,19 @@ function DesignSystem(): JSX.Element {
   const menuItemsArr: TMenuItem[] = [
     {
       icon: <BiCollection />,
-      name: 'buttons',
+      name: 'Buttons',
     },
     {
       icon: <BiTable />,
-      name: 'tables',
+      name: 'Tables',
+    },
+    {
+      name: 'Tags',
+      titleType: 'main',
     },
     {
       icon: <BiExtension />,
-      name: 'tags',
+      name: 'Tags',
     },
   ];
   const getRightMenu = (): JSX.Element => {

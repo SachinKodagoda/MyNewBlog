@@ -8,10 +8,13 @@ type TQueryData = {
   value: string;
 };
 
+type TTitleTypes = 'disabled' | 'main' | 'sub' | 'normal';
+
 export type TMenuItem = {
   name: string;
   data?: TQueryData[];
   icon?: JSX.Element;
+  titleType?: TTitleTypes;
 };
 type TProps = {
   menuItems: TMenuItem[];
@@ -43,6 +46,12 @@ function ActionMenu({
   const selectedArr = menuItems.map(a => a.name);
   const top = `${itemHeight * (selectedArr.indexOf(selected) >= 0 ? selectedArr.indexOf(selected) : 0)}px`;
   const router = useRouter();
+  const getTitleType = (item: TMenuItem): JSX.Element => {
+    if (item?.titleType === 'main') {
+      return <MainTitle>{item?.name}</MainTitle>;
+    }
+    return <div>{item?.name}</div>;
+  };
   return (
     <Container
       style={{ width: collapsed ? collapsedWidth : width }}
@@ -66,7 +75,7 @@ function ActionMenu({
               }}
               key={`menu-${i + 1}`}>
               {a?.icon}
-              {!collapsed && a.name}
+              {!collapsed && getTitleType(a)}
             </MenuItem>
           );
         })}
@@ -114,7 +123,6 @@ const MenuItemBackground = styled.span<{ menuType: string; itemHeight: number }>
 const Logo = styled.div``;
 
 const MenuItem = styled.button<{ menuType: string; itemHeight: number }>`
-  text-transform: uppercase;
   cursor: pointer;
   width: 100%;
   height: ${p => p.itemHeight}px;
@@ -149,4 +157,8 @@ const MenuArrow = styled.span<{ itemHeight: number; borderSize: number; menuType
   transition: top 0.2s ease-in-out;
   transform-origin: top right;
   display: ${p => (p.menuType === 'secondary' ? 'none' : 'inline-block')};
+`;
+
+const MainTitle = styled.div`
+  color: #ccc;
 `;
