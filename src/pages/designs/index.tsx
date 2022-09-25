@@ -48,6 +48,7 @@ function DesignSystem(): JSX.Element {
           menuItems={menuItemsArr}
           setSelected={val => setSelectedItem(`${val.name}`)}
           marginTop='60px'
+          type='secondary'
         />
 
         <RightMenu>{getRightMenu()}</RightMenu>

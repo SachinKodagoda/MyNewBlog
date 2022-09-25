@@ -93,7 +93,6 @@ const MenuItemBackground = styled.span<{ type: string }>`
   height: ${misc.menuHeight}px;
   width: 100%;
   background: var(--xui-${({ type }) => type}-sidebar-active-background);
-  color: var(--xui-${({ type }) => type}-sidebar-active-foreground);
   pointer-events: none;
   transition: top 0.2s ease-in-out;
   transform-origin: top right;
@@ -110,7 +109,6 @@ const MenuItem = styled.button`
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
-  color: ${colors.white};
   pointer-events: auto;
   position: relative;
   z-index: 1;
@@ -121,6 +119,7 @@ const MenuItem = styled.button`
   }
   &.active {
     color: ${colors.black};
+    color: var(--xui-${({ type }) => type}-sidebar-active-foreground);
     font-weight: 600;
   }
 `;
