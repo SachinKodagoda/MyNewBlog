@@ -4,7 +4,8 @@ import { useRouter } from 'next/router';
 import { BiExtension } from 'react-icons/bi';
 import styled from 'styled-components';
 
-import PrimaryMenu, { TMenuItem } from '@components/SideMenu/PrimaryMenu';
+import PrimaryMenu, { TMenuItem } from '@components/Menu/PrimaryMenu';
+import TopMenu from '@components/Menu/TopMenu';
 import Buttons from '@layouts/Designs/buttons';
 import Tables from '@layouts/Designs/tables';
 
@@ -53,14 +54,18 @@ function DesignSystem(): JSX.Element {
     }
   }, [router.query.menu]);
   return (
-    <Container>
-      <PrimaryMenu
-        selected={selectedItem}
-        menuItems={menuItemsArr}
-        setSelected={val => setSelectedItem(`${val.name}`)}
-      />
-      <RightMenu>{getRightMenu()}</RightMenu>
-    </Container>
+    <>
+      <TopMenu />
+      <Container>
+        <PrimaryMenu
+          selected={selectedItem}
+          menuItems={menuItemsArr}
+          setSelected={val => setSelectedItem(`${val.name}`)}
+          marginTop='60px'
+        />
+        <RightMenu>{getRightMenu()}</RightMenu>
+      </Container>
+    </>
   );
 }
 

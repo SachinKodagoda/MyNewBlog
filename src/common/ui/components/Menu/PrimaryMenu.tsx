@@ -21,12 +21,14 @@ type TProps = {
   collapsedWidth?: string;
   width?: string;
   brand?: string;
+  marginTop?: string;
 };
 
 function PrimaryMenu({
   brand = '',
   collapsed = false,
   collapsedWidth = '70px',
+  marginTop = '0px',
   menuItems,
   selected,
   setSelected,
@@ -36,7 +38,7 @@ function PrimaryMenu({
   const top = `${misc.menuHeight * (selectedArr.indexOf(selected) >= 0 ? selectedArr.indexOf(selected) : 0)}px`;
   const router = useRouter();
   return (
-    <Container style={{ width: collapsed ? collapsedWidth : width }}>
+    <Container style={{ width: collapsed ? collapsedWidth : width }} marginTop={marginTop}>
       {brand.trim().length > 0 && <Logo>{brand}</Logo>}
       <MenuItemCtr>
         <MenuItemBackground style={{ top }} />
@@ -64,10 +66,10 @@ function PrimaryMenu({
 
 export default PrimaryMenu;
 
-const Container = styled.div`
-  height: 100vh;
-  background: ${colors.black};
-  color: ${colors.white};
+const Container = styled.div<{ marginTop: string }>`
+  height: calc(100vh - ${({ marginTop }) => marginTop});
+  background: var(--xui-colors-sidebar-background);
+  color: var(--xui-colors-sidebar-foreground);
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -88,7 +90,8 @@ const MenuItemBackground = styled.span`
   right: 0;
   height: ${misc.menuHeight}px;
   width: 100%;
-  background: ${colors.royalGold};
+  background: var(--xui-colors-sidebar-active-background);
+  color: var(--xui-colors-sidebar-active-foreground);
   pointer-events: none;
   transition: top 0.2s ease-in-out;
   transform-origin: top right;
