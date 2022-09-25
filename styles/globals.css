@@ -395,10 +395,15 @@
   --xui--navbarBlur: 10px;
 
   --xui-colors-navbar: var(--xui-colors-gray900);
-  --xui-colors-sidebar-background: var(--xui-colors-gray900);
-  --xui-colors-sidebar-foreground: var(--xui-colors-white);
-  --xui-colors-sidebar-active-background: var(--xui-colors-yellow600);
-  --xui-colors-sidebar-active-foreground: var(--xui-colors-black);
+  --xui-primary-sidebar-background: var(--xui-colors-gray900);
+  --xui-primary-sidebar-foreground: var(--xui-colors-white);
+  --xui-primary-sidebar-active-background: var(--xui-colors-yellow600);
+  --xui-primary-sidebar-active-foreground: var(--xui-colors-black);
+
+  --xui-secondary-sidebar-background: var(--xui-colors-gray900);
+  --xui-secondary-sidebar-foreground: var(--xui-colors-white);
+  --xui-secondary-sidebar-active-background: var(--xui-colors-yellow600);
+  --xui-secondary-sidebar-active-foreground: var(--xui-colors-black);
 
 }
 

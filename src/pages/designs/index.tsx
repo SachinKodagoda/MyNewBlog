@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { BiExtension } from 'react-icons/bi';
 import styled from 'styled-components';
 
-import PrimaryMenu, { TMenuItem } from '@components/Menu/PrimaryMenu';
+import PrimaryMenu, { TMenuItem } from '@components/Menu/ActionMenu';
 import TopMenu from '@components/Menu/TopMenu';
 import Buttons from '@layouts/Designs/buttons';
 import Tables from '@layouts/Designs/tables';
@@ -14,26 +14,12 @@ function DesignSystem(): JSX.Element {
   const [selectedItem, setSelectedItem] = useState('profile');
   const menuItemsArr: TMenuItem[] = [
     {
-      data: [
-        {
-          name: 'test1',
-          value: '111',
-        },
-        {
-          name: 'test2',
-          value: '222',
-        },
-      ],
-      icon: <BiExtension />,
       name: 'buttons',
     },
     {
-      data: null,
-      icon: <BiExtension />,
       name: 'tables',
     },
     {
-      data: null,
       icon: <BiExtension />,
       name: 'tags',
     },
@@ -63,6 +49,7 @@ function DesignSystem(): JSX.Element {
           setSelected={val => setSelectedItem(`${val.name}`)}
           marginTop='60px'
         />
+
         <RightMenu>{getRightMenu()}</RightMenu>
       </Container>
     </>

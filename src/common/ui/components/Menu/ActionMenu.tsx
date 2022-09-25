@@ -10,8 +10,8 @@ type TQueryData = {
 
 export type TMenuItem = {
   name: string;
-  data: null | TQueryData[];
-  icon: JSX.Element | null;
+  data?: TQueryData[];
+  icon?: JSX.Element;
 };
 type TProps = {
   menuItems: TMenuItem[];
@@ -22,9 +22,10 @@ type TProps = {
   width?: string;
   brand?: string;
   marginTop?: string;
+  type?: 'primary' | 'secondary';
 };
 
-function PrimaryMenu({
+function ActionMenu({
   brand = '',
   collapsed = false,
   collapsedWidth = '70px',
@@ -32,16 +33,17 @@ function PrimaryMenu({
   menuItems,
   selected,
   setSelected,
+  type = 'primary',
   width = '200px',
 }: TProps): JSX.Element | null {
   const selectedArr = menuItems.map(a => a.name);
   const top = `${misc.menuHeight * (selectedArr.indexOf(selected) >= 0 ? selectedArr.indexOf(selected) : 0)}px`;
   const router = useRouter();
   return (
-    <Container style={{ width: collapsed ? collapsedWidth : width }} marginTop={marginTop}>
+    <Container style={{ width: collapsed ? collapsedWidth : width }} marginTop={marginTop} type={type}>
       {brand.trim().length > 0 && <Logo>{brand}</Logo>}
       <MenuItemCtr>
-        <MenuItemBackground style={{ top }} />
+        <MenuItemBackground style={{ top }} type={type} />
         {menuItems.map((a, i) => {
           return (
             <MenuItem
@@ -53,7 +55,7 @@ function PrimaryMenu({
                 setSelected(a);
               }}
               key={`menu-${i + 1}`}>
-              {a.icon}
+              {a?.icon}
               {!collapsed && a.name}
             </MenuItem>
           );
@@ -64,12 +66,12 @@ function PrimaryMenu({
   );
 }
 
-export default PrimaryMenu;
+export default ActionMenu;
 
-const Container = styled.div<{ marginTop: string }>`
+const Container = styled.div<{ marginTop: string; type: string }>`
   height: calc(100vh - ${({ marginTop }) => marginTop});
-  background: var(--xui-colors-sidebar-background);
-  color: var(--xui-colors-sidebar-foreground);
+  background: var(--xui-${({ type }) => type}-sidebar-background);
+  color: var(--xui-${({ type }) => type}-sidebar-foreground);
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -84,14 +86,14 @@ const MenuItemCtr = styled.div`
   position: relative;
 `;
 
-const MenuItemBackground = styled.span`
+const MenuItemBackground = styled.span<{ type: string }>`
   content: '';
   position: absolute;
   right: 0;
   height: ${misc.menuHeight}px;
   width: 100%;
-  background: var(--xui-colors-sidebar-active-background);
-  color: var(--xui-colors-sidebar-active-foreground);
+  background: var(--xui-${({ type }) => type}-sidebar-active-background);
+  color: var(--xui-${({ type }) => type}-sidebar-active-foreground);
   pointer-events: none;
   transition: top 0.2s ease-in-out;
   transform-origin: top right;
