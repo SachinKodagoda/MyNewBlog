@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
-import { BiExtension } from 'react-icons/bi';
+import { BiCollection, BiExtension, BiTable } from 'react-icons/bi';
 import styled from 'styled-components';
 
 import PrimaryMenu, { TMenuItem } from '@components/Menu/ActionMenu';
@@ -14,9 +14,11 @@ function DesignSystem(): JSX.Element {
   const [selectedItem, setSelectedItem] = useState('profile');
   const menuItemsArr: TMenuItem[] = [
     {
+      icon: <BiCollection />,
       name: 'buttons',
     },
     {
+      icon: <BiTable />,
       name: 'tables',
     },
     {
@@ -49,6 +51,8 @@ function DesignSystem(): JSX.Element {
           setSelected={val => setSelectedItem(`${val.name}`)}
           marginTop='60px'
           type='secondary'
+          borderSize={1}
+          width='250px'
         />
 
         <RightMenu>{getRightMenu()}</RightMenu>

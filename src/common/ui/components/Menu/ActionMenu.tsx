@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
-import { colors, misc } from '@theme/baseTheme';
+import { colors } from '@theme/baseTheme';
 
 type TQueryData = {
   name: string;
@@ -23,12 +23,16 @@ type TProps = {
   brand?: string;
   marginTop?: string;
   type?: 'primary' | 'secondary';
+  itemHeight?: number;
+  borderSize?: number;
 };
 
 function ActionMenu({
+  borderSize = 0,
   brand = '',
   collapsed = false,
   collapsedWidth = '70px',
+  itemHeight = 40,
   marginTop = '0px',
   menuItems,
   selected,
@@ -37,17 +41,23 @@ function ActionMenu({
   width = '200px',
 }: TProps): JSX.Element | null {
   const selectedArr = menuItems.map(a => a.name);
-  const top = `${misc.menuHeight * (selectedArr.indexOf(selected) >= 0 ? selectedArr.indexOf(selected) : 0)}px`;
+  const top = `${itemHeight * (selectedArr.indexOf(selected) >= 0 ? selectedArr.indexOf(selected) : 0)}px`;
   const router = useRouter();
   return (
-    <Container style={{ width: collapsed ? collapsedWidth : width }} marginTop={marginTop} type={type}>
+    <Container
+      style={{ width: collapsed ? collapsedWidth : width }}
+      marginTop={marginTop}
+      menuType={type}
+      borderSize={borderSize}>
       {brand.trim().length > 0 && <Logo>{brand}</Logo>}
       <MenuItemCtr>
-        <MenuItemBackground style={{ top }} type={type} />
+        <MenuItemBackground style={{ top }} menuType={type} itemHeight={itemHeight} />
         {menuItems.map((a, i) => {
           return (
             <MenuItem
+              itemHeight={itemHeight}
               type='button'
+              menuType={type}
               className={`${selected === a?.name ? 'active' : ''}`}
               onClick={() => {
                 const query = a?.data ? a.data.map(v => `&${v.name}=${v.value}`).join('&') : '';
@@ -60,7 +70,7 @@ function ActionMenu({
             </MenuItem>
           );
         })}
-        <MenuArrow style={{ top }} />
+        <MenuArrow style={{ top }} itemHeight={itemHeight} borderSize={borderSize} menuType={type} />
       </MenuItemCtr>
     </Container>
   );
@@ -68,10 +78,11 @@ function ActionMenu({
 
 export default ActionMenu;
 
-const Container = styled.div<{ marginTop: string; type: string }>`
+const Container = styled.div<{ marginTop: string; menuType: string; borderSize: number }>`
   height: calc(100vh - ${({ marginTop }) => marginTop});
-  background: var(--xui-${({ type }) => type}-sidebar-background);
-  color: var(--xui-${({ type }) => type}-sidebar-foreground);
+  background: var(--xui-${p => p.menuType}-sidebar-background);
+  color: var(--xui-${p => p.menuType}-sidebar-foreground);
+  border-right: ${p => p.borderSize}px solid var(--xui-secondary-sidebar-border);
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -86,13 +97,15 @@ const MenuItemCtr = styled.div`
   position: relative;
 `;
 
-const MenuItemBackground = styled.span<{ type: string }>`
+const MenuItemBackground = styled.span<{ menuType: string; itemHeight: number }>`
   content: '';
   position: absolute;
   right: 0;
-  height: ${misc.menuHeight}px;
+  height: ${p => p.itemHeight}px;
   width: 100%;
-  background: var(--xui-${({ type }) => type}-sidebar-active-background);
+  background: var(
+    ${p => (p.menuType === 'secondary' ? 'transparent' : `--xui-${p.menuType}-sidebar-active-background`)}
+  );
   pointer-events: none;
   transition: top 0.2s ease-in-out;
   transform-origin: top right;
@@ -100,11 +113,11 @@ const MenuItemBackground = styled.span<{ type: string }>`
 
 const Logo = styled.div``;
 
-const MenuItem = styled.button`
+const MenuItem = styled.button<{ menuType: string; itemHeight: number }>`
   text-transform: uppercase;
   cursor: pointer;
   width: 100%;
-  height: ${misc.menuHeight}px;
+  height: ${p => p.itemHeight}px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -119,20 +132,21 @@ const MenuItem = styled.button`
   }
   &.active {
     color: ${colors.black};
-    color: var(--xui-${({ type }) => type}-sidebar-active-foreground);
+    color: var(${p => (p.menuType === 'secondary' ? 'inherit' : `--xui-${p.menuType}-sidebar-active-foreground`)});
     font-weight: 600;
   }
 `;
 
-const MenuArrow = styled.span`
+const MenuArrow = styled.span<{ itemHeight: number; borderSize: number; menuType: string }>`
   content: '';
   position: absolute;
-  right: -1px;
+  right: -${p => p.borderSize + 1}px;
   height: 0;
   width: 0;
-  border: 30px solid transparent;
-  border-right: 10px solid ${colors.white};
+  border: ${p => p.itemHeight / 2}px solid transparent;
+  border-right: ${p => p.itemHeight / 3}px solid ${colors.white};
   pointer-events: none;
   transition: top 0.2s ease-in-out;
   transform-origin: top right;
+  display: ${p => (p.menuType === 'secondary' ? 'none' : 'inline-block')};
 `;

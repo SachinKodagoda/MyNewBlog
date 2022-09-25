@@ -397,13 +397,16 @@
   --xui-colors-navbar: var(--xui-colors-gray900);
   --xui-primary-sidebar-background: var(--xui-colors-gray900);
   --xui-primary-sidebar-foreground: var(--xui-colors-white);
+  --xui-primary-sidebar-border: var(--xui-colors-black);
   --xui-primary-sidebar-active-background: var(--xui-colors-yellow600);
   --xui-primary-sidebar-active-foreground: var(--xui-colors-black);
 
+
   --xui-secondary-sidebar-background: var(--xui-colors-gray100);
   --xui-secondary-sidebar-foreground: var(--xui-colors-black);
-  --xui-secondary-sidebar-active-background: var(--xui-colors-yellow600);
-  --xui-secondary-sidebar-active-foreground: var(--xui-colors-black);
+  --xui-secondary-sidebar-border: var(--xui-colors-gray300);
+  --xui-secondary-sidebar-active-background: var(--xui-colors-gray900);
+  --xui-secondary-sidebar-active-foreground: var(--xui-colors-white);
 
 }
 
