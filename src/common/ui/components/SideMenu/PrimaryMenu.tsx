@@ -1,32 +1,29 @@
 import React, { useContext, useState } from 'react';
 
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
 import styled from 'styled-components';
 
-import LetterImg from '@components/Thumbnails/LetterImg';
 import { UserContext } from '@ctx/UserContext';
-import { Log, MenuIcons, ZoomIn } from '@svg/common';
+import { MenuIcons } from '@svg/common';
 import { colors, misc } from '@theme/baseTheme';
-import { TMenuItem, TRoute } from '@ts/common';
 
 type TProps = {
-  menuItemsArr: TMenuItem[];
-  selectedItem: TMenuItem;
-  setSelectedItem: React.Dispatch<React.SetStateAction<TMenuItem>>;
-  rType: TRoute;
+  menuItemsArr: string[];
+  selectedItem: string;
+  setSelectedItem: React.Dispatch<React.SetStateAction<string>>;
+  userType: string;
 };
-function LeftMenu({ menuItemsArr, rType, selectedItem, setSelectedItem }: TProps): JSX.Element | null {
+
+function PrimaryMenu({ menuItemsArr, selectedItem, setSelectedItem, userType }: TProps): JSX.Element | null {
   const { signOut } = useContext(UserContext);
   const [cookies] = useCookies(['uData']);
   const [smallMenu, setSmallMenu] = useState(false);
   const top = `${misc.menuHeight * (menuItemsArr.indexOf(selectedItem) || 0)}px`;
   const router = useRouter();
-
   return (
     <Container style={{ width: smallMenu ? '70px' : '200px' }}>
-      <div className='profileCover' style={{ paddingBottom: smallMenu ? '0' : '16px' }}>
+      {/* <div className='profileCover' style={{ paddingBottom: smallMenu ? '0' : '16px' }}>
         {cookies?.uData?.photoURL ? (
           <div className='profileImgCtr'>
             <Image
@@ -48,9 +45,9 @@ function LeftMenu({ menuItemsArr, rType, selectedItem, setSelectedItem }: TProps
       </div>
       {!smallMenu && <div className='profileName'>{cookies?.uData?.displayName}</div>}
       {!smallMenu && cookies?.uData?.type && <div className='type'>({cookies?.uData?.type})</div>}
-      <div className='separator' />
-      <div className='menuCover'>
-        <span className='backgroundSelection' style={{ top }} />
+      <div className='separator' /> */}
+      <MenuItemCtr>
+        <MenuItemBackground style={{ top }} />
         {menuItemsArr.map((item, i) => {
           return (
             <button
@@ -58,7 +55,7 @@ function LeftMenu({ menuItemsArr, rType, selectedItem, setSelectedItem }: TProps
               className={`${selectedItem === item ? 'menuItem active' : 'menuItem'}`}
               onClick={() => {
                 const query = item === 'offers' ? '&page=1&limit=8&orderBy=id&order=asc' : '';
-                router.push(`/dashboard/${rType}?menu=${item}${query}`, undefined, { shallow: true });
+                router.push(`/dashboard/${userType}?menu=${item}${query}`, undefined, { shallow: true });
                 setSelectedItem(item);
               }}
               key={`menu-${i + 1}`}>
@@ -68,8 +65,8 @@ function LeftMenu({ menuItemsArr, rType, selectedItem, setSelectedItem }: TProps
           );
         })}
         <span className='topArrow' style={{ top }} />
-      </div>
-      <div className='bottomContainer'>
+      </MenuItemCtr>
+      {/* <div className='bottomContainer'>
         <div className='separator' />
         <button data-cy='dashboard-logout' type='button' className='logoutCtr' onClick={() => signOut(true)}>
           {smallMenu ? <Log /> : <div className='logoutText'>Log out</div>}
@@ -78,12 +75,12 @@ function LeftMenu({ menuItemsArr, rType, selectedItem, setSelectedItem }: TProps
         <button type='button' className='zoomCtr' onClick={() => setSmallMenu(val => !val)}>
           {smallMenu ? <ZoomIn /> : <div className='zoomOutText'>Small Menu</div>}
         </button>
-      </div>
+      </div> */}
     </Container>
   );
 }
 
-export default LeftMenu;
+export default PrimaryMenu;
 
 const Container = styled.div`
   height: 100vh;
@@ -135,14 +132,6 @@ const Container = styled.div`
     margin: 16px auto;
   }
 
-  .menuCover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-  }
-
   .topArrow {
     content: '';
     position: absolute;
@@ -157,15 +146,6 @@ const Container = styled.div`
   }
 
   .backgroundSelection {
-    content: '';
-    position: absolute;
-    right: 0;
-    height: ${misc.menuHeight}px;
-    width: 100%;
-    background: ${colors.royalGold};
-    pointer-events: none;
-    transition: top 0.2s ease-in-out;
-    transform-origin: top right;
   }
 
   .menuItem {
@@ -228,4 +208,24 @@ const Container = styled.div`
     color: ${colors.white};
     cursor: pointer;
   }
+`;
+
+const MenuItemCtr = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+`;
+
+const MenuItemBackground = styled.span`
+  content: '';
+  position: absolute;
+  right: 0;
+  height: ${misc.menuHeight}px;
+  width: 100%;
+  background: ${colors.royalGold};
+  pointer-events: none;
+  transition: top 0.2s ease-in-out;
+  transform-origin: top right;
 `;

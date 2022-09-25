@@ -1,3 +1,8 @@
+import { useEffect, useState } from 'react';
+
+import { useRouter } from 'next/router';
+import styled from 'styled-components';
+
 import AuthCheck from '@layouts/common/AuthCheck';
 import EmptyFullPage from '@layouts/common/EmptyFullPage';
 import Analytics from '@layouts/menu/Analytics';
@@ -8,9 +13,6 @@ import Profile from '@layouts/menu/Profile';
 import Settings from '@layouts/menu/Settings';
 import Support from '@layouts/menu/Support';
 import { TMenuItem } from '@ts/common';
-import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 
 function Index(): JSX.Element {
   const menuItemsArr: TMenuItem[] = ['profile', 'offers', 'bookings', 'analytics', 'settings'];

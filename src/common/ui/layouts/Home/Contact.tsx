@@ -99,25 +99,3 @@ const Container = styled.div`
     margin: auto;
   }
 `;
-
-const ContactContainer = styled.div``;
-
-const ContactHead = styled.div``;
-
-const ContactBody = styled.div``;
-
-const ContactForm = styled.form``;
-
-const ContactFormGroup = styled.div``;
-
-const ContactFormGroupInput = styled.input``;
-
-const ContactFormGroup = styled.div``;
-
-const ContactFormGroupInput = styled.input``;
-
-const ContactFormGroup = styled.div``;
-
-const ContactFormGroupInput = styled.input``;
-
-const ContactBtn = styled.div``;
