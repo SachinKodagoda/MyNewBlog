@@ -1,12 +1,16 @@
-import { UserContextProvider } from '@ctx/UserContext';
-import '@styles/globals.css';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+
+import { ThemeProvider as DarkLightThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Router } from 'next/router';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import React from 'react';
 import { Toaster } from 'react-hot-toast';
+
+import { UserContextProvider } from '@ctx/UserContext';
+import '@styles/globals.css';
 
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => {
@@ -34,12 +38,14 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
         <meta name='theme-color' content='#000' />
         <meta name='apple-mobile-web-app-status-bar-style' content='#000' />
       </Head>
-      <UserContextProvider>
-        <>
-          <Component {...pageProps} />
-          <Toaster position='bottom-right' />
-        </>
-      </UserContextProvider>
+      <DarkLightThemeProvider>
+        <UserContextProvider>
+          <>
+            <Component {...pageProps} />
+            <Toaster position='bottom-right' />
+          </>
+        </UserContextProvider>
+      </DarkLightThemeProvider>
     </>
   );
 }

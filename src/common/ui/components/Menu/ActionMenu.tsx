@@ -50,7 +50,7 @@ function ActionMenu({
     if (item?.titleType === 'main') {
       return <MainTitle>{item?.name}</MainTitle>;
     }
-    return <div>{item?.name}</div>;
+    return <NormalTitle>{item?.name}</NormalTitle>;
   };
   return (
     <Container
@@ -134,6 +134,7 @@ const MenuItem = styled.button<{ menuType: string; itemHeight: number }>`
   position: relative;
   z-index: 1;
   font-weight: 400;
+  color: var(${p => `--xui-${p.menuType}-sidebar-foreground`});
   gap: 8px;
   > svg {
     flex: none;
@@ -160,5 +161,9 @@ const MenuArrow = styled.span<{ itemHeight: number; borderSize: number; menuType
 `;
 
 const MainTitle = styled.div`
-  color: #ccc;
+  /* color: #ccc; */
+`;
+
+const NormalTitle = styled.div`
+  color: inherit;
 `;

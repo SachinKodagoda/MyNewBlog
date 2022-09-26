@@ -1,35 +1,16 @@
 import { useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
-import { BiCollection, BiExtension, BiTable } from 'react-icons/bi';
 import styled from 'styled-components';
 
-import PrimaryMenu, { TMenuItem } from '@components/Menu/ActionMenu';
-import TopMenu from '@components/Menu/TopMenu';
+import LeftMenu, { TData } from '@components/Menu/LeftMenu';
 import Buttons from '@layouts/Designs/buttons';
 import Tables from '@layouts/Designs/tables';
+import { widths } from '@theme/baseTheme';
 
 function DesignSystem(): JSX.Element {
   const router = useRouter();
   const [selectedItem, setSelectedItem] = useState('profile');
-  const menuItemsArr: TMenuItem[] = [
-    {
-      icon: <BiCollection />,
-      name: 'Buttons',
-    },
-    {
-      icon: <BiTable />,
-      name: 'Tables',
-    },
-    {
-      name: 'Tags',
-      titleType: 'main',
-    },
-    {
-      icon: <BiExtension />,
-      name: 'Tags',
-    },
-  ];
   const getRightMenu = (): JSX.Element => {
     switch (selectedItem) {
       case 'buttons':
@@ -45,23 +26,156 @@ function DesignSystem(): JSX.Element {
       setSelectedItem(`${router.query.menu}`);
     }
   }, [router.query.menu]);
+  const menuData: TData = [
+    {
+      subtitles: [
+        {
+          name: 'Colors',
+          value: 'colors',
+        },
+        {
+          name: 'sizes',
+          value: 'Sizes',
+        },
+      ],
+      title: 'Theme',
+    },
+    {
+      subtitles: [
+        {
+          name: 'Container',
+          value: 'container',
+        },
+        {
+          name: 'Grid',
+          value: 'grid',
+        },
+        {
+          name: 'Spacer',
+          value: 'spacer',
+        },
+      ],
+      title: 'Layouts',
+    },
+    {
+      subtitles: [
+        {
+          name: 'Avatar',
+          value: 'avatar',
+        },
+        {
+          name: 'Button',
+          value: 'button',
+        },
+        {
+          name: 'Button Group',
+          value: 'button_group',
+        },
+        {
+          name: 'Card',
+          value: 'card',
+        },
+        {
+          name: 'Pagination',
+          value: 'pagination',
+        },
+        {
+          name: 'Label',
+          value: 'label',
+        },
+        {
+          name: 'Collapse',
+          value: 'collapse',
+        },
+        {
+          name: 'Navbar',
+          value: 'navbar',
+        },
+        {
+          name: 'Badge',
+          value: 'badge',
+        },
+        {
+          name: 'Input',
+          value: 'input',
+        },
+        {
+          name: 'AutoComplete',
+          value: 'auto_complete',
+        },
+        {
+          name: 'TextArea',
+          value: 'text_area',
+        },
+        {
+          name: 'Checkbox',
+          value: 'checkbox',
+        },
+        {
+          name: 'Checkbox Group',
+          value: 'checkbox_group',
+        },
+        {
+          name: 'Radio',
+          value: 'radio',
+        },
+        {
+          name: 'Popover',
+          value: 'popover',
+        },
+        {
+          name: 'Tooltip',
+          value: 'tooltip',
+        },
+        {
+          name: 'Dropdown',
+          value: 'dropdown',
+        },
+        {
+          name: 'Progress',
+          value: 'progress',
+        },
+        {
+          name: 'Select',
+          value: 'select',
+        },
+        {
+          name: 'Modal',
+          value: 'modal',
+        },
+        {
+          name: 'Loading',
+          value: 'loading',
+        },
+        {
+          name: 'Switch',
+          value: 'switch',
+        },
+        {
+          name: 'Text',
+          value: 'text',
+        },
+        {
+          name: 'Link',
+          value: 'link',
+        },
+        {
+          name: 'User',
+          value: 'user',
+        },
+        {
+          name: 'Image',
+          value: 'image',
+        },
+      ],
+      title: 'Components',
+    },
+  ];
   return (
-    <>
-      <TopMenu />
-      <Container>
-        <PrimaryMenu
-          selected={selectedItem}
-          menuItems={menuItemsArr}
-          setSelected={val => setSelectedItem(`${val.name}`)}
-          marginTop='60px'
-          type='secondary'
-          borderSize={1}
-          width='250px'
-        />
-
-        <RightMenu>{getRightMenu()}</RightMenu>
-      </Container>
-    </>
+    <Container>
+      <LeftMenu data={menuData} />
+      <RightMenu>{getRightMenu()}</RightMenu>
+    </Container>
   );
 }
 
@@ -69,6 +183,11 @@ export default DesignSystem;
 
 const Container = styled.div`
   display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: auto;
+  max-width: ${widths.minDesktopLG};
 `;
 const RightMenu = styled.div`
   padding: 20px;

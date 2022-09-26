@@ -11,8 +11,177 @@
   --rdp-outline-selected: 2px solid rgba(0, 0, 0, 0.75);
 }
 
+
+
 :root {
 
+
+
+  --xui-fonts-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI','Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', sans-serif;
+  --xui-fonts-mono: Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono','Courier New', monospace;
+
+  --xui-fontSizes-xs: 0.75rem;
+  --xui-fontSizes-sm: 0.875rem;
+  --xui-fontSizes-base: 1rem;
+  --xui-fontSizes-md: 1rem;
+  --xui-fontSizes-lg: 1.125rem;
+  --xui-fontSizes-xl: 1.25rem;
+  --xui-fontSizes-2xl: 1.5rem;
+  --xui-fontSizes-3xl: 1.875rem;
+  --xui-fontSizes-4xl: 2.25rem;
+  --xui-fontSizes-5xl: 3rem;
+  --xui-fontSizes-6xl: 3.75rem;
+  --xui-fontSizes-7xl: 4.5rem;
+  --xui-fontSizes-8xl: 6rem;
+  --xui-fontSizes-9xl: 8rem;
+
+  --xui-fontWeights-hairline: 100;
+  --xui-fontWeights-thin: 200;
+  --xui-fontWeights-light: 300;
+  --xui-fontWeights-normal: 400;
+  --xui-fontWeights-medium: 500;
+  --xui-fontWeights-semibold: 600;
+  --xui-fontWeights-bold: 700;
+  --xui-fontWeights-extrabold: 800;
+  --xui-fontWeights-black: 900;
+
+  --xui-lineHeights-xs: 1;
+  --xui-lineHeights-sm: 1.25;
+  --xui-lineHeights-base: 1.5;
+  --xui-lineHeights-md: 1.5;
+  --xui-lineHeights-lg: 1.75;
+  --xui-lineHeights-xl: 1.75;
+  --xui-lineHeights-2xl: 2;
+  --xui-lineHeights-3xl: 2.25;
+  --xui-lineHeights-4xl: 2.5;
+  --xui-lineHeights-5xl: 1;
+  --xui-lineHeights-6xl: 1;
+  --xui-lineHeights-7xl: 1;
+  --xui-lineHeights-8xl: 1;
+  --xui-lineHeights-9xl: 1;
+
+  --xui-letterSpacings-tighter: -0.05em;
+  --xui-letterSpacings-tight: -0.025em;
+  --xui-letterSpacings-normal: 0;
+  --xui-letterSpacings-wide: 0.025em;
+  --xui-letterSpacings-wider: 0.05em;
+  --xui-letterSpacings-widest: 0.1em;
+
+  --xui-space-0: 0rem;
+  --xui-space-1: 0.125rem;
+  --xui-space-2: 0.25rem;
+  --xui-space-3: 0.375rem;
+  --xui-space-4: 0.5rem;
+  --xui-space-5: 0.625rem;
+  --xui-space-6: 0.75rem;
+  --xui-space-7: 0.875rem;
+  --xui-space-8: 1rem;
+  --xui-space-9: 1.25rem;
+  --xui-space-10: 1.5rem;
+  --xui-space-11: 1.75rem;
+  --xui-space-12: 2rem;
+  --xui-space-13: 2.25rem;
+  --xui-space-14: 2.5rem;
+  --xui-space-15: 2.75rem;
+  --xui-space-16: 3rem;
+  --xui-space-17: 3.5rem;
+  --xui-space-18: 4rem;
+  --xui-space-20: 5rem;
+  --xui-space-24: 6rem;
+  --xui-space-28: 7rem;
+  --xui-space-32: 8rem;
+  --xui-space-36: 9rem;
+  --xui-space-40: 10rem;
+  --xui-space-44: 11rem;
+  --xui-space-48: 12rem;
+  --xui-space-52: 13rem;
+  --xui-space-56: 14rem;
+  --xui-space-60: 15rem;
+  --xui-space-64: 16rem;
+  --xui-space-72: 18rem;
+  --xui-space-80: 20rem;
+  --xui-space-96: 24rem;
+
+  --xui-space-xs: 0.5rem;
+  --xui-space-sm: 0.75rem;
+  --xui-space-md: 1rem;
+  --xui-space-lg: 1.25rem;
+  --xui-space-xl: 2.25rem;
+  --xui-space-2xl: 3rem;
+  --xui-space-3xl: 5rem;
+  --xui-space-4xl: 10rem;
+  --xui-space-5xl: 14rem;
+  --xui-space-6xl: 18rem;
+  --xui-space-7xl: 24rem;
+  --xui-space-8xl: 32rem;
+  --xui-space-9xl: 40rem;
+  --xui-space-min: min-content;
+  --xui-space-max: max-content;
+  --xui-space-fit: fit-content;
+  --xui-space-screen: 100vw;
+  --xui-space-full: 100%;
+  --xui-space-px: 1px;
+
+  --xui-radii-xs: 7px;
+  --xui-radii-sm: 9px;
+  --xui-radii-md: 12px;
+  --xui-radii-base: 14px;
+  --xui-radii-lg: 14px;
+  --xui-radii-xl: 18px;
+  --xui-radii-2xl: 24px;
+  --xui-radii-3xl: 32px;
+  --xui-radii-squared: 33%;
+  --xui-radii-rounded: 50%;
+  --xui-radii-pill: 9999px;
+
+  --xui-zIndices-1: 100;
+  --xui-zIndices-2: 200;
+  --xui-zIndices-3: 300;
+  --xui-zIndices-4: 400;
+  --xui-zIndices-5: 500;
+  --xui-zIndices-10: 1000;
+  --xui-zIndices-max: 9999;
+
+  --xui-borderWeights-light: 1px;
+  --xui-borderWeights-normal: 2px;
+  --xui-borderWeights-bold: 3px;
+  --xui-borderWeights-extrabold: 4px;
+  --xui-borderWeights-black: 5px;
+
+  --xui-transitions-default: all 250ms ease;
+  --xui-transitions-button: background 0.25s ease 0s, color 0.25s ease 0s, border-color 0.25s ease 0s, box-shadow 0.25s ease 0s, transform 0.25s ease 0s, opacity 0.25s ease 0s;
+  --xui-transitions-avatar: box-shadow 0.25s ease 0s, opacity 0.25s ease 0s;
+  --xui-transitions-card: transform 0.25s ease 0s, filter 0.25s ease 0s, box-shadow 0.25s ease 0s;
+  --xui-transitions-dropdownItem: background 0.12s ease, transform 0.12s ease, color 0.12s ease, box-shadow 0.12s ease 0s;
+
+  --xui-breakpoints-xs: 650px;
+  --xui-breakpoints-sm: 960px;
+  --xui-breakpoints-md: 1280px;
+  --xui-breakpoints-lg: 1400px;
+  --xui-breakpoints-xl: 1920px;
+
+
+  --xui--switchWidth: var(--xui-space-15);
+  --xui--switchHeight: var(--xui-space-11);
+
+  --xui--navbarHeight: 76px;
+  --xui--navbarCompactHeight: calc(var(--xui--navbarHeight) * 0.7);
+
+  --xui--navbarItemMaxHeight: calc(var(--xui--navbarHeight) * 0.5);
+  --xui--navbarCompactItemMaxHeight: calc(var(--xui--navbarHeight) * 0.5);
+
+  --xui--navbarBorderRadius: var(--xui-radii-lg);
+  --xui--navbarPadding: var(--xui-space-10);
+  --xui--navbarFloatingMargin: var(--xui-space-10);
+  --xui--navbarContainerMaxWidth: var(--xui-breakpoints-lg);
+  --xui--navbarShadow: var(--xui-shadows-md);
+  --xui--navbarBorderWeight: var(--xui-borderWeights-light);
+  --xui--navbarBlur: 10px;
+
+
+}
+
+[data-theme='light']{
   --xui-colors-blue50: #EDF5FF;
   --xui-colors-blue100: #E1EFFF;
   --xui-colors-blue200: #CEE4FE;
@@ -227,173 +396,6 @@
   --xui-dropShadows-lg: drop-shadow(0 12px 24px rgb(104 112 118 / 0.15)) drop-shadow(0 12px 14px rgb(104 112 118 / 0.1));
   --xui-dropShadows-xl: drop-shadow(0 25px 34px rgb(104 112 118 / 0.35));
 
-
-
-  --xui-fonts-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI','Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', sans-serif;
-  --xui-fonts-mono: Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono','Courier New', monospace;
-
-  --xui-fontSizes-xs: 0.75rem;
-  --xui-fontSizes-sm: 0.875rem;
-  --xui-fontSizes-base: 1rem;
-  --xui-fontSizes-md: 1rem;
-  --xui-fontSizes-lg: 1.125rem;
-  --xui-fontSizes-xl: 1.25rem;
-  --xui-fontSizes-2xl: 1.5rem;
-  --xui-fontSizes-3xl: 1.875rem;
-  --xui-fontSizes-4xl: 2.25rem;
-  --xui-fontSizes-5xl: 3rem;
-  --xui-fontSizes-6xl: 3.75rem;
-  --xui-fontSizes-7xl: 4.5rem;
-  --xui-fontSizes-8xl: 6rem;
-  --xui-fontSizes-9xl: 8rem;
-
-  --xui-fontWeights-hairline: 100;
-  --xui-fontWeights-thin: 200;
-  --xui-fontWeights-light: 300;
-  --xui-fontWeights-normal: 400;
-  --xui-fontWeights-medium: 500;
-  --xui-fontWeights-semibold: 600;
-  --xui-fontWeights-bold: 700;
-  --xui-fontWeights-extrabold: 800;
-  --xui-fontWeights-black: 900;
-
-  --xui-lineHeights-xs: 1;
-  --xui-lineHeights-sm: 1.25;
-  --xui-lineHeights-base: 1.5;
-  --xui-lineHeights-md: 1.5;
-  --xui-lineHeights-lg: 1.75;
-  --xui-lineHeights-xl: 1.75;
-  --xui-lineHeights-2xl: 2;
-  --xui-lineHeights-3xl: 2.25;
-  --xui-lineHeights-4xl: 2.5;
-  --xui-lineHeights-5xl: 1;
-  --xui-lineHeights-6xl: 1;
-  --xui-lineHeights-7xl: 1;
-  --xui-lineHeights-8xl: 1;
-  --xui-lineHeights-9xl: 1;
-
-  --xui-letterSpacings-tighter: -0.05em;
-  --xui-letterSpacings-tight: -0.025em;
-  --xui-letterSpacings-normal: 0;
-  --xui-letterSpacings-wide: 0.025em;
-  --xui-letterSpacings-wider: 0.05em;
-  --xui-letterSpacings-widest: 0.1em;
-
-  --xui-space-0: 0rem;
-  --xui-space-1: 0.125rem;
-  --xui-space-2: 0.25rem;
-  --xui-space-3: 0.375rem;
-  --xui-space-4: 0.5rem;
-  --xui-space-5: 0.625rem;
-  --xui-space-6: 0.75rem;
-  --xui-space-7: 0.875rem;
-  --xui-space-8: 1rem;
-  --xui-space-9: 1.25rem;
-  --xui-space-10: 1.5rem;
-  --xui-space-11: 1.75rem;
-  --xui-space-12: 2rem;
-  --xui-space-13: 2.25rem;
-  --xui-space-14: 2.5rem;
-  --xui-space-15: 2.75rem;
-  --xui-space-16: 3rem;
-  --xui-space-17: 3.5rem;
-  --xui-space-18: 4rem;
-  --xui-space-20: 5rem;
-  --xui-space-24: 6rem;
-  --xui-space-28: 7rem;
-  --xui-space-32: 8rem;
-  --xui-space-36: 9rem;
-  --xui-space-40: 10rem;
-  --xui-space-44: 11rem;
-  --xui-space-48: 12rem;
-  --xui-space-52: 13rem;
-  --xui-space-56: 14rem;
-  --xui-space-60: 15rem;
-  --xui-space-64: 16rem;
-  --xui-space-72: 18rem;
-  --xui-space-80: 20rem;
-  --xui-space-96: 24rem;
-
-  --xui-space-xs: 0.5rem;
-  --xui-space-sm: 0.75rem;
-  --xui-space-md: 1rem;
-  --xui-space-lg: 1.25rem;
-  --xui-space-xl: 2.25rem;
-  --xui-space-2xl: 3rem;
-  --xui-space-3xl: 5rem;
-  --xui-space-4xl: 10rem;
-  --xui-space-5xl: 14rem;
-  --xui-space-6xl: 18rem;
-  --xui-space-7xl: 24rem;
-  --xui-space-8xl: 32rem;
-  --xui-space-9xl: 40rem;
-  --xui-space-min: min-content;
-  --xui-space-max: max-content;
-  --xui-space-fit: fit-content;
-  --xui-space-screen: 100vw;
-  --xui-space-full: 100%;
-  --xui-space-px: 1px;
-
-  --xui-radii-xs: 7px;
-  --xui-radii-sm: 9px;
-  --xui-radii-md: 12px;
-  --xui-radii-base: 14px;
-  --xui-radii-lg: 14px;
-  --xui-radii-xl: 18px;
-  --xui-radii-2xl: 24px;
-  --xui-radii-3xl: 32px;
-  --xui-radii-squared: 33%;
-  --xui-radii-rounded: 50%;
-  --xui-radii-pill: 9999px;
-
-  --xui-zIndices-1: 100;
-  --xui-zIndices-2: 200;
-  --xui-zIndices-3: 300;
-  --xui-zIndices-4: 400;
-  --xui-zIndices-5: 500;
-  --xui-zIndices-10: 1000;
-  --xui-zIndices-max: 9999;
-
-  --xui-borderWeights-light: 1px;
-  --xui-borderWeights-normal: 2px;
-  --xui-borderWeights-bold: 3px;
-  --xui-borderWeights-extrabold: 4px;
-  --xui-borderWeights-black: 5px;
-
-  --xui-transitions-default: all 250ms ease;
-  --xui-transitions-button: background 0.25s ease 0s, color 0.25s ease 0s, border-color 0.25s ease 0s, box-shadow 0.25s ease 0s, transform 0.25s ease 0s, opacity 0.25s ease 0s;
-  --xui-transitions-avatar: box-shadow 0.25s ease 0s, opacity 0.25s ease 0s;
-  --xui-transitions-card: transform 0.25s ease 0s, filter 0.25s ease 0s, box-shadow 0.25s ease 0s;
-  --xui-transitions-dropdownItem: background 0.12s ease, transform 0.12s ease, color 0.12s ease, box-shadow 0.12s ease 0s;
-
-  --xui-breakpoints-xs: 650px;
-  --xui-breakpoints-sm: 960px;
-  --xui-breakpoints-md: 1280px;
-  --xui-breakpoints-lg: 1400px;
-  --xui-breakpoints-xl: 1920px;
-
-  --xui--switchColor: var(--xui-colors-primary);
-  --xui--switchColorShadow: var(--xui-colors-primaryShadow);
-  --xui--switchColorHover: var(--xui-colors-primarySolidHover);
-  --xui--switchWidth: var(--xui-space-15);
-  --xui--switchHeight: var(--xui-space-11);
-
-  --xui--navbarHeight: 76px;
-  --xui--navbarCompactHeight: calc(var(--xui--navbarHeight) * 0.7);
-  --xui--navbarTextColor: var(--xui-colors-text);
-  --xui--navbarBackgroundColor: var(--xui-colors-background);
-  --xui--navbarBlurBackgroundColor: var(--xui-colors-backgroundAlpha);
-  --xui--navbarItemMaxHeight: calc(var(--xui--navbarHeight) * 0.5);
-  --xui--navbarCompactItemMaxHeight: calc(var(--xui--navbarHeight) * 0.5);
-  --xui--navbarBorderColor: var(--xui-colors-border);
-  --xui--navbarBorderRadius: var(--xui-radii-lg);
-  --xui--navbarPadding: var(--xui-space-10);
-  --xui--navbarFloatingMargin: var(--xui-space-10);
-  --xui--navbarContainerMaxWidth: var(--xui-breakpoints-lg);
-  --xui--navbarShadow: var(--xui-shadows-md);
-  --xui--navbarBorderWeight: var(--xui-borderWeights-light);
-  --xui--navbarBlur: 10px;
-
   --xui-colors-navbar: var(--xui-colors-gray900);
   --xui-primary-sidebar-background: var(--xui-colors-gray900);
   --xui-primary-sidebar-foreground: var(--xui-colors-white);
@@ -407,6 +409,16 @@
   --xui-secondary-sidebar-border: var(--xui-colors-gray300);
   --xui-secondary-sidebar-active-background: var(--xui-colors-gray900);
   --xui-secondary-sidebar-active-foreground: var(--xui-colors-white);
+  --xui-colors-bullet: var(--xui-colors-gray50);
+
+  --xui--switchColor: var(--xui-colors-primary);
+  --xui--switchColorShadow: var(--xui-colors-primaryShadow);
+  --xui--switchColorHover: var(--xui-colors-primarySolidHover);
+
+  --xui--navbarTextColor: var(--xui-colors-text);
+  --xui--navbarBackgroundColor: var(--xui-colors-background);
+  --xui--navbarBlurBackgroundColor: var(--xui-colors-backgroundAlpha);
+  --xui--navbarBorderColor: var(--xui-colors-border);
 
 }
 
@@ -626,6 +638,7 @@
   --xui-dropShadows-xl: drop-shadow(0 25px 34px rgb(0 0 0 / 0.35));
 
   --xui-colors-navbar: var(--xui-colors-yellow600);
+  --xui-colors-bullet: var(--xui-colors-gray50);
 }
 
 
@@ -835,8 +848,6 @@ body {
   color: var(--xui-colors-foreground);
   -webkit-touch-callout: none;
   user-select: none;
-  /* background: #adb5bd; */
-  background: #fff;
 }
 
 html,
