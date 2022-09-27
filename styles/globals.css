@@ -182,39 +182,6 @@
 }
 
 [data-theme='light']{
-  --xui-colors-blue50: #EDF5FF;
-  --xui-colors-blue100: #E1EFFF;
-  --xui-colors-blue200: #CEE4FE;
-  --xui-colors-blue300: #B7D5F8;
-  --xui-colors-blue400: #96C1F2;
-  --xui-colors-blue500: #5EA2EF;
-  --xui-colors-blue600: #0072F5;
-  --xui-colors-blue700: #005FCC;
-  --xui-colors-blue800: #004799;
-  --xui-colors-blue900: #00254D;
-
-  --xui-colors-purple50: #F7F2FD;
-  --xui-colors-purple100: #F1E8FB;
-  --xui-colors-purple200: #EADCF8;
-  --xui-colors-purple300: #E0CBF5;
-  --xui-colors-purple400: #D1B1F0;
-  --xui-colors-purple500: #BC8EE9;
-  --xui-colors-purple600: #7828C8;
-  --xui-colors-purple700: #6622AA;
-  --xui-colors-purple800: #4D1980;
-  --xui-colors-purple900: #290E44;
-
-  --xui-colors-green50: #F1FDF7;
-  --xui-colors-green100: #E8FCF1;
-  --xui-colors-green200: #DAFBE8;
-  --xui-colors-green300: #C8F9DD;
-  --xui-colors-green400: #ADF5CC;
-  --xui-colors-green500: #88F1B6;
-  --xui-colors-green600: #17C964;
-  --xui-colors-green700: #13A452;
-  --xui-colors-green800: #108944;
-  --xui-colors-green900: #06371B;
-
   --xui-colors-yellow50: #FEF9F0;
   --xui-colors-yellow100: #FEF5E7;
   --xui-colors-yellow200: #FDEFD8;
@@ -237,6 +204,39 @@
   --xui-colors-red800: #910838;
   --xui-colors-red900: #4E041E;
 
+  --xui-colors-pink50: #FFF0FB;
+  --xui-colors-pink100: #FFE5F8;
+  --xui-colors-pink200: #FFD6F3;
+  --xui-colors-pink300: #FFC2EE;
+  --xui-colors-pink400: #FFA3E5;
+  --xui-colors-pink500: #FF7AD9;
+  --xui-colors-pink600: #FF4ECD;
+  --xui-colors-pink700: #D6009A;
+  --xui-colors-pink800: #B80084;
+  --xui-colors-pink900: #4D0037;
+
+  --xui-colors-purple50: #F7F2FD;
+  --xui-colors-purple100: #F1E8FB;
+  --xui-colors-purple200: #EADCF8;
+  --xui-colors-purple300: #E0CBF5;
+  --xui-colors-purple400: #D1B1F0;
+  --xui-colors-purple500: #BC8EE9;
+  --xui-colors-purple600: #7828C8;
+  --xui-colors-purple700: #6622AA;
+  --xui-colors-purple800: #4D1980;
+  --xui-colors-purple900: #290E44;
+
+  --xui-colors-blue50: #EDF5FF;
+  --xui-colors-blue100: #E1EFFF;
+  --xui-colors-blue200: #CEE4FE;
+  --xui-colors-blue300: #B7D5F8;
+  --xui-colors-blue400: #96C1F2;
+  --xui-colors-blue500: #5EA2EF;
+  --xui-colors-blue600: #0072F5;
+  --xui-colors-blue700: #005FCC;
+  --xui-colors-blue800: #004799;
+  --xui-colors-blue900: #00254D;
+
   --xui-colors-cyan50: #F0FCFF;
   --xui-colors-cyan100: #E6FAFE;
   --xui-colors-cyan200: #D7F8FE;
@@ -248,16 +248,16 @@
   --xui-colors-cyan800: #0E8AAA;
   --xui-colors-cyan900: #053B48;
 
-  --xui-colors-pink50: #FFF0FB;
-  --xui-colors-pink100: #FFE5F8;
-  --xui-colors-pink200: #FFD6F3;
-  --xui-colors-pink300: #FFC2EE;
-  --xui-colors-pink400: #FFA3E5;
-  --xui-colors-pink500: #FF7AD9;
-  --xui-colors-pink600: #FF4ECD;
-  --xui-colors-pink700: #D6009A;
-  --xui-colors-pink800: #B80084;
-  --xui-colors-pink900: #4D0037;
+  --xui-colors-green50: #F1FDF7;
+  --xui-colors-green100: #E8FCF1;
+  --xui-colors-green200: #DAFBE8;
+  --xui-colors-green300: #C8F9DD;
+  --xui-colors-green400: #ADF5CC;
+  --xui-colors-green500: #88F1B6;
+  --xui-colors-green600: #17C964;
+  --xui-colors-green700: #13A452;
+  --xui-colors-green800: #108944;
+  --xui-colors-green900: #06371B;
 
   --xui-colors-gray50: #F1F3F5;
   --xui-colors-gray100: #ECEEF0;
@@ -423,39 +423,6 @@
 }
 
 [data-theme='dark'] {
-  --xui-colors-blue50: #10253E;
-  --xui-colors-blue100: #102C4C;
-  --xui-colors-blue200: #0F3158;
-  --xui-colors-blue300: #0D3868;
-  --xui-colors-blue400: #0A4281;
-  --xui-colors-blue500: #0952A5;
-  --xui-colors-blue600: #0072F5;
-  --xui-colors-blue700: #3694FF;
-  --xui-colors-blue800: #3694FF;
-  --xui-colors-blue900: #EAF4FF;
-
-  --xui-colors-purple50: #1F0A33;
-  --xui-colors-purple100: #240C3C;
-  --xui-colors-purple200: #2E0F4D;
-  --xui-colors-purple300: #3B1362;
-  --xui-colors-purple400: #451773;
-  --xui-colors-purple500: #571D91;
-  --xui-colors-purple600: #7828C8;
-  --xui-colors-purple700: #9750DD;
-  --xui-colors-purple800: #B583E7;
-  --xui-colors-purple900: #F7ECFC;
-
-  --xui-colors-green50: #042F14;
-  --xui-colors-green100: #06381B;
-  --xui-colors-green200: #074A24;
-  --xui-colors-green300: #0A6130;
-  --xui-colors-green400: #0B7439;
-  --xui-colors-green500: #0F9549;
-  --xui-colors-green600: #17C964;
-  --xui-colors-green700: #41EC8B;
-  --xui-colors-green800: #78F2AD;
-  --xui-colors-green900: #ECFDF4;
-
   --xui-colors-yellow50: #3A2503;
   --xui-colors-yellow100: #442B03;
   --xui-colors-yellow200: #583804;
@@ -478,6 +445,39 @@
   --xui-colors-red800: #F75F94;
   --xui-colors-red900: #FDD8E5;
 
+  --xui-colors-pink50: #330025;
+  --xui-colors-pink100: #470033;
+  --xui-colors-pink200: #5C0042;
+  --xui-colors-pink300: #750054;
+  --xui-colors-pink400: #8A0063;
+  --xui-colors-pink500: #AD007C;
+  --xui-colors-pink600: #FF4ECD;
+  --xui-colors-pink700: #FF2EC4;
+  --xui-colors-pink800: #FF6BD5;
+  --xui-colors-pink900: #FFEBF9;
+
+  --xui-colors-purple50: #1F0A33;
+  --xui-colors-purple100: #240C3C;
+  --xui-colors-purple200: #2E0F4D;
+  --xui-colors-purple300: #3B1362;
+  --xui-colors-purple400: #451773;
+  --xui-colors-purple500: #571D91;
+  --xui-colors-purple600: #7828C8;
+  --xui-colors-purple700: #9750DD;
+  --xui-colors-purple800: #B583E7;
+  --xui-colors-purple900: #F7ECFC;
+
+  --xui-colors-blue50: #10253E;
+  --xui-colors-blue100: #102C4C;
+  --xui-colors-blue200: #0F3158;
+  --xui-colors-blue300: #0D3868;
+  --xui-colors-blue400: #0A4281;
+  --xui-colors-blue500: #0952A5;
+  --xui-colors-blue600: #0072F5;
+  --xui-colors-blue700: #3694FF;
+  --xui-colors-blue800: #3694FF;
+  --xui-colors-blue900: #EAF4FF;
+
   --xui-colors-cyan50: #012A32;
   --xui-colors-cyan100: #023A46;
   --xui-colors-cyan200: #024B5A;
@@ -489,16 +489,16 @@
   --xui-colors-cyan800: #6FE4FB;
   --xui-colors-cyan900: #EBFBFE;
 
-  --xui-colors-pink50: #330025;
-  --xui-colors-pink100: #470033;
-  --xui-colors-pink200: #5C0042;
-  --xui-colors-pink300: #750054;
-  --xui-colors-pink400: #8A0063;
-  --xui-colors-pink500: #AD007C;
-  --xui-colors-pink600: #FF4ECD;
-  --xui-colors-pink700: #FF2EC4;
-  --xui-colors-pink800: #FF6BD5;
-  --xui-colors-pink900: #FFEBF9;
+  --xui-colors-green50: #042F14;
+  --xui-colors-green100: #06381B;
+  --xui-colors-green200: #074A24;
+  --xui-colors-green300: #0A6130;
+  --xui-colors-green400: #0B7439;
+  --xui-colors-green500: #0F9549;
+  --xui-colors-green600: #17C964;
+  --xui-colors-green700: #41EC8B;
+  --xui-colors-green800: #78F2AD;
+  --xui-colors-green900: #ECFDF4;
 
   --xui-colors-gray50: #16181A;
   --xui-colors-gray100: #26292B;
@@ -511,9 +511,6 @@
   --xui-colors-gray800: #9BA1A6;
   --xui-colors-gray900: #ECEDEE;
 
-  --xui-colors-white: #ffffff;
-  --xui-colors-black: #000000;
-
   --xui-colors-accents0: var(--xui-colors-gray50);
   --xui-colors-accents1: var(--xui-colors-gray100);
   --xui-colors-accents2: var(--xui-colors-gray200);
@@ -524,6 +521,9 @@
   --xui-colors-accents7: var(--xui-colors-gray700);
   --xui-colors-accents8: var(--xui-colors-gray800);
   --xui-colors-accents9: var(--xui-colors-gray900);
+
+  --xui-colors-white: #ffffff;
+  --xui-colors-black: #000000;
 
   --xui-colors-background: var(--xui-colors-black);
   --xui-colors-backgroundAlpha: rgba(0, 0, 0, 0.6);

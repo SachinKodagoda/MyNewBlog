@@ -39,7 +39,7 @@ function LeftMenu({ data }: TProps): JSX.Element {
                     const queryItems = subtitle?.queries
                       ? subtitle?.queries.map(query => `&${query.name}=${query.value}`).join('&')
                       : '';
-                    router.push(`?menu=${subtitle.name}${queryItems}`, undefined, { shallow: true });
+                    router.push(`?menu=${subtitle.value}${queryItems}`, undefined, { shallow: true });
                   }}>
                   {subtitle.name}
                 </Subtitle>

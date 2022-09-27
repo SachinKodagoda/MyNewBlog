@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
+import Colors from '@components/Menu/Colors';
 import LeftMenu, { TData } from '@components/Menu/LeftMenu';
 import Buttons from '@layouts/Designs/buttons';
 import Tables from '@layouts/Designs/tables';
@@ -17,6 +18,8 @@ function DesignSystem(): JSX.Element {
         return <Buttons />;
       case 'tables':
         return <Tables />;
+      case 'colors':
+        return <Colors />;
       default:
         return <div />;
     }
@@ -191,4 +194,6 @@ const Container = styled.div`
 `;
 const RightMenu = styled.div`
   padding: 20px;
+  overflow-y: auto;
+  flex: auto;
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { colorData } from '@data/Colors';
 
-function ThemeComponent(): JSX.Element {
+function Colors(): JSX.Element {
   const { setTheme, theme } = useTheme();
   return (
     <Container>
@@ -37,7 +37,7 @@ function ThemeComponent(): JSX.Element {
   );
 }
 
-export default ThemeComponent;
+export default Colors;
 
 const Container = styled.div`
   display: flex;
@@ -64,8 +64,9 @@ const Title = styled.div`
 `;
 
 const ColorBlock = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: var(--xui-radii-lg);
 `;
 
 const Item = styled.div<{ color: string; mode?: string }>`
