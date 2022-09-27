@@ -5,6 +5,7 @@ import { ColorCodes, Prefix } from '@data/Colors';
 
 function Colors(): JSX.Element {
   const { theme } = useTheme();
+  const antiTheme = theme === 'dark' ? 'light' : 'dark';
   return (
     <Container>
       <Main>
@@ -13,15 +14,14 @@ function Colors(): JSX.Element {
           {Object.entries(ColorCodes).map((item, i) => (
             <ItemBox key={`first-light-${i + 1}`} mode={theme}>
               {Object.entries(item[1]).map((sub, j) => (
-                <Item key={`second-dark-${j + 1}`} color={`${Prefix}-${item[0]}${sub[0]}`} mode={theme}>
-                  <ColorBlock color={`${Prefix}-${item[0]}${sub[0]}`} />
+                <ColorBlock key={`second-dark-${j + 1}`} color={`${Prefix}-${item[0]}${sub[0]}`}>
                   <Title fontColor={sub[1][`${theme}`].font}>
                     {item[0]}
-                    {sub[0]}
+                    {sub[0]} {sub[1][`${theme}`].color === sub[1][`${antiTheme}`].color ? '*' : ''}
                     <br />
                     <SubT>{sub[1][`${theme}`].color}</SubT>
                   </Title>
-                </Item>
+                </ColorBlock>
               ))}
               <MiniTitle mode={theme}>{item[0]}</MiniTitle>
             </ItemBox>
@@ -52,10 +52,6 @@ const Main = styled.div`
 
 const Title = styled.div<{ fontColor: string }>`
   color: ${p => p.fontColor};
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-weight: 500;
   font-size: 14px;
 `;
@@ -65,20 +61,14 @@ const SubT = styled.div`
   font-weight: 600;
 `;
 
-const ColorBlock = styled.div`
-  width: 100px;
-  height: 100px;
+const ColorBlock = styled.div<{ color: string }>`
+  width: 120px;
+  height: 120px;
   border-radius: var(--xui-radii-lg);
-`;
-
-const Item = styled.div<{ color: string; mode?: string }>`
   display: flex;
   align-items: center;
-  gap: 5px;
-  position: relative;
-  ${ColorBlock} {
-    background: var(${p => p.color});
-  }
+  justify-content: center;
+  background: var(${p => p.color});
 `;
 
 const ItemBox = styled.div<{ mode?: string }>`
@@ -97,7 +87,3 @@ const ItemBoxCtr = styled.div`
 `;
 
 const MiniTitle = styled.div<{ mode?: string }>``;
-
-const Theme = styled.div`
-  cursor: pointer;
-`;
