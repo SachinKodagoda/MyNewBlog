@@ -1,11 +1,17 @@
 import { useTheme } from 'next-themes';
 import styled from 'styled-components';
 
-import { ColorCodes, Prefix } from '@data/Colors';
+import { ColorCodes, Prefix, TColorItem } from '@data/Colors';
 
 function Colors(): JSX.Element {
   const { theme } = useTheme();
   const antiTheme = theme === 'dark' ? 'light' : 'dark';
+  const isRepeated = (clr: string, itemx: TColorItem) => {
+    const members = Object.entries(itemx).map(a => a[1][`${theme}`].color);
+    const idx = members.findIndex(p => p === clr);
+    members.splice(idx, 1);
+    return members.includes(clr);
+  };
   return (
     <Container>
       <Main>
@@ -16,9 +22,10 @@ function Colors(): JSX.Element {
               {Object.entries(item[1]).map((sub, j) => (
                 <ColorBlock key={`second-dark-${j + 1}`} color={`${Prefix}-${item[0]}${sub[0]}`}>
                   <Title fontColor={sub[1][`${theme}`].font}>
-                    {item[0]}
-                    {sub[0]} {sub[1][`${theme}`].color === sub[1][`${antiTheme}`].color ? '*' : ''}
-                    <br />
+                    <InnerSpan>
+                      <IsRepeated isR={isRepeated(sub[1][`${theme}`].color, item[1])}>{item[0]}</IsRepeated>
+                      {sub[0]} {sub[1][`${theme}`].color === sub[1][`${antiTheme}`].color ? '*' : ''}
+                    </InnerSpan>
                     <SubT>{sub[1][`${theme}`].color}</SubT>
                   </Title>
                 </ColorBlock>
@@ -54,6 +61,14 @@ const Title = styled.div<{ fontColor: string }>`
   color: ${p => p.fontColor};
   font-weight: 500;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const InnerSpan = styled.div`
+  display: flex;
 `;
 
 const SubT = styled.div`
@@ -87,3 +102,8 @@ const ItemBoxCtr = styled.div`
 `;
 
 const MiniTitle = styled.div<{ mode?: string }>``;
+
+const IsRepeated = styled.div<{ isR: boolean }>`
+  text-decoration: ${p => (p.isR ? 'underline' : 'none')};
+  ${p => (p.isR ? 'color: red' : '')};
+`;

@@ -1,6 +1,12 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 
 export type TColorCategories = { dark: { color: string; font: string }; light: { color: string; font: string } };
+export type TColorItem = {
+  [value: number]: TColorCategories;
+};
+export type TColor = {
+  [color: string]: TColorItem;
+};
 
 export const ColorCodes = {
   yellow: {
