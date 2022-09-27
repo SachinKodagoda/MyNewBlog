@@ -15,9 +15,11 @@ function Colors(): JSX.Element {
               {Object.entries(item[1]).map((sub, j) => (
                 <Item key={`second-dark-${j + 1}`} color={`${Prefix}-${item[0]}${sub[0]}`} mode={theme}>
                   <ColorBlock color={`${Prefix}-${item[0]}${sub[0]}`} />
-                  <Title>
+                  <Title fontColor={sub[1][`${theme}`].font}>
                     {item[0]}
                     {sub[0]}
+                    <br />
+                    <SubT>{sub[1][`${theme}`].color}</SubT>
                   </Title>
                 </Item>
               ))}
@@ -48,11 +50,19 @@ const Main = styled.div`
   gap: 5px;
 `;
 
-const Title = styled.div`
+const Title = styled.div<{ fontColor: string }>`
+  color: ${p => p.fontColor};
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 14px;
+`;
+
+const SubT = styled.div`
+  opacity: 0.8;
+  font-weight: 600;
 `;
 
 const ColorBlock = styled.div`
