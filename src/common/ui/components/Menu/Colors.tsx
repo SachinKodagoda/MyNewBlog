@@ -1,31 +1,24 @@
 import { useTheme } from 'next-themes';
 import styled from 'styled-components';
 
-import { colorData } from '@data/Colors';
+import { ColorCodes, Prefix } from '@data/Colors';
 
 function Colors(): JSX.Element {
-  const { setTheme, theme } = useTheme();
+  const { theme } = useTheme();
   return (
     <Container>
       <Main>
-        <Theme
-          onClick={() => {
-            if (theme === 'dark') {
-              setTheme('light');
-            } else {
-              setTheme('dark');
-            }
-          }}>
-          Theme
-        </Theme>
-        <MainTitle>Dark</MainTitle>
+        <MainTitle>{theme}</MainTitle>
         <ItemBoxCtr>
-          {Object.entries(colorData).map((item, i) => (
+          {Object.entries(ColorCodes).map((item, i) => (
             <ItemBox key={`first-light-${i + 1}`} mode={theme}>
-              {item[1].map((sub, j) => (
-                <Item key={`second-dark-${j + 1}`} color={sub.name} mode={theme}>
-                  <ColorBlock color={sub.name} />
-                  <Title>{sub.value}</Title>
+              {Object.entries(item[1]).map((sub, j) => (
+                <Item key={`second-dark-${j + 1}`} color={`${Prefix}-${item[0]}${sub[0]}`} mode={theme}>
+                  <ColorBlock color={`${Prefix}-${item[0]}${sub[0]}`} />
+                  <Title>
+                    {item[0]}
+                    {sub[0]}
+                  </Title>
                 </Item>
               ))}
               <MiniTitle mode={theme}>{item[0]}</MiniTitle>
@@ -60,7 +53,6 @@ const Title = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 `;
 
 const ColorBlock = styled.div`
@@ -76,11 +68,6 @@ const Item = styled.div<{ color: string; mode?: string }>`
   position: relative;
   ${ColorBlock} {
     background: var(${p => p.color});
-  }
-  &:hover {
-    ${Title} {
-      display: block;
-    }
   }
 `;
 

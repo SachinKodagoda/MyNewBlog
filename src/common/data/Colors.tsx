@@ -1,14 +1,8 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
-export type TColorNames = {
-  [key: string]: {
-    name: string;
-    value: string;
-    colorCode: string;
-    fontColor: string;
-  }[];
-};
 
-const darkColorCodes = {
+export type TColorCategories = { dark: { color: string; font: string }; light: { color: string; font: string } };
+
+export const ColorCodes = {
   yellow: {
     50: { dark: { color: '#3A2503', font: '#fff' }, light: { color: '#FEF9F0', font: '#fff' } },
     100: { dark: { color: '#442B03', font: '#fff' }, light: { color: '#FEF5E7', font: '#fff' } },
@@ -106,34 +100,10 @@ const darkColorCodes = {
     900: { dark: { color: '#ECEDEE', font: '#fff' }, light: { color: '#11181C', font: '#fff' } },
   },
 };
-const lightColorCodes = [''];
-const colorCategories = ['yellow', 'red', 'pink', 'purple', 'blue', 'cyan', 'green', 'gray'];
-const weights = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
-const prefix = '--xui-colors';
-const getNameArr = (colorCategory: string) => {
-  return weights.map((weight, i) => ({
-    colorCode: '',
-    fontColor: '',
-    name: `${prefix}-${colorCategory}${weight}`,
-    value: `${weight}`,
-  }));
-};
-const tempArr = {};
-export const colorsArr = colorCategories.forEach(ele => {
-  tempArr[ele] = getNameArr(ele);
-});
 
-const getOtherArr = (arr: string[], sub: string) => {
-  return arr.map(a => ({
-    colorCode: '',
-    fontColor: '',
-    name: `${prefix}-${sub}${a}`,
-    value: `${a}`,
-  }));
-};
+export const Prefix = '--xui-colors';
 
-export const colorData: TColorNames = {
-  ...tempArr,
+export const colorData = {
   // ...{
   //   accents: getOtherArr(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'], 'accents'),
   // },
@@ -180,5 +150,3 @@ export const colorData: TColorNames = {
   //   ),
   // },
 };
-
-// { name: `${pre}-` },
