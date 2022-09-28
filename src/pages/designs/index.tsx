@@ -7,6 +7,7 @@ import Colors from '@components/Menu/Colors';
 import LeftMenu, { TData } from '@components/Menu/LeftMenu';
 import Buttons from '@layouts/Designs/buttons';
 import Tables from '@layouts/Designs/tables';
+import Texts from '@layouts/Designs/texts';
 import { widths } from '@theme/baseTheme';
 
 function DesignSystem(): JSX.Element {
@@ -20,6 +21,8 @@ function DesignSystem(): JSX.Element {
         return <Tables />;
       case 'colors':
         return <Colors />;
+      case 'texts':
+        return <Texts />;
       default:
         return <div />;
     }
@@ -156,7 +159,7 @@ function DesignSystem(): JSX.Element {
         },
         {
           name: 'Text',
-          value: 'text',
+          value: 'texts',
         },
         {
           name: 'Link',
