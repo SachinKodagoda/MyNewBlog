@@ -5,9 +5,10 @@ import { ColorCodes, Prefix, TColorItem } from '@data/Colors';
 
 function Colors(): JSX.Element {
   const { theme } = useTheme();
-  const antiTheme = theme === 'dark' ? 'light' : 'dark';
+  const tempTheme = theme || 'light';
+  const antiTheme = tempTheme === 'dark' ? 'light' : 'dark';
   const isRepeated = (clr: string, itemx: TColorItem) => {
-    const members = Object.entries(itemx).map(a => a[1][`${theme}`].color);
+    const members = Object.entries(itemx).map(a => a[1][`${theme}`]?.color);
     const idx = members.findIndex(p => p === clr);
     members.splice(idx, 1);
     return members.includes(clr);
@@ -15,22 +16,22 @@ function Colors(): JSX.Element {
   return (
     <Container>
       <Main>
-        <MainTitle>{theme}</MainTitle>
+        <MainTitle>{tempTheme}</MainTitle>
         <ItemBoxCtr>
           {Object.entries(ColorCodes).map((item, i) => (
-            <ItemBox key={`first-light-${i + 1}`} mode={theme}>
+            <ItemBox key={`first-light-${i + 1}`} mode={tempTheme}>
               {Object.entries(item[1]).map((sub, j) => (
                 <ColorBlock key={`second-dark-${j + 1}`} color={`${Prefix}-${item[0]}${sub[0]}`}>
-                  <Title fontColor={sub[1][`${theme}`].font}>
+                  <Title fontColor={sub[1][`${tempTheme}`]?.font}>
                     <InnerSpan>
-                      <IsRepeated isR={isRepeated(sub[1][`${theme}`].color, item[1])}>{item[0]}</IsRepeated>
-                      {sub[0]} {sub[1][`${theme}`].color === sub[1][`${antiTheme}`].color ? '*' : ''}
+                      <IsRepeated isR={isRepeated(sub[1][`${tempTheme}`]?.color, item[1])}>{item[0]}</IsRepeated>
+                      {sub[0]} {sub[1][`${tempTheme}`]?.color === sub[1][`${antiTheme}`].color ? '*' : ''}
                     </InnerSpan>
-                    <SubT>{sub[1][`${theme}`].color}</SubT>
+                    <SubT>{sub[1][`${tempTheme}`]?.color}</SubT>
                   </Title>
                 </ColorBlock>
               ))}
-              <MiniTitle mode={theme}>{item[0]}</MiniTitle>
+              <MiniTitle mode={tempTheme}>{item[0]}</MiniTitle>
             </ItemBox>
           ))}
         </ItemBoxCtr>

@@ -15,17 +15,18 @@ type TProps = { data: TData };
 function LeftMenu({ data }: TProps): JSX.Element {
   const router = useRouter();
   const { setTheme, theme } = useTheme();
+  const tempTheme = theme || 'light';
   return (
     <Container>
       <ThemeTitle
         onClick={() => {
-          if (theme === 'dark') {
+          if (tempTheme === 'dark') {
             setTheme('light');
           } else {
             setTheme('dark');
           }
         }}>
-        theme
+        tempTheme
       </ThemeTitle>
       {data.map((a, i) => (
         <ContainerInner key={`titles-${i + 1}`}>
