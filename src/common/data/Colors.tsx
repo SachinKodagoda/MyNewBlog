@@ -22,7 +22,7 @@ export const ColorCodes = {
     900: { dark: { color: '#FEF7EC', font: '#3A2503' }, light: { color: '#4E3104', font: '#FEF9F0' } },
   },
   red: {
-    50: { dark: { color: '#300313', font: '#FDD8E5' }, light: { color: '#FEF0F5', font: '#4E041E' } },
+    50: { dark: { color: '#260000', font: '#FDD8E5' }, light: { color: '#FEF0F5', font: '#4E041E' } }, //
     100: { dark: { color: '#300313', font: '#FDD8E5' }, light: { color: '#FEE7EF', font: '#4E041E' } },
     200: { dark: { color: '#44041A', font: '#FDD8E5' }, light: { color: '#FDD8E5', font: '#4E041E' } },
     300: { dark: { color: '#5C0523', font: '#FDD8E5' }, light: { color: '#FCC5D8', font: '#4E041E' } },
@@ -65,8 +65,8 @@ export const ColorCodes = {
     400: { dark: { color: '#0A4281', font: '#EAF4FF' }, light: { color: '#96C1F2', font: '#00254D' } },
     500: { dark: { color: '#0952A5', font: '#EAF4FF' }, light: { color: '#5EA2EF', font: '#00254D' } },
     600: { dark: { color: '#0072F5', font: '#102C4C' }, light: { color: '#0072F5', font: '#EDF5FF' } },
-    700: { dark: { color: '#3694FF', font: '#102C4C' }, light: { color: '#005FCC', font: '#EDF5FF' } },
-    800: { dark: { color: '#3694FF', font: '#102C4C' }, light: { color: '#004799', font: '#EDF5FF' } },
+    700: { dark: { color: '#3694FF', font: '#102C4C' }, light: { color: '#005FCC', font: '#EDF5FF' } }, //
+    800: { dark: { color: '#5cb0ff', font: '#102C4C' }, light: { color: '#004799', font: '#EDF5FF' } },
     900: { dark: { color: '#EAF4FF', font: '#102C4C' }, light: { color: '#00254D', font: '#EDF5FF' } },
   },
   cyan: {

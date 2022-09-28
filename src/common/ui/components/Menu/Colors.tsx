@@ -2,6 +2,7 @@ import { useTheme } from 'next-themes';
 import styled from 'styled-components';
 
 import { ColorCodes, Prefix, TColorItem } from '@data/Colors';
+import { hexToRgb } from '@util/common';
 
 function Colors(): JSX.Element {
   const { theme } = useTheme();
@@ -27,7 +28,10 @@ function Colors(): JSX.Element {
                       <IsRepeated isR={isRepeated(sub[1][`${tempTheme}`]?.color, item[1])}>{item[0]}</IsRepeated>
                       {sub[0]} {sub[1][`${tempTheme}`]?.color === sub[1][`${antiTheme}`].color ? '*' : ''}
                     </InnerSpan>
-                    <SubT>{sub[1][`${tempTheme}`]?.color}</SubT>
+                    <SubT>
+                      <span>{sub[1][`${tempTheme}`]?.color}</span>
+                      <span>{hexToRgb(sub[1][`${tempTheme}`]?.color)}</span>
+                    </SubT>
                   </Title>
                 </ColorBlock>
               ))}
@@ -66,6 +70,7 @@ const Title = styled.div<{ fontColor: string }>`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  user-select: text;
 `;
 
 const InnerSpan = styled.div`
@@ -75,6 +80,10 @@ const InnerSpan = styled.div`
 const SubT = styled.div`
   opacity: 0.8;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 const ColorBlock = styled.div<{ color: string }>`
@@ -106,5 +115,4 @@ const MiniTitle = styled.div<{ mode?: string }>``;
 
 const IsRepeated = styled.div<{ isR: boolean }>`
   text-decoration: ${p => (p.isR ? 'underline' : 'none')};
-  ${p => (p.isR ? 'color: red' : '')};
 `;
