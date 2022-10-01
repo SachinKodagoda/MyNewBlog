@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Colors from '@components/Menu/Colors';
 import LeftMenu, { TData } from '@components/Menu/LeftMenu';
 import Buttons from '@layouts/Designs/buttons';
+import Cards from '@layouts/Designs/cards';
 import Tables from '@layouts/Designs/tables';
 import Texts from '@layouts/Designs/texts';
 import { widths } from '@theme/baseTheme';
@@ -23,6 +24,8 @@ function DesignSystem(): JSX.Element {
         return <Colors />;
       case 'texts':
         return <Texts />;
+      case 'cards':
+        return <Cards />;
       default:
         return <div />;
     }
@@ -79,7 +82,7 @@ function DesignSystem(): JSX.Element {
         },
         {
           name: 'Card',
-          value: 'card',
+          value: 'cards',
         },
         {
           name: 'Pagination',
