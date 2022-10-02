@@ -109,50 +109,65 @@ export const ColorCodes = {
 
 export const Prefix = '--xui-colors';
 
-export const colorData = {
-  // ...{
-  //   accents: getOtherArr(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'], 'accents'),
-  // },
-  // ...{
-  //   background: getOtherArr(['background', 'backgroundAlpha', 'foreground', 'backgroundContrast'], ''),
-  // },
-  // ...{
-  //   primary: getOtherArr(
-  //     [
-  //       'primary',
-  //       'primaryBorder',
-  //       'primaryBorderHover',
-  //       'primarySolidHover',
-  //       'primarySolidContrast',
-  //       'primaryShadow',
-  //       'primaryLight',
-  //       'primaryLight',
-  //       'primaryLightHover',
-  //       'primaryLightActive',
-  //       'primaryLightContrast',
-  //     ],
-  //     ''
-  //   ),
-  // },
-  // ...{
-  //   background: getOtherArr(['background', 'backgroundAlpha', 'foreground', 'backgroundContrast'], ''),
-  // },
-  // ...{
-  //   secondary: getOtherArr(
-  //     [
-  //       'secondary',
-  //       'secondaryBorder',
-  //       'secondaryBorderHover',
-  //       'secondarySolidHover',
-  //       'secondarySolidContrast',
-  //       'secondaryShadow',
-  //       'secondaryLight',
-  //       'secondaryLight',
-  //       'secondaryLightHover',
-  //       'secondaryLightActive',
-  //       'secondaryLightContrast',
-  //     ],
-  //     ''
-  //   ),
-  // },
+export const accentData = [
+  {
+    name: 'accents0',
+    color: 'var(--xui-colors-gray50)',
+  },
+  {
+    name: 'accents1',
+    color: 'var(--xui-colors-gray100)',
+  },
+  {
+    name: 'accents2',
+    color: 'var(--xui-colors-gray200)',
+  },
+  {
+    name: 'accents3',
+    color: 'var(--xui-colors-gray300)',
+  },
+  {
+    name: 'accents4',
+    color: 'var(--xui-colors-gray400)',
+  },
+  {
+    name: 'accents5',
+    color: 'var(--xui-colors-gray500)',
+  },
+  {
+    name: 'accents6',
+    color: 'var(--xui-colors-gray600)',
+  },
+  {
+    name: 'accents7',
+    color: 'var(--xui-colors-gray700)',
+  },
+  {
+    name: 'accents8',
+    color: 'var(--xui-colors-gray800)',
+  },
+  {
+    name: 'accents9',
+    color: 'var(--xui-colors-gray900)',
+  },
+];
+
+export const blackAndWhite = [
+  {
+    name: 'white',
+    color: '#fff',
+  },
+  {
+    name: 'black',
+    color: '#000',
+  },
+];
+
+type TGet = {
+  [key: string]: { name: string; color: string }[];
+};
+
+export const getOtherData: TGet = {
+  light: [...accentData, ...blackAndWhite],
+  dark: [...accentData, ...blackAndWhite],
 };

@@ -1,7 +1,9 @@
+import { Fragment } from 'react';
+
 import { useTheme } from 'next-themes';
 import styled from 'styled-components';
 
-import { ColorCodes, Prefix, TColorItem } from '@data/Colors';
+import { ColorCodes, getOtherData, Prefix, TColorItem } from '@data/Colors';
 import { hexToRgb } from '@util/common';
 
 function Colors(): JSX.Element {
@@ -39,6 +41,27 @@ function Colors(): JSX.Element {
             </ItemBox>
           ))}
         </ItemBoxCtr>
+        <ColorSchema>
+          {`[data-theme='${theme}'] {`}
+          {Object.entries(ColorCodes).map((item, i) => (
+            <Fragment key={`tItem-${i + 1}`}>
+              <UICtr>
+                {Object.entries(item[1]).map((sub, j) => (
+                  <UItext key={`UItext-${j + 1}`}>{`${Prefix}-${item[0]}${sub[0]}: ${
+                    sub[1][`${tempTheme}`]?.color
+                  };`}</UItext>
+                ))}
+              </UICtr>
+              <br />
+            </Fragment>
+          ))}
+          {getOtherData[`${theme}`].map((item, i) => (
+            <Fragment key={`OtherItem-${i + 1}`}>
+              <UICtr>{`${Prefix}-${item.name}: ${item.color};`}</UICtr>
+            </Fragment>
+          ))}
+          {`};`}
+        </ColorSchema>
       </Main>
     </Container>
   );
@@ -116,3 +139,11 @@ const MiniTitle = styled.div<{ mode?: string }>``;
 const IsRepeated = styled.div<{ isR: boolean }>`
   text-decoration: ${p => (p.isR ? 'underline' : 'none')};
 `;
+
+const ColorSchema = styled.div`
+  user-select: text;
+`;
+
+const UICtr = styled.div``;
+
+const UItext = styled.div``;

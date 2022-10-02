@@ -423,6 +423,7 @@
 }
 
 [data-theme='dark'] {
+
   --xui-colors-yellow50: #3A2503;
   --xui-colors-yellow100: #442B03;
   --xui-colors-yellow200: #583804;
@@ -434,7 +435,7 @@
   --xui-colors-yellow800: #F8C572;
   --xui-colors-yellow900: #FEF7EC;
 
-  --xui-colors-red50: #300313;
+  --xui-colors-red50: #260000;
   --xui-colors-red100: #300313;
   --xui-colors-red200: #44041A;
   --xui-colors-red300: #5C0523;
@@ -475,7 +476,7 @@
   --xui-colors-blue500: #0952A5;
   --xui-colors-blue600: #0072F5;
   --xui-colors-blue700: #3694FF;
-  --xui-colors-blue800: #3694FF;
+  --xui-colors-blue800: #5cb0ff;
   --xui-colors-blue900: #EAF4FF;
 
   --xui-colors-cyan50: #012A32;
@@ -510,6 +511,7 @@
   --xui-colors-gray700: #787F85;
   --xui-colors-gray800: #9BA1A6;
   --xui-colors-gray900: #ECEDEE;
+
 
   --xui-colors-accents0: var(--xui-colors-gray50);
   --xui-colors-accents1: var(--xui-colors-gray100);
