@@ -109,7 +109,7 @@ export const ColorCodes = {
 
 export const Prefix = '--xui-colors';
 
-export const accentData = [
+export const noChangeData = [
   {
     name: 'accents0',
     color: 'var(--xui-colors-gray50)',
@@ -150,9 +150,6 @@ export const accentData = [
     name: 'accents9',
     color: 'var(--xui-colors-gray900)',
   },
-];
-
-export const blackAndWhite = [
   {
     name: 'white',
     color: '#fff',
@@ -161,6 +158,66 @@ export const blackAndWhite = [
     name: 'black',
     color: '#000',
   },
+  { name: 'primary', color: 'var(--xui-colors-blue600)' },
+  { name: 'primaryBorder', color: 'var(--xui-colors-blue500)' },
+  { name: 'primaryBorderHover', color: 'var(--xui-colors-blue600)' },
+  { name: 'primarySolidHover', color: 'var(--xui-colors-blue700)' },
+  { name: 'primarySolidContrast', color: 'var(--xui-colors-white)' },
+  { name: 'primaryShadow', color: 'var(--xui-colors-blue500)' },
+
+  { name: 'primaryLightContrast', color: 'var(--xui-colors-blue600)' },
+
+  { name: 'secondary', color: 'var(--xui-colors-purple600)' }, // dark => 700
+  { name: 'secondaryBorder', color: 'var(--xui-colors-purple500)' },
+  { name: 'secondaryBorderHover', color: 'var(--xui-colors-purple600)' },
+  { name: 'secondarySolidHover', color: 'var(--xui-colors-purple700)' },
+  { name: 'secondarySolidContrast', color: 'var(--xui-colors-white)' },
+  { name: 'secondaryShadow', color: 'var(--xui-colors-purple500)' },
+
+  { name: 'secondaryLightContrast', color: 'var(--xui-colors-purple600)' }, // dark => 800
+
+  { name: 'success', color: 'var(--xui-colors-green600)' },
+  { name: 'successBorder', color: 'var(--xui-colors-green500)' },
+  { name: 'successBorderHover', color: 'var(--xui-colors-green600)' },
+  { name: 'successSolidHover', color: 'var(--xui-colors-green700)' },
+  { name: 'successSolidContrast', color: 'var(--xui-colors-white)' },
+  { name: 'successShadow', color: 'var(--xui-colors-green500)' },
+
+  { name: 'successLightContrast', color: 'var(--xui-colors-green700)' },
+
+  { name: 'warning', color: 'var(--xui-colors-yellow600)' },
+  { name: 'warningBorder', color: 'var(--xui-colors-yellow500)' },
+  { name: 'warningBorderHover', color: 'var(--xui-colors-yellow600)' },
+  { name: 'warningSolidHover', color: 'var(--xui-colors-yellow700)' },
+  { name: 'warningSolidContrast', color: 'var(--xui-colors-white)' },
+  { name: 'warningShadow', color: 'var(--xui-colors-yellow500)' },
+
+  { name: 'warningLightContrast', color: 'var(--xui-colors-yellow700)' },
+
+  { name: 'error', color: 'var(--xui-colors-red600)' },
+  { name: 'errorBorder', color: 'var(--xui-colors-red500)' },
+  { name: 'errorBorderHover', color: 'var(--xui-colors-red600)' },
+  { name: 'errorSolidHover', color: 'var(--xui-colors-red700)' },
+  { name: 'errorSolidContrast', color: 'var(--xui-colors-white)' },
+  { name: 'errorShadow', color: 'var(--xui-colors-red500)' },
+
+  { name: 'errorLightContrast', color: 'var(--xui-colors-red600)' }, // dark 700
+
+  { name: 'neutral', color: 'var(--xui-colors-gray600)' },
+  { name: 'neutralBorder', color: 'var(--xui-colors-gray400)' },
+  { name: 'neutralBorderHover', color: 'var(--xui-colors-gray500)' },
+  { name: 'neutralSolidHover', color: 'var(--xui-colors-gray600)' },
+  { name: 'neutralSolidContrast', color: 'var(--xui-colors-white)' },
+  { name: 'neutralShadow', color: 'var(--xui-colors-gray400)' },
+
+  { name: 'neutralLightContrast', color: 'var(--xui-colors-gray800)' },
+
+  {
+    name: 'gradient',
+    color:
+      'linear-gradient(112deg, var(--xui-colors-cyan600) -63.59%, var(--xui-colors-pink600) -20.3%, var(--xui-colors-blue600) 70.46%)',
+  },
+  { name: 'text', color: 'var(--xui-colors-gray900)' },
 ];
 
 type TGet = {
@@ -168,6 +225,101 @@ type TGet = {
 };
 
 export const getOtherData: TGet = {
-  light: [...accentData, ...blackAndWhite],
-  dark: [...accentData, ...blackAndWhite],
+  light: [
+    ...noChangeData,
+    { name: 'background', color: 'var(--xui-colors-white)' },
+    { name: 'backgroundAlpha', color: 'rgba(255, 255, 255, 0.8)' },
+    { name: 'foreground', color: 'var(--xui-colors-black)' },
+    { name: 'backgroundContrast', color: 'var(--xui-colors-white)' },
+
+    { name: 'primaryLight', color: 'var(--xui-colors-blue200)' },
+    { name: 'primaryLightHover', color: 'var(--xui-colors-blue300)' },
+    { name: 'primaryLightActive', color: 'var(--xui-colors-blue400)' },
+
+    { name: 'secondaryLight', color: 'var(--xui-colors-purple200)' },
+    { name: 'secondaryLightHover', color: 'var(--xui-colors-purple300)' },
+    { name: 'secondaryLightActive', color: 'var(--xui-colors-purple400)' },
+
+    { name: 'successLight', color: 'var(--xui-colors-green200)' },
+    { name: 'successLightHover', color: 'var(--xui-colors-green300)' },
+    { name: 'successLightActive', color: 'var(--xui-colors-green400)' },
+
+    { name: 'warningLight', color: 'var(--xui-colors-yellow200)' },
+    { name: 'warningLightHover', color: 'var(--xui-colors-yellow300)' },
+    { name: 'warningLightActive', color: 'var(--xui-colors-yellow400)' },
+
+    { name: 'errorLight', color: 'var(--xui-colors-red200)' },
+    { name: 'errorLightHover', color: 'var(--xui-colors-red300)' },
+    { name: 'errorLightActive', color: 'var(--xui-colors-red400)' },
+
+    { name: 'neutralLight', color: 'var(--xui-colors-gray100)' },
+    { name: 'neutralLightHover', color: 'var(--xui-colors-gray200)' },
+    { name: 'neutralLightActive', color: 'var(--xui-colors-gray300)' },
+
+    { name: 'link', color: 'var(--xui-colors-blue600)' },
+    { name: 'codeLight', color: 'var(--xui-colors-pink100)' },
+    { name: 'code', color: 'var(--xui-colors-pink600)' },
+    { name: 'selection', color: 'var(--xui-colors-blue200)' },
+    { name: 'border', color: 'rgba(0, 0, 0, 0.15)' },
+
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+  ],
+  dark: [
+    ...noChangeData,
+    { name: 'background', color: 'var(--xui-colors-black)' },
+    { name: 'backgroundAlpha', color: 'rgba(0, 0, 0, 0.6)' },
+    { name: 'foreground', color: 'var(--xui-colors-white)' },
+    { name: 'backgroundContrast', color: 'var(--xui-colors-accents0)' },
+
+    { name: 'primaryLight', color: 'var(--xui-colors-blue50)' },
+    { name: 'primaryLightHover', color: 'var(--xui-colors-blue100)' },
+    { name: 'primaryLightActive', color: 'var(--xui-colors-blue200)' },
+
+    { name: 'secondaryLight', color: 'var(--xui-colors-purple50)' },
+    { name: 'secondaryLightHover', color: 'var(--xui-colors-purple100)' },
+    { name: 'secondaryLightActive', color: 'var(--xui-colors-purple200)' },
+
+    { name: 'successLight', color: 'var(--xui-colors-green50)' },
+    { name: 'successLightHover', color: 'var(--xui-colors-green100)' },
+    { name: 'successLightActive', color: 'var(--xui-colors-green200)' },
+
+    { name: 'warningLight', color: 'var(--xui-colors-yellow50)' },
+    { name: 'warningLightHover', color: 'var(--xui-colors-yellow100)' },
+    { name: 'warningLightActive', color: 'var(--xui-colors-yellow200)' },
+
+    { name: 'errorLight', color: 'var(--xui-colors-red50)' },
+    { name: 'errorLightHover', color: 'var(--xui-colors-red100)' },
+    { name: 'errorLightActive', color: 'var(--xui-colors-red200)' },
+
+    { name: 'neutralLight', color: 'var(--xui-colors-gray200)' },
+    { name: 'neutralLightHover', color: 'var(--xui-colors-gray300)' },
+    { name: 'neutralLightActive', color: 'var(--xui-colors-gray400)' },
+
+    { name: 'link', color: 'var(--xui-colors-blue700)' },
+    { name: 'codeLight', color: 'var(--xui-colors-cyan50)' },
+    { name: 'code', color: 'var(--xui-colors-cyan600)' },
+    { name: 'selection', color: 'var(--xui-colors-pink800)' },
+    { name: 'border', color: 'rgba(255, 255, 255, 0.15)' },
+
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+    { name: '', color: '' },
+  ],
 };
