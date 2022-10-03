@@ -42,7 +42,7 @@ function Colors(): JSX.Element {
           ))}
         </ItemBoxCtr>
         <ColorSchema>
-          {`[data-theme='${theme}'] {`}
+          {`html[data-theme='${theme}'] {`}
           {Object.entries(ColorCodes).map((item, i) => (
             <Fragment key={`tItem-${i + 1}`}>
               <UICtr>
