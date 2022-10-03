@@ -10,6 +10,7 @@ import 'nprogress/nprogress.css';
 import { Toaster } from 'react-hot-toast';
 
 import { UserContextProvider } from '@ctx/UserContext';
+import '@styles/a_theme.css';
 import '@styles/globals.css';
 
 NProgress.configure({ showSpinner: false });
