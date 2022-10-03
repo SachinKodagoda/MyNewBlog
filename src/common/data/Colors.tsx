@@ -150,6 +150,7 @@ export const noChangeData = [
     name: 'accents9',
     color: 'var(--xui-colors-gray900)',
   },
+  { name: '', color: '....................................' },
   {
     name: 'white',
     color: '#fff',
@@ -158,60 +159,55 @@ export const noChangeData = [
     name: 'black',
     color: '#000',
   },
+  { name: '', color: '....................................' },
   { name: 'primary', color: 'var(--xui-colors-blue600)' },
   { name: 'primaryBorder', color: 'var(--xui-colors-blue500)' },
   { name: 'primaryBorderHover', color: 'var(--xui-colors-blue600)' },
   { name: 'primarySolidHover', color: 'var(--xui-colors-blue700)' },
   { name: 'primarySolidContrast', color: 'var(--xui-colors-white)' },
   { name: 'primaryShadow', color: 'var(--xui-colors-blue500)' },
-
   { name: 'primaryLightContrast', color: 'var(--xui-colors-blue600)' },
-
+  { name: '', color: '....................................' },
   { name: 'secondary', color: 'var(--xui-colors-purple600)' }, // dark => 700
   { name: 'secondaryBorder', color: 'var(--xui-colors-purple500)' },
   { name: 'secondaryBorderHover', color: 'var(--xui-colors-purple600)' },
   { name: 'secondarySolidHover', color: 'var(--xui-colors-purple700)' },
   { name: 'secondarySolidContrast', color: 'var(--xui-colors-white)' },
   { name: 'secondaryShadow', color: 'var(--xui-colors-purple500)' },
-
   { name: 'secondaryLightContrast', color: 'var(--xui-colors-purple600)' }, // dark => 800
-
+  { name: '', color: '....................................' },
   { name: 'success', color: 'var(--xui-colors-green600)' },
   { name: 'successBorder', color: 'var(--xui-colors-green500)' },
   { name: 'successBorderHover', color: 'var(--xui-colors-green600)' },
   { name: 'successSolidHover', color: 'var(--xui-colors-green700)' },
   { name: 'successSolidContrast', color: 'var(--xui-colors-white)' },
   { name: 'successShadow', color: 'var(--xui-colors-green500)' },
-
   { name: 'successLightContrast', color: 'var(--xui-colors-green700)' },
-
+  { name: '', color: '....................................' },
   { name: 'warning', color: 'var(--xui-colors-yellow600)' },
   { name: 'warningBorder', color: 'var(--xui-colors-yellow500)' },
   { name: 'warningBorderHover', color: 'var(--xui-colors-yellow600)' },
   { name: 'warningSolidHover', color: 'var(--xui-colors-yellow700)' },
   { name: 'warningSolidContrast', color: 'var(--xui-colors-white)' },
   { name: 'warningShadow', color: 'var(--xui-colors-yellow500)' },
-
   { name: 'warningLightContrast', color: 'var(--xui-colors-yellow700)' },
-
+  { name: '', color: '....................................' },
   { name: 'error', color: 'var(--xui-colors-red600)' },
   { name: 'errorBorder', color: 'var(--xui-colors-red500)' },
   { name: 'errorBorderHover', color: 'var(--xui-colors-red600)' },
   { name: 'errorSolidHover', color: 'var(--xui-colors-red700)' },
   { name: 'errorSolidContrast', color: 'var(--xui-colors-white)' },
   { name: 'errorShadow', color: 'var(--xui-colors-red500)' },
-
   { name: 'errorLightContrast', color: 'var(--xui-colors-red600)' }, // dark 700
-
+  { name: '', color: '....................................' },
   { name: 'neutral', color: 'var(--xui-colors-gray600)' },
   { name: 'neutralBorder', color: 'var(--xui-colors-gray400)' },
   { name: 'neutralBorderHover', color: 'var(--xui-colors-gray500)' },
   { name: 'neutralSolidHover', color: 'var(--xui-colors-gray600)' },
   { name: 'neutralSolidContrast', color: 'var(--xui-colors-white)' },
   { name: 'neutralShadow', color: 'var(--xui-colors-gray400)' },
-
   { name: 'neutralLightContrast', color: 'var(--xui-colors-gray800)' },
-
+  { name: '', color: '....................................' },
   {
     name: 'gradient',
     color:
@@ -224,62 +220,60 @@ type TGet = {
   [key: string]: { name: string; color: string }[];
 };
 
-export const getOtherData: TGet = {
+export const otherColors: TGet = {
   light: [
     ...noChangeData,
     { name: 'background', color: 'var(--xui-colors-white)' },
     { name: 'backgroundAlpha', color: 'rgba(255, 255, 255, 0.8)' },
     { name: 'foreground', color: 'var(--xui-colors-black)' },
     { name: 'backgroundContrast', color: 'var(--xui-colors-white)' },
-
+    { name: '', color: '....................................' },
     { name: 'primaryLight', color: 'var(--xui-colors-blue200)' },
     { name: 'primaryLightHover', color: 'var(--xui-colors-blue300)' },
     { name: 'primaryLightActive', color: 'var(--xui-colors-blue400)' },
-
+    { name: '', color: '....................................' },
     { name: 'secondaryLight', color: 'var(--xui-colors-purple200)' },
     { name: 'secondaryLightHover', color: 'var(--xui-colors-purple300)' },
     { name: 'secondaryLightActive', color: 'var(--xui-colors-purple400)' },
-
+    { name: '', color: '....................................' },
     { name: 'successLight', color: 'var(--xui-colors-green200)' },
     { name: 'successLightHover', color: 'var(--xui-colors-green300)' },
     { name: 'successLightActive', color: 'var(--xui-colors-green400)' },
-
+    { name: '', color: '....................................' },
     { name: 'warningLight', color: 'var(--xui-colors-yellow200)' },
     { name: 'warningLightHover', color: 'var(--xui-colors-yellow300)' },
     { name: 'warningLightActive', color: 'var(--xui-colors-yellow400)' },
-
+    { name: '', color: '....................................' },
     { name: 'errorLight', color: 'var(--xui-colors-red200)' },
     { name: 'errorLightHover', color: 'var(--xui-colors-red300)' },
     { name: 'errorLightActive', color: 'var(--xui-colors-red400)' },
-
+    { name: '', color: '....................................' },
     { name: 'neutralLight', color: 'var(--xui-colors-gray100)' },
     { name: 'neutralLightHover', color: 'var(--xui-colors-gray200)' },
     { name: 'neutralLightActive', color: 'var(--xui-colors-gray300)' },
-
+    { name: '', color: '....................................' },
     { name: 'link', color: 'var(--xui-colors-blue600)' },
     { name: 'codeLight', color: 'var(--xui-colors-pink100)' },
     { name: 'code', color: 'var(--xui-colors-pink600)' },
     { name: 'selection', color: 'var(--xui-colors-blue200)' },
     { name: 'border', color: 'rgba(0, 0, 0, 0.15)' },
-
+    { name: '', color: '....................................' },
     { name: 'headerBackground', color: 'hsla(0,0%,100%,0.8)' },
     { name: 'menuBackground', color: 'rgba(255, 255, 255, 0.8)' },
     { name: 'headerIconColor', color: 'var(--xui-colors-accents4)' },
     { name: 'codeBackground', color: '#363449' },
     { name: 'codeComment', color: 'var(--xui-colors-accents7)' },
     { name: 'codeCopyIconColor', color: 'var(--xui-colors-accents2)' },
-
+    { name: '', color: '....................................' },
     { name: 'cardBackground', color: 'var(--xui-colors-white)' },
     { name: 'codeHighlight', color: 'hsl(243, 16%, 30%)' },
     { name: 'backgroundBlur', color: 'rgba(255, 255, 255, 0.3)' },
     { name: 'blockLinkColor', color: '#FF1CF7' },
     { name: 'blockLinkBackground', color: 'var(--xui-colors-accents1)' },
     { name: 'blockLinkHoverBackground', color: '#FFD1ED' },
-
+    { name: '', color: '....................................' },
     { name: 'navbar', color: 'var(--xui-colors-gray900)' },
     { name: 'bullet', color: 'var(--xui-colors-gray50)' },
-    { name: '', color: '' },
-    { name: '', color: '' },
   ],
   dark: [
     ...noChangeData,
@@ -287,57 +281,57 @@ export const getOtherData: TGet = {
     { name: 'backgroundAlpha', color: 'rgba(0, 0, 0, 0.6)' },
     { name: 'foreground', color: 'var(--xui-colors-white)' },
     { name: 'backgroundContrast', color: 'var(--xui-colors-accents0)' },
-
+    { name: '', color: '....................................' },
     { name: 'primaryLight', color: 'var(--xui-colors-blue50)' },
     { name: 'primaryLightHover', color: 'var(--xui-colors-blue100)' },
     { name: 'primaryLightActive', color: 'var(--xui-colors-blue200)' },
-
+    { name: '', color: '....................................' },
     { name: 'secondaryLight', color: 'var(--xui-colors-purple50)' },
     { name: 'secondaryLightHover', color: 'var(--xui-colors-purple100)' },
     { name: 'secondaryLightActive', color: 'var(--xui-colors-purple200)' },
-
+    { name: '', color: '....................................' },
     { name: 'successLight', color: 'var(--xui-colors-green50)' },
     { name: 'successLightHover', color: 'var(--xui-colors-green100)' },
     { name: 'successLightActive', color: 'var(--xui-colors-green200)' },
-
+    { name: '', color: '....................................' },
     { name: 'warningLight', color: 'var(--xui-colors-yellow50)' },
     { name: 'warningLightHover', color: 'var(--xui-colors-yellow100)' },
     { name: 'warningLightActive', color: 'var(--xui-colors-yellow200)' },
-
+    { name: '', color: '....................................' },
     { name: 'errorLight', color: 'var(--xui-colors-red50)' },
     { name: 'errorLightHover', color: 'var(--xui-colors-red100)' },
     { name: 'errorLightActive', color: 'var(--xui-colors-red200)' },
-
+    { name: '', color: '....................................' },
     { name: 'neutralLight', color: 'var(--xui-colors-gray200)' },
     { name: 'neutralLightHover', color: 'var(--xui-colors-gray300)' },
     { name: 'neutralLightActive', color: 'var(--xui-colors-gray400)' },
-
+    { name: '', color: '....................................' },
     { name: 'link', color: 'var(--xui-colors-blue700)' },
     { name: 'codeLight', color: 'var(--xui-colors-cyan50)' },
     { name: 'code', color: 'var(--xui-colors-cyan600)' },
     { name: 'selection', color: 'var(--xui-colors-pink800)' },
     { name: 'border', color: 'rgba(255, 255, 255, 0.15)' },
-
+    { name: '', color: '....................................' },
     { name: 'headerBackground', color: 'rgba(0,0,0,0.5)' },
     { name: 'menuBackground', color: 'rgba(0,0,0,0.5)' },
     { name: 'headerIconColor', color: 'var(--xui-colors-accents8)' },
     { name: 'codeBackground', color: '#111111' },
     { name: 'codeComment', color: 'var(--xui-colors-accents6)' },
     { name: 'codeCopyIconColor', color: 'var(--xui-colors-accents7)' },
-
+    { name: '', color: '....................................' },
     { name: 'cardBackground', color: 'var(--xui-colors-accents0)' },
     { name: 'codeHighlight', color: 'hsl(0, 0%, 15%)' },
     { name: 'backgroundBlur', color: 'rgba(255, 255, 255, 0.1)' },
     { name: 'blockLinkColor', color: '#FFA4E3' },
     { name: 'blockLinkBackground', color: 'var(--xui-colors-accents1)' },
     { name: 'blockLinkHoverBackground', color: '#55057A' },
-
+    { name: '', color: '....................................' },
     { name: 'navbar', color: 'var(--xui-colors-gray600)' },
     { name: 'bullet', color: 'var(--xui-colors-gray50)' },
   ],
 };
 
-export const getRest: TGet = {
+export const restOfTheVariables: TGet = {
   light: [
     {
       name: '--xui-shadows-xs',
@@ -350,7 +344,7 @@ export const getRest: TGet = {
     { name: '--xui-shadows-md', color: '0 12px 20px 6px rgb(104 112 118 / 0.08)' },
     { name: '--xui-shadows-lg', color: '0 12px 34px 6px rgb(104 112 118 / 0.18)' },
     { name: '--xui-shadows-xl', color: '0 25px 65px 0px rgb(104 112 118 / 0.35)' },
-
+    { name: '', color: '....................................' },
     {
       name: '--xui-dropShadows-xs',
       color: 'drop-shadow(0 2px 4px rgb(104 112 118 / 0.07)) drop-shadow(0 1px 1px rgb(104 112 118 / 0.04))',
@@ -368,6 +362,7 @@ export const getRest: TGet = {
       color: 'drop-shadow(0 12px 24px rgb(104 112 118 / 0.15)) drop-shadow(0 12px 14px rgb(104 112 118 / 0.1))',
     },
     { name: '--xui-dropShadows-xl', color: 'drop-shadow(0 25px 34px rgb(104 112 118 / 0.35))' },
+    { name: '', color: '....................................' },
     { name: '--xui-primary-sidebar-background', color: 'var(--xui-colors-gray900)' },
     { name: '--xui-primary-sidebar-foreground', color: 'var(--xui-colors-white)' },
     { name: '--xui-primary-sidebar-border', color: 'var(--xui-colors-black)' },
@@ -385,7 +380,6 @@ export const getRest: TGet = {
     { name: '--xui--navbarBackgroundColor', color: 'var(--xui-colors-background)' },
     { name: '--xui--navbarBlurBackgroundColor', color: 'var(--xui-colors-backgroundAlpha)' },
     { name: '--xui--navbarBorderColor', color: 'var(--xui-colors-border)' },
-    { name: '', color: '' },
   ],
   dark: [
     { name: '--xui-shadows-xs', color: '0 2px 8px 1px rgb(0 0 0 / 0.07), 0 1px 1px -1px rgb(0 0 0 / 0.04)' },
@@ -393,7 +387,7 @@ export const getRest: TGet = {
     { name: '--xui-shadows-md', color: '0 12px 20px 6px rgb(0 0 0 / 0.08)' },
     { name: '--xui-shadows-lg', color: '0 12px 34px 6px rgb(0 0 0 / 0.18)' },
     { name: '--xui-shadows-xl', color: '0 25px 65px 0px rgb(0 0 0 / 0.35)' },
-
+    { name: '', color: '....................................' },
     {
       name: '--xui-dropShadows-xs',
       color: 'drop-shadow(0 2px 4px rgb(0 0 0 / 0.07)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.04))',
@@ -411,6 +405,5 @@ export const getRest: TGet = {
       color: 'drop-shadow(0 12px 24px rgb(0 0 0 / 0.15)) drop-shadow(0 12px 14px rgb(0 0 0 / 0.1))',
     },
     { name: '--xui-dropShadows-xl', color: 'drop-shadow(0 25px 34px rgb(0 0 0 / 0.35))' },
-    { name: '', color: '' },
   ],
 };

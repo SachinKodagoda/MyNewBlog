@@ -33,7 +33,7 @@ function LeftMenu({ data }: TProps): JSX.Element {
           <Title>{a.title}</Title>
           <SubtitleCtr>
             {a.subtitles.map(subtitle => (
-              <SubtitleInner key={`sub-${i + 1}`}>
+              <SubtitleInner key={`${subtitle.name}-x-sub-${i + 1}`}>
                 <IconCtr />
                 <Subtitle
                   onClick={() => {

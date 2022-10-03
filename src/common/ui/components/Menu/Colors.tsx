@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { useTheme } from 'next-themes';
 import styled from 'styled-components';
 
-import { ColorCodes, getOtherData, Prefix, TColorItem } from '@data/Colors';
+import { ColorCodes, otherColors, Prefix, restOfTheVariables, TColorItem } from '@data/Colors';
 import { hexToRgb } from '@util/common';
 
 function Colors(): JSX.Element {
@@ -55,9 +55,14 @@ function Colors(): JSX.Element {
               <br />
             </Fragment>
           ))}
-          {getOtherData[`${theme}`].map((item, i) => (
+          {otherColors[`${theme}`].map((item, i) => (
             <Fragment key={`OtherItem-${i + 1}`}>
-              <UICtr>{`${Prefix}-${item.name}: ${item.color};`}</UICtr>
+              {`${item.name}`.trim().length > 0 ? <UICtr>{`${Prefix}-${item.name}: ${item.color};`}</UICtr> : <br />}
+            </Fragment>
+          ))}
+          {restOfTheVariables[`${theme}`].map((item, i) => (
+            <Fragment key={`RestItem-${i + 1}`}>
+              {`${item.name}`.trim().length > 0 ? <UICtr>{`${item.name}: ${item.color};`}</UICtr> : <br />}
             </Fragment>
           ))}
           {`};`}
