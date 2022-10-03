@@ -45,24 +45,32 @@ function Colors(): JSX.Element {
           {`html[data-theme='${theme}'] {`}
           {Object.entries(ColorCodes).map((item, i) => (
             <Fragment key={`tItem-${i + 1}`}>
-              <UICtr>
+              <UIMainCtr>
                 {Object.entries(item[1]).map((sub, j) => (
-                  <UItext key={`UItext-${j + 1}`}>{`${Prefix}-${item[0]}${sub[0]}: ${
-                    sub[1][`${tempTheme}`]?.color
-                  };`}</UItext>
+                  <UItext key={`UItext-${j + 1}`} color={`${Prefix}-${item[0]}${sub[0]}`}>{`${Prefix}-${item[0]}${
+                    sub[0]
+                  }: ${sub[1][`${tempTheme}`]?.color};`}</UItext>
                 ))}
-              </UICtr>
+              </UIMainCtr>
               <br />
             </Fragment>
           ))}
           {otherColors[`${theme}`].map((item, i) => (
             <Fragment key={`OtherItem-${i + 1}`}>
-              {`${item.name}`.trim().length > 0 ? <UICtr>{`${Prefix}-${item.name}: ${item.color};`}</UICtr> : <br />}
+              {`${item.name}`.trim().length > 0 ? (
+                <UICtr color={`${Prefix}-${item.name}`}>{`${Prefix}-${item.name}: ${item.color};`}</UICtr>
+              ) : (
+                <br />
+              )}
             </Fragment>
           ))}
           {restOfTheVariables[`${theme}`].map((item, i) => (
             <Fragment key={`RestItem-${i + 1}`}>
-              {`${item.name}`.trim().length > 0 ? <UICtr>{`${item.name}: ${item.color};`}</UICtr> : <br />}
+              {`${item.name}`.trim().length > 0 ? (
+                <UICtOther color={`${item.color}`}>{`${item.name}: ${item.color};`}</UICtOther>
+              ) : (
+                <br />
+              )}
             </Fragment>
           ))}
           {`};`}
@@ -149,6 +157,49 @@ const ColorSchema = styled.div`
   user-select: text;
 `;
 
-const UICtr = styled.div``;
+const UIMainCtr = styled.div``;
 
-const UItext = styled.div``;
+const UICtr = styled.div<{ color: string }>`
+  position: relative;
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    ${p => (`${p.color}`.includes('colors') ? `background: var(${p.color})` : `display: none`)};
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--xui-colors-foreground);
+  }
+`;
+
+const UItext = styled.div<{ color: string }>`
+  position: relative;
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    ${p => (`${p.color}`.includes('colors') ? `background: var(${p.color})` : `display: none`)};
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--xui-colors-foreground);
+  }
+`;
+
+const UICtOther = styled.div<{ color: string }>`
+  position: relative;
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    ${p => (`${p.color}`.includes('colors') ? `background: ${p.color}` : `display: none`)};
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--xui-colors-foreground);
+  }
+`;
