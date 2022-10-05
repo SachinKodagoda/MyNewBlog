@@ -12,7 +12,7 @@ type TTitle = {
   type?: string;
 };
 
-type TProps = { imgSrc: string | StaticImageData; imgRatio?: string; title?: TTitle | null };
+type TProps = { imgSrc: string | StaticImageData; imgRatio?: string; title?: TTitle | null; imgHeight?: string };
 
 type TText = { color: string; opacity: string; textTransform: string; fontWeight: string };
 type TThemeFormat = {
@@ -27,7 +27,7 @@ type TThemeFormat = {
   };
 };
 
-function Card({ imgRatio = '4/5', imgSrc, title = null }: TProps): JSX.Element {
+function Card({ imgHeight = '400px', imgRatio = '4/5', imgSrc, title = null }: TProps): JSX.Element {
   const typeProps: TThemeFormat = {
     first: {
       color: '#fff',
@@ -61,7 +61,7 @@ function Card({ imgRatio = '4/5', imgSrc, title = null }: TProps): JSX.Element {
     typeProps.footer.btnColor = '#B583E7';
   }
   return (
-    <Container imgRatio={imgRatio} typeProps={typeProps}>
+    <Container imgRatio={imgRatio} typeProps={typeProps} imgHeight={imgHeight}>
       <Image src={imgSrc} layout='fill' />
       <CardHeader>
         <HeaderFirstTitle>{title?.headerFirstTitle}</HeaderFirstTitle>
@@ -130,9 +130,10 @@ const HeaderSecondTitle = styled.div`
   font-size: 1.2rem;
 `;
 
-const Container = styled.div<{ imgRatio: string; typeProps: TThemeFormat }>`
-  height: 400px;
+const Container = styled.div<{ imgRatio: string; typeProps: TThemeFormat; imgHeight: string }>`
+  height: auto;
   aspect-ratio: ${p => p.imgRatio};
+  min-height: ${p => p.imgHeight};
   position: relative;
   border-radius: 10px;
   overflow: hidden;

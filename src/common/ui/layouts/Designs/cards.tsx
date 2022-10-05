@@ -58,6 +58,11 @@ function Cards(): JSX.Element {
           type: 'type2',
         }}
       />
+      <OtherCards>
+        <BasicCard>A Basic Card</BasicCard>
+        <FlatCard>A Flat Card</FlatCard>
+        <HoverCard>A Bordered, Hoverable Card</HoverCard>
+      </OtherCards>
     </Container>
   );
 }
@@ -71,4 +76,48 @@ const Container = styled.div`
   gap: 16px;
   height: auto;
   width: auto;
+`;
+
+const BasicCard = styled.div`
+  filter: drop-shadow(0 12px 24px rgb(104 112 118 / 0.15)) drop-shadow(0 12px 14px rgb(104 112 118 / 0.1));
+  transition: transform 0.25s ease 0s, filter 0.25s ease 0s, box-shadow 0.25s ease 0s;
+  width: 320px;
+  height: 100px;
+  border-radius: 14px;
+  background: #fff;
+  padding: 20px;
+  /* transform: translateZ(0px);
+  backface-visibility: hidden; */
+`;
+
+const FlatCard = styled.div`
+  width: 320px;
+  height: 100px;
+  border-radius: 14px;
+  background: #f1f3f5;
+  padding: 20px;
+`;
+
+const HoverCard = styled.div`
+  transition: var(--xui-transitions-card);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  width: 320px;
+  height: 100px;
+  border-radius: 14px;
+  background: #fff;
+  padding: 20px;
+  /* transform: translateZ(0px);
+  backface-visibility: hidden; */
+  &:hover {
+    transform: translateY(-2px);
+    filter: var(--xui-dropShadows-lg);
+  }
+`;
+
+const OtherCards = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 `;
