@@ -11,11 +11,53 @@ import Card from './card';
 function Cards(): JSX.Element {
   return (
     <Container>
-      <Card imgSrc={Card2Img} />
-      <Card imgSrc={Card3Img} />
-      <Card imgSrc={Card4Img} />
-      <Card imgSrc={Card5Img} />
-      <Card imgSrc={Card6Img} />
+      <Card
+        imgSrc={Card2Img}
+        imgRatio='4/5'
+        title={{
+          headerFirstTitle: 'New',
+          headerSecondTitle: 'Acme Camera',
+        }}
+      />
+      <Card
+        imgSrc={Card3Img}
+        imgRatio='4/5'
+        title={{
+          headerFirstTitle: 'New',
+          headerSecondTitle: 'Acme Camera',
+        }}
+      />
+      <Card
+        imgSrc={Card4Img}
+        imgRatio='4/5'
+        title={{
+          headerFirstTitle: 'New',
+          headerSecondTitle: 'Acme Camera',
+        }}
+      />
+      <Card
+        imgSrc={Card5Img}
+        imgRatio='6/5'
+        title={{
+          footerButtonText: 'Notify',
+          footerFirstTitle: 'Available Soon.',
+          footerSecondTitle: 'Get Notified.',
+          headerFirstTitle: 'New',
+          headerSecondTitle: 'Acme Camera',
+        }}
+      />
+      <Card
+        imgSrc={Card6Img}
+        imgRatio='4/5'
+        title={{
+          footerButtonText: 'Notify',
+          footerFirstTitle: 'Available Soon.',
+          footerSecondTitle: 'Get Notified.',
+          headerFirstTitle: 'New',
+          headerSecondTitle: 'Acme Camera',
+          type: 'type2',
+        }}
+      />
     </Container>
   );
 }
@@ -24,6 +66,7 @@ export default Cards;
 
 const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: auto;
   gap: 16px;
   height: auto;

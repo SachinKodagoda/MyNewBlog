@@ -1,3 +1,14 @@
+import { useEffect, useState } from 'react';
+
+import { Offer } from '@prisma/client';
+import { compareAsc, endOfMonth, format, startOfMonth } from 'date-fns';
+import { useRouter } from 'next/router';
+import { CSVLink } from 'react-csv';
+import { DateRange, DayPicker } from 'react-day-picker';
+import toast from 'react-hot-toast';
+import { FiPlusCircle, FiTrash2 } from 'react-icons/fi';
+import styled from 'styled-components';
+
 import Button from '@components/Buttons/Button';
 import SearchBox from '@components/FormElements/SearchBox';
 import Modal from '@components/Other/Modal';
@@ -6,21 +17,13 @@ import Tbl from '@components/Table/Tbl';
 import useDebounce from '@hooks/useDebounce';
 import AddOffer from '@layouts/Offers/AddOffer';
 import { limitOpt, searchOpt, typeOpt } from '@lib/optionLib';
-import { Offer } from '@prisma/client';
 import { TOfferSchema } from '@schemas/offerSchema';
 import FileText from '@svg/feather/FileText';
 import Printer from '@svg/feather/Printer';
 import { colors } from '@theme/baseTheme';
 import { IOptions, TFormState, TInputValue, TOrderBy, TOrderVal, TRoute } from '@ts/common';
 import { accumulateByKey, sortBy, sumBy } from '@util/normalize';
-import { compareAsc, endOfMonth, format, startOfMonth } from 'date-fns';
-import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import { CSVLink } from 'react-csv';
-import { DateRange, DayPicker } from 'react-day-picker';
-import toast from 'react-hot-toast';
-import { FiPlusCircle, FiTrash2 } from 'react-icons/fi';
-import styled from 'styled-components';
+
 // import TDoc from './TDoc';
 
 type TProps = { rType: TRoute };
@@ -37,14 +40,14 @@ function Offers({ rType }: TProps): JSX.Element {
   const [searchVal, setSearchVal] = useState('');
   const debouncedSearchVal = useDebounce(searchVal, 250);
   const initialValues: TOfferSchema = {
+    desc: '',
+    discount: 0,
+    endDate: new Date(),
     id: null,
+    offerCode: '',
+    startDate: new Date(),
     status: 'Active',
     type: null,
-    desc: '',
-    startDate: new Date(),
-    endDate: new Date(),
-    offerCode: '',
-    discount: 0,
   };
   const [offerInput, setOfferInput] = useState<TOfferSchema>({ ...initialValues });
   const [graphData, setGraphData] = useState<{ name: string; val: number }[]>([]);
@@ -62,10 +65,10 @@ function Offers({ rType }: TProps): JSX.Element {
   const getOfferData = async (nextPage: number, pageLimit: number, orderByVal: TOrderBy) => {
     setLoading(true);
     fetch(`/api/dashboard?page=${nextPage}&limit=${pageLimit}&orderBy=${orderByVal.key}&order=${orderByVal.value}`, {
-      method: 'GET',
       headers: {
         authorization: `${process.env.JWT}`,
       },
+      method: 'GET',
     })
       .then(res => res.json())
       .then(async res => {
@@ -96,10 +99,10 @@ function Offers({ rType }: TProps): JSX.Element {
   const getSearchData = async (searchKey: string, searchBy: string) => {
     setLoading(true);
     fetch(`/api/dashboard?searchKey=${searchKey}&searchBy=${searchBy}`, {
-      method: 'GET',
       headers: {
         authorization: `${process.env.JWT}`,
       },
+      method: 'GET',
     })
       .then(res => res.json())
       .then(async res => {
@@ -130,19 +133,19 @@ function Offers({ rType }: TProps): JSX.Element {
 
   const getGraph = async (from: string, to: string) => {
     await fetch(`/api/dashboard?start=${from}&end=${to}`, {
-      method: 'GET',
       headers: {
         authorization: `${process.env.JWT}`,
       },
+      method: 'GET',
     })
       .then(res => res.json())
       .then(res => {
         const temp = res.data as Offer[];
         const temp2 = temp
           .map(val => ({
+            end: format(new Date(val.endDate), 'dd'),
             name: format(new Date(val.startDate), 'P'),
             val: +val.discount,
-            end: format(new Date(val.endDate), 'dd'),
           }))
           .sort((a, b) => compareAsc(new Date(a.name), new Date(b.name)));
         setGraphData(temp2);
@@ -155,10 +158,10 @@ function Offers({ rType }: TProps): JSX.Element {
   const deleteOfferData = (id: number) => {
     setLoading(true);
     fetch(`/api/dashboard?type=user_one_delete&id=${id}`, {
-      method: 'DELETE',
       headers: {
         authorization: `${process.env.JWT}`,
       },
+      method: 'DELETE',
     })
       .then(res => res.json())
       .then(res => {
@@ -179,10 +182,10 @@ function Offers({ rType }: TProps): JSX.Element {
   const deleteAll = () => {
     setLoading(true);
     fetch(`/api/dashboard?type=user_all_delete`, {
-      method: 'DELETE',
       headers: {
         authorization: `${process.env.JWT}`,
       },
+      method: 'DELETE',
     })
       .then(res => res.json())
       .then(res => {
@@ -206,12 +209,12 @@ function Offers({ rType }: TProps): JSX.Element {
     setLoading(true);
     setModelOpened(false);
     fetch(`/api/dashboard?type=offer_${rrType}`, {
-      method: rType,
-      headers: {
-        'content-type': 'application/json',
-        authorization: `${process.env.JWT}`,
-      },
       body: JSON.stringify(data),
+      headers: {
+        authorization: `${process.env.JWT}`,
+        'content-type': 'application/json',
+      },
+      method: rType,
     })
       .then(res => res.json())
       .then(res => {
@@ -253,82 +256,82 @@ function Offers({ rType }: TProps): JSX.Element {
   };
 
   const headerArr = [
-    { align: 'left', priority: 1, minWidth: 50, maxWidth: 300, title: <Heading>#</Heading> },
+    { align: 'left', maxWidth: 300, minWidth: 50, priority: 1, title: <Heading>#</Heading> },
     {
       align: 'left',
-      priority: 2,
-      minWidth: 40,
       maxWidth: 300,
+      minWidth: 40,
+      priority: 2,
       title: <Heading onClick={() => getOrder('id')}>ID{getArrow('id')}</Heading>,
     },
     {
       align: 'left',
-      priority: 11,
-      minWidth: 100,
       maxWidth: 300,
+      minWidth: 100,
+      priority: 11,
       title: <Heading onClick={() => getOrder('status')}>STATUS{getArrow('status')}</Heading>,
     },
     {
       align: 'left',
-      priority: 10,
-      minWidth: 100,
       maxWidth: 300,
+      minWidth: 100,
+      priority: 10,
       title: <Heading onClick={() => getOrder('type')}>TYPE{getArrow('type')}</Heading>,
     },
     {
       align: 'left',
-      priority: 9,
-      minWidth: 130,
       maxWidth: 300,
+      minWidth: 130,
+      priority: 9,
       title: <Heading onClick={() => getOrder('desc')}>DESC{getArrow('desc')}</Heading>,
     },
     {
       align: 'left',
-      priority: 8,
-      minWidth: 130,
       maxWidth: 300,
+      minWidth: 130,
+      priority: 8,
       title: <Heading onClick={() => getOrder('startDate')}>START DATE{getArrow('startDate')}</Heading>,
     },
     {
       align: 'left',
-      priority: 7,
-      minWidth: 120,
       maxWidth: 300,
+      minWidth: 120,
+      priority: 7,
       title: <Heading onClick={() => getOrder('endDate')}>END DATE{getArrow('endDate')}</Heading>,
     },
     {
       align: 'left',
-      priority: 6,
-      minWidth: 130,
       maxWidth: 300,
+      minWidth: 130,
+      priority: 6,
       title: <Heading onClick={() => getOrder('offerCode')}>OFFER CODE{getArrow('offerCode')}</Heading>,
     },
     {
       align: 'left',
-      priority: 4,
-      minWidth: 100,
       maxWidth: 300,
+      minWidth: 100,
+      priority: 4,
       title: <Heading onClick={() => getOrder('discount')}>DISCOUNT{getArrow('discount')}</Heading>,
     },
     {
       align: 'left',
-      priority: 5,
-      minWidth: 140,
       maxWidth: 300,
+      minWidth: 140,
+      priority: 5,
       title: <Heading onClick={() => getOrder('createdAt')}>CREATED AT{getArrow('createdAt')}</Heading>,
     },
     {
       align: 'left',
-      priority: 5,
-      minWidth: 140,
       maxWidth: 300,
+      minWidth: 140,
+      priority: 5,
       title: <Heading onClick={() => getOrder('updatedAt')}>UPDATED AT{getArrow('updatedAt')}</Heading>,
     },
     {
       align: 'left',
-      priority: 3,
-      minWidth: 150,
       maxWidth: 300,
+      minWidth: 150,
+      priority: 3,
       title: <Heading>ACTION</Heading>,
     },
   ];
@@ -366,14 +369,14 @@ function Offers({ rType }: TProps): JSX.Element {
           onClickHandler={async () => {
             setSubmitType('edit');
             setOfferInput({
+              desc: item.desc,
+              discount: +item.discount,
+              endDate: new Date(item.endDate),
               id: +item.id,
+              offerCode: item.offerCode,
+              startDate: new Date(item.startDate),
               status: item.status,
               type: item.type,
-              desc: item.desc,
-              startDate: new Date(item.startDate),
-              endDate: new Date(item.endDate),
-              offerCode: item.offerCode,
-              discount: +item.discount,
             });
             setModelOpened(true);
           }}
