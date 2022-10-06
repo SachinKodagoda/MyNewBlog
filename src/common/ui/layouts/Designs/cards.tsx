@@ -62,6 +62,7 @@ function Cards(): JSX.Element {
         <BasicCard>A Basic Card</BasicCard>
         <FlatCard>A Flat Card</FlatCard>
         <HoverCard>A Bordered, Hoverable Card</HoverCard>
+        <Clickable>A Bordered, Clickable Card</Clickable>
       </OtherCards>
     </Container>
   );
@@ -79,6 +80,9 @@ const Container = styled.div`
 `;
 
 const BasicCard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   filter: drop-shadow(0 12px 24px rgb(104 112 118 / 0.15)) drop-shadow(0 12px 14px rgb(104 112 118 / 0.1));
   transition: transform 0.25s ease 0s, filter 0.25s ease 0s, box-shadow 0.25s ease 0s;
   width: 320px;
@@ -91,6 +95,9 @@ const BasicCard = styled.div`
 `;
 
 const FlatCard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 320px;
   height: 100px;
   border-radius: 14px;
@@ -99,6 +106,9 @@ const FlatCard = styled.div`
 `;
 
 const HoverCard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: var(--xui-transitions-card);
   border: 1px solid rgba(0, 0, 0, 0.15);
   width: 320px;
@@ -106,6 +116,7 @@ const HoverCard = styled.div`
   border-radius: 14px;
   background: #fff;
   padding: 20px;
+  cursor: pointer;
   /* transform: translateZ(0px);
   backface-visibility: hidden; */
   &:hover {
@@ -120,4 +131,21 @@ const OtherCards = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+`;
+
+const Clickable = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--xui-transitions-card);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  width: 320px;
+  height: 100px;
+  border-radius: 14px;
+  background: #fff;
+  padding: 20px;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.97);
+  }
 `;
