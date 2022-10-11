@@ -26,3 +26,7 @@ declare module 'react' {
     slot?: string;
   }
 }
+
+export interface IHtmlDivElement {
+  target: HTMLDivElement;
+}

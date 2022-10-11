@@ -74,7 +74,7 @@ function DesignSystem(): JSX.Element {
         },
         {
           name: 'Button',
-          value: 'button',
+          value: 'buttons',
         },
         {
           name: 'Button Group',
@@ -180,10 +180,16 @@ function DesignSystem(): JSX.Element {
       title: 'Components',
     },
   ];
+  const styleObj = {
+    padding: '20px',
+  };
+  if (selectedItem === 'buttons') {
+    styleObj.padding = '0';
+  }
   return (
     <Container>
       <LeftMenu data={menuData} />
-      <RightMenu>{getRightMenu()}</RightMenu>
+      <RightMenu styleObj={styleObj}>{getRightMenu()}</RightMenu>
     </Container>
   );
 }
@@ -198,8 +204,12 @@ const Container = styled.div`
   margin: auto;
   max-width: ${widths.minDesktopLG};
 `;
-const RightMenu = styled.div`
-  padding: 20px;
+
+type TStyleObj = {
+  padding: string;
+};
+const RightMenu = styled.div<{ styleObj: TStyleObj }>`
+  padding: ${p => p.styleObj.padding};
   overflow-y: auto;
   flex: auto;
 `;
