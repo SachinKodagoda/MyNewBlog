@@ -20,9 +20,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 14px;
-  padding: 32px;
+  padding: 16px;
   .btn {
+    flex: none;
     padding: 0.4em 1.2em;
     text-align: center;
     transition: all 0.2s;

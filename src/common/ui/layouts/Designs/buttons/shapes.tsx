@@ -35,7 +35,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 32px;
+  padding: 16px;
 `;
 
 const Btn = styled.div`
