@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
+import Ripple2 from './otherRipple';
 import Ripple from './ripple';
 
 function Animated(): JSX.Element {
@@ -9,7 +10,8 @@ function Animated(): JSX.Element {
       <BtnType2 className='btn'>BTN02</BtnType2>
       <BtnType3 className='btn'>BTN03</BtnType3>
       <BtnType4 className='btn'>BTN04</BtnType4>
-      <Ripple text='Click Me' />
+      <Ripple text='BTN05' />
+      <Ripple2 text='BTN05' />
     </Container>
   );
 }
@@ -86,10 +88,8 @@ const BtnType3 = styled.div`
   color: #fff;
   background-color: teal;
   border-radius: 15px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 2;
+  height: 60px;
   box-shadow: inset 0 -0.9em 0 -0.35em rgba(0, 0, 0, 0.17);
   &:active {
     transform: translateY(-8px);

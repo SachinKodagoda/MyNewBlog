@@ -4,16 +4,18 @@ import styled, { keyframes } from 'styled-components';
 
 type TProps = { text: string; onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void };
 function RippleButton({ onClick, text }: TProps): JSX.Element {
-  const [coords, setCoords] = useState({ x: -1, y: -1 });
+  const [coords, setCoords] = useState({ height: 0, width: 0, x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState(false);
+
   useEffect(() => {
     if (coords.x !== -1 && coords.y !== -1) {
       setIsRippling(true);
       setTimeout(() => setIsRippling(false), 300);
     } else setIsRippling(false);
   }, [coords]);
+
   useEffect(() => {
-    if (!isRippling) setCoords({ x: -1, y: -1 });
+    if (!isRippling) setCoords({ height: 0, width: 0, x: -1, y: -1 });
   }, [isRippling]);
 
   return (
@@ -22,14 +24,19 @@ function RippleButton({ onClick, text }: TProps): JSX.Element {
       onClick={e => {
         const temp = e.target as unknown as HTMLButtonElement;
         const rect = temp.getBoundingClientRect();
-        setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        const d = Math.max(rect.width, rect.height);
+        // eslint-disable-next-line no-console
+        console.log('rect.left, rect.right: =-->', e.clientX - rect.left, rect.right - rect.left);
+        setCoords({ height: d, width: d, x: e.clientX - rect.left, y: e.clientY - rect.top });
         onClick?.(e);
       }}>
       {isRippling && (
         <RippleCircle
           style={{
-            left: coords.x,
-            top: coords.y,
+            // height: `${coords.height}px`,
+            left: `${coords.x}px`,
+            // top: coords.y,
+            // width: `${coords.width}px`,
           }}
         />
       )}
@@ -41,16 +48,8 @@ function RippleButton({ onClick, text }: TProps): JSX.Element {
 export default RippleButton;
 
 const ripple = keyframes`
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(10);
-    opacity: 0.375;
-  }
-  100% {
-    transform: scale(35);
+  to {
+    transform: scale(2.5);
     opacity: 0;
   }
 `;
@@ -58,7 +57,8 @@ const ripple = keyframes`
 const Btn = styled.button`
   border: none;
   margin: 8px;
-  padding: 14px 24px;
+  /* padding: 14px 24px; */
+  width: 100px;
   background: #001f3f;
   color: #fff;
   overflow: hidden;
@@ -69,15 +69,17 @@ const Btn = styled.button`
 `;
 
 const RippleCircle = styled.span`
-  width: 20px;
-  height: 20px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.5);
+  /* background: rgba(255, 255, 255, 0.7); */
+  background: red;
   display: block;
-  content: '';
   border-radius: 9999px;
-  opacity: 1;
-  animation: 0.9s ease 1 forwards ${ripple};
+
+  /* transform: scale(0); */
+  /* animation: ${ripple} 0.6s linear; */
+  width: 5px;
+  height: 5px;
+  transform-origin: center;
 `;
 
 const Content = styled.span`
