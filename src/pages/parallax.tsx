@@ -1,15 +1,44 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
+const TIME = 400;
 function ParallaxPage(): JSX.Element {
   const parallax = useRef<IParallax>(null);
+  const [text, setText] = useState('Good Morning');
+  const [bHue, setBHue] = useState(1);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      if (bHue === 1) {
+        setText('Good Morning!');
+      } else if (bHue === 2) {
+        setText('Good Day!');
+      } else {
+        setText('Good Evening!');
+      }
+      setLoading(false);
+    }, TIME);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [bHue]);
+  const hueVar = () => {
+    if (bHue === 1) {
+      return '--hue-180';
+    }
+    if (bHue === 2) {
+      return '--hue-90';
+    }
+    return '--hue-0';
+  };
   return (
     <>
       <GlobalCss />
-      <Container>
-        <Parallax ref={parallax} pages={1.05}>
+      <Container bHue={hueVar()}>
+        <Parallax ref={parallax} pages={1.2}>
           <ParallaxLayer offset={0} speed={0} style={{ pointerEvents: 'none' }}>
             <img src='/images/parallax/parallax0.png' alt='img' className='img1' />
           </ParallaxLayer>
@@ -31,6 +60,9 @@ function ParallaxPage(): JSX.Element {
           <ParallaxLayer offset={0} speed={3} style={{ pointerEvents: 'none' }}>
             <img src='/images/parallax/parallax6.png' alt='img' className='img1' />
           </ParallaxLayer>
+          <ParallaxLayer offset={0} speed={-1} style={{ pointerEvents: 'none' }}>
+            <img src='/images/parallax/ballon3.png' alt='img' className='balloon' />
+          </ParallaxLayer>
           <ParallaxLayer offset={0} speed={3.5} style={{ pointerEvents: 'none' }}>
             <img src='/images/parallax/parallax7.png' alt='img' className='img1' />
           </ParallaxLayer>
@@ -48,11 +80,34 @@ function ParallaxPage(): JSX.Element {
               <div className='bird bird2' />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={-0} style={{ pointerEvents: 'none' }}>
+
+          <ParallaxLayer offset={0} speed={1}>
             <div className='OtherCtr'>
               <div className='OtherInner'>
-                <img src='/images/duminda.jpg' alt='img' className='profile' />
-                <div className='profileDetails'>Parallax</div>
+                <ProfileImg
+                  src='/images/duminda.jpg'
+                  alt='img'
+                  className='profile'
+                  onClick={() => {
+                    // parallax?.current?.scrollTo(0);
+                    setBHue(a => (a + 1) % 3);
+                  }}
+                />
+                <div className='profileDetails'>
+                  Parallax with<div className='whiteText'>React-Spring</div>
+                </div>
+                <ClickHere
+                  bHue={hueVar()}
+                  onClick={() => {
+                    // parallax?.current?.scrollTo(1);
+                    setBHue(a => (a + 1) % 3);
+                  }}>
+                  {loading ? (
+                    <img src='/images/parallax/loading.svg' alt='img' className='loader' />
+                  ) : (
+                    <span>{text}</span>
+                  )}
+                </ClickHere>
               </div>
             </div>
           </ParallaxLayer>
@@ -65,10 +120,16 @@ function ParallaxPage(): JSX.Element {
 export default ParallaxPage;
 
 const GlobalCss = createGlobalStyle`
+  :root {
+    --hue-180: hue-rotate(180deg);
+    --hue-90: hue-rotate(90deg);
+    --hue-0: hue-rotate(0deg);
+  }
   html,body,#root{
-    background: #210002;
+    background: #000;
     height: 100%;
     width: 100%;
+    /* scroll-behavior: smooth; */
   }
 `;
 
@@ -106,11 +167,12 @@ const move = keyframes`
   }
 `;
 
-const Container = styled.div`
+const Container = styled.div<{ bHue: string }>`
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
+
   .img1 {
     display: block;
     width: auto;
@@ -119,6 +181,8 @@ const Container = styled.div`
     left: 50%;
     top: 0;
     transform: translateX(-50%);
+    filter: var(${p => p.bHue});
+    transition: filter ${TIME}ms;
   }
   .backgroundOverlay {
     height: 500vh;
@@ -128,17 +192,19 @@ const Container = styled.div`
     bottom: 0;
     left: 0;
     transform: translateY(100%);
+    filter: var(${p => p.bHue});
+    transition: filter ${TIME}ms;
   }
   .OtherCtr {
     width: 100%;
-    height: 105vh;
+    height: 110vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
   }
   .OtherInner {
     width: 100%;
-    height: 50%;
+    height: 52vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,15 +212,22 @@ const Container = styled.div`
   }
   .profile {
     width: 200px;
-    height: auto;
+    height: 200px;
     border-radius: 100%;
-    border: 5px solid #feae1a;
+    border: 5px solid #fff;
+    flex: none;
   }
   .profileDetails {
     font-size: 45px;
     font-weight: 900;
     color: #feae1a;
-    /* font-family: 'Playfair Display', Georgia, serif; */
+    display: flex;
+    gap: 10px;
+    filter: var(${p => p.bHue});
+    transition: filter ${TIME}ms;
+  }
+  .whiteText {
+    color: #fff;
   }
   .img2 {
     width: 500px;
@@ -198,4 +271,30 @@ const Container = styled.div`
     animation-delay: -0.75s;
     animation-duration: 0.9s;
   }
+  .balloon {
+    height: 200px;
+    width: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    filter: var(${p => p.bHue});
+    transition: filter ${TIME}ms;
+  }
+  .clickHere {
+    filter: var(${p => p.bHue});
+    transition: filter ${TIME}ms;
+  }
 `;
+
+const ClickHere = styled.button<{ bHue: string }>`
+  font-size: 45px;
+  font-weight: 900;
+  color: #de6f1d;
+  cursor: pointer;
+  filter: var(${p => p.bHue});
+  transition: filter ${TIME}ms;
+  .loader {
+  }
+`;
+
+const ProfileImg = styled.img``;
