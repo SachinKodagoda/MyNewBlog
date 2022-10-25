@@ -3,44 +3,44 @@ import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 type TProps = { text: string; onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void };
+
 function RippleButton({ onClick, text }: TProps): JSX.Element {
-  const [coords, setCoords] = useState({ height: 0, width: 0, x: -1, y: -1 });
+  const [coords, setCoords] = useState({ size: 20, x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState(false);
 
   useEffect(() => {
     if (coords.x !== -1 && coords.y !== -1) {
       setIsRippling(true);
-      setTimeout(() => setIsRippling(false), 300);
+      setTimeout(() => {
+        setIsRippling(false);
+        setCoords({ size: 20, x: -1, y: -1 });
+      }, 300);
     } else setIsRippling(false);
   }, [coords]);
 
-  useEffect(() => {
-    if (!isRippling) setCoords({ height: 0, width: 0, x: -1, y: -1 });
-  }, [isRippling]);
+  function getClickPosition(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    const temp = e.target as unknown as HTMLButtonElement;
+    const { height, left, top, width } = temp.getBoundingClientRect();
+    const size = Math.min(height, width) / 4;
+    const xPosition = e.clientX - left - size / 2;
+    const yPosition = e.clientY - top - size / 2;
+    setCoords({ size, x: xPosition, y: yPosition });
+    onClick?.(e);
+  }
 
   return (
-    <Btn
-      className='ripple-button'
-      onClick={e => {
-        const temp = e.target as unknown as HTMLButtonElement;
-        const rect = temp.getBoundingClientRect();
-        const d = Math.max(rect.width, rect.height);
-        // eslint-disable-next-line no-console
-        console.log('rect.left, rect.right: =-->', e.clientX - rect.left, rect.right - rect.left);
-        setCoords({ height: d, width: d, x: e.clientX - rect.left, y: e.clientY - rect.top });
-        onClick?.(e);
-      }}>
+    <Btn className='ripple-button' onClick={e => getClickPosition(e)}>
       {isRippling && (
         <RippleCircle
           style={{
-            // height: `${coords.height}px`,
-            left: `${coords.x}px`,
-            // top: coords.y,
-            // width: `${coords.width}px`,
+            height: coords.size,
+            left: coords.x,
+            top: coords.y,
+            width: coords.size,
           }}
         />
       )}
-      <Content>{text}</Content>
+      {text}
     </Btn>
   );
 }
@@ -48,8 +48,16 @@ function RippleButton({ onClick, text }: TProps): JSX.Element {
 export default RippleButton;
 
 const ripple = keyframes`
-  to {
-    transform: scale(2.5);
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(10);
+    opacity: 0.375;
+  }
+  100% {
+    transform: scale(35);
     opacity: 0;
   }
 `;
@@ -57,9 +65,10 @@ const ripple = keyframes`
 const Btn = styled.button`
   border: none;
   margin: 8px;
-  /* padding: 14px 24px; */
-  width: 100px;
+  padding: 14px 24px;
   background: #001f3f;
+  width: 100px;
+  height: 50px;
   color: #fff;
   overflow: hidden;
   position: relative;
@@ -68,21 +77,14 @@ const Btn = styled.button`
   box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
 `;
 
-const RippleCircle = styled.span`
+const RippleCircle = styled.div`
+  width: 20px;
+  height: 20px;
   position: absolute;
-  /* background: rgba(255, 255, 255, 0.7); */
-  background: red;
+  background: rgba(255, 255, 255, 0.5);
   display: block;
+  content: '';
   border-radius: 9999px;
-
-  /* transform: scale(0); */
-  /* animation: ${ripple} 0.6s linear; */
-  width: 5px;
-  height: 5px;
-  transform-origin: center;
-`;
-
-const Content = styled.span`
-  position: relative;
-  z-index: 2;
+  opacity: 1;
+  animation: 0.9s ease 1 forwards ${ripple};
 `;
